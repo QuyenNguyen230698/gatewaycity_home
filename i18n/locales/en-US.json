@@ -1,0 +1,57 @@
+{
+  "app":{
+    "menu":{
+      "about":"About",
+      "WhatWeDo": "What We Do",
+      "WhyModulux": "Why Modulux",
+      "OurTechnology": "Our Technology",
+      "TechnicalSpecification": "Technical Specification",
+      "OurProcess": "Our Process",
+      "Projects": "Projects",
+      "Blog": "Blog",
+      "contact":"Contact",
+      "EnquiryNow": "Enquiry Now"
+    }
+  },
+  "banner":{
+    "title":"HIGH-PERFORMANCE MODULAR HOMES FOR",
+    "description":"ARCHITECTS, DEVELOPERS, PARTNERS AND INVESTORS.",
+    "button":"Learn more"
+  },
+  "footer": {
+    "title":"SUSTAINABLE LIVING SOLUTION",
+    "titleForm":"Subscribe to our email newsletter for regular updates and exclusive content",
+    "firstName":"First name",
+    "lastName":"Last name",
+    "email":"Email",
+    "phone":"Phone",
+    "subscribe":"Subscribe",
+    "about":"About",
+    "WhatWeDo": "What We Do",
+    "WhyModulux": "Why Modulux",
+    "OurTechnology": "Our Technology",
+    "TechnicalSpecification": "Technical Specification",
+    "OurProcess": "Our Process",
+    "Projects": "Projects",
+    "Blog": "Blog",
+    "projects":"Projects",
+    "contact":"Contact",
+    "faqs": "FAQs",
+    "headOffice": "Head Office",
+    "number": "+84 274 3 718 111",
+    "address": "Unit 901, The Waterfront Saigon, 1-1A Ton Duc Thang, District 1, Ho Chi Minh City, Vietnam",
+    "factory": "Factory",
+    "factoryAddress1": "69/13 Binh Chuan 42 Street, Binh Chuan Ward, Thuan An City, Binh Duong Province, Vietnam",
+    "factoryAddress2": "1/21M, Group 1, Binh Thuan 2 Quarter, Thuan Giao Ward, Thuan An City, Binh Duong Province, Vietnam",
+    "terms": "Terms & conditions",
+    "privacyPolicy": "Privacy Policy"
+  },
+  "toast": {
+    "notification":"Please check your email (inbox or spam) after 1 - 5 minutes.",
+    "help":"Support: (+84) 931 866 698 (Mr. Duc).",
+    "errorName": "Please enter your name.",
+    "errorEmail": "Please enter your email.",
+    "errorPhone": "Please enter your phone number.",
+    "errorEmailInvalid": "Please enter a valid email address."
+  }
+}

@@ -1,0 +1,261 @@
+@import url('https://fonts.cdnfonts.com/css/playfair-display');
+@import "~/node_modules/@syncfusion/ej2-vue-richtexteditor/styles/tailwind.css";
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Custom CSS for setting viewport height */
+:root {
+  --vh: 100%;
+}
+@font-face {
+  font-family: 'Quicksand-Bold';
+  font-style: normal;
+  src: local('Quicksand-Bold'), url('/font/Quicksand-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Quicksand-Medium';
+  font-style: normal;
+  src: local('Quicksand-Medium'), url('/font/Quicksand-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Quicksand-Regular';
+  font-style: normal;
+  src: local('Quicksand-Regular'), url('/font/Quicksand-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Geoform-Bold';
+  font-style: normal;
+  src: local('Geoform-Bold'), url('/font/Geoform-Bold.otf') format('truetype');
+}
+@font-face {
+  font-family: 'Geoform-Medium';
+  font-style: normal;
+  src: local('Geoform-Medium'), url('/font/Geoform-Medium.otf') format('truetype');
+}
+@font-face {
+  font-family: 'Geoform-Regular';
+  font-style: normal;
+  src: local('Geoform-Regular'), url('/font/Geoform.otf') format('truetype');
+}
+@font-face {
+  font-family: 'Geoform-BoldItalic';
+  font-style: normal;
+  src: local('Geoform-BoldItalic'), url('/font/Geoform-BoldItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Geoform-MediumItalic';
+  font-style: normal;
+  src: local('Geoform-MediumItalic'), url('/font/Geoform-MediumItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Geoform-RegularItalic';
+  font-style: normal;
+  src: local('Geoform-RegularItalic'), url('/font/Geoform-Italic.ttf') format('truetype');
+}
+/* Base styles */
+body {
+  background-color: #ffffff;
+  background: #ffffff;
+  margin: 0; /* Reset body margin to avoid extra gaps */
+}
+.font-quicksand-bold{
+  font-family: 'Quicksand-Bold', sans-serif;
+}
+.font-quicksand-medium{
+  font-family: 'Quicksand-Medium', sans-serif;
+}
+.font-quicksand-regular{
+  font-family: 'Quicksand-Regular', sans-serif;
+}
+/* Font family classes */
+.font-geoform-bold {
+  font-family: "Geoform-Bold", serif;
+}
+.font-geoform-medium {
+  font-family: "Geoform-Medium", serif;
+}
+.font-geoform-regular {
+  font-family: "Geoform-Regular", serif;
+}
+.font-geoform-bold-italic {
+  font-family: "Geoform-BoldItalic", serif;
+}
+.font-geoform-medium-italic {
+  font-family: "Geoform-MediumItalic", serif;
+}
+.font-geoform-regular-italic {
+  font-family: "Geoform-RegularItalic", serif;
+}
+@layer components {
+  .font-geoform-medium {
+    font-family: "Geoform-Medium", serif;
+  }
+  .font-geoform-regular {
+    font-family: "Geoform-Regular", serif;
+  }
+  .font-geoform-hover {
+    @apply font-geoform-regular;
+  }
+  .font-geoform-hover:hover {
+    @apply font-geoform-medium;
+  }
+}
+
+/* Typography using Tailwind CSS classes */
+h1, h2, h3{
+  font-family: 'Quicksand-Bold', sans-serif;
+}
+h4, h5, h6, p, small{
+  font-family: 'Quicksand-Medium', sans-serif;
+}
+a, ul, li, input, textarea, select, option, label, button, div {
+  font-family: 'Geoform-Regular', sans-serif;
+}
+p{
+  @apply text-base md:text-lg
+}
+span { @apply text-sm; }
+small { @apply text-xs text-gray-500; }
+b, strong {
+
+}
+.bg-black-gray{
+  background: #222222;
+  background-color: #222222;
+}
+.text-black-gray{
+  color: #222222;
+}
+.btn{
+  height: 2.5rem !important;
+  min-height: 2.5rem !important;
+}
+/* Banner styles */
+.textBanner, .textSubBanner, .textTitle {
+}
+.textBanner { @apply text-4xl md:text-5xl lg:text-6xl; }
+.textSubBanner { @apply text-3xl md:text-4xl lg:text-5xl; }
+.textTitle { @apply text-lg md:text-xl lg:text-3xl; }
+.textTitleImage { @apply text-base md:text-lg lg:text-xl; }
+.textTitleContact { @apply text-lg md:text-xl lg:text-2xl }
+.textTitleFooter { @apply text-base md:text-lg lg:text-xl }
+.textFooter { @apply text-sm md:text-base lg:text-lg; }
+.textHeader { @apply text-sm md:text-base lg:text-lg; }
+
+/* quyen class */
+.textError { @apply text-6xl md:text-7xl lg:text-8xl; }
+.title4xl { @apply text-2xl md:text-3xl lg:text-4xl; }
+.title3xl { @apply text-xl md:text-2xl lg:text-3xl; }
+.title2xl { @apply text-lg md:text-xl lg:text-2xl; }
+.titlexl { @apply text-base md:text-lg lg:text-xl; }
+.titlelg { @apply text-sm md:text-base lg:text-lg; }
+.titlebase { @apply text-sm md:text-base; }
+
+/* Height and background styles */
+.heightBanner { height: 50rem !important; }
+.bg-primary-tdc, .bg-list-project-tdc, .bg-header-list-project-tdc, .bg-main-image-project-list {
+  color: #ffffff;
+}
+.bg-primary-tdc { background: #222222; }
+.bg-contact-tdc { background: #13151B; }
+
+.bg-list-project-tdc { background: #1f1f1f; color: #000; }
+.bg-header-list-project-tdc { background: #2e2e2e; }
+.bg-main-image-project-list { background: #141414; }
+
+/* Button styles */
+
+.btnTDC-md, .btnTDC-sm, .btnTDC-lg, .btnFormTDC-rounded-sm, .btnFormTDC-rounded-md, .btnFormTDC-rounded-lg {
+
+  @apply btn bg-[#222222] border-none  text-white hover:bg-gray-300 hover:text-neutral hover:border  rounded-none;
+}
+.btnTDCSolution-sm{
+  @apply btn btn-sm bg-white text-neutral hover:bg-neutral hover:text-white border-none rounded-none;
+}
+.btnFormTDC-rounded-sm { @apply text-sm px-8 py-3; }
+.btnFormTDC-rounded-md { @apply text-base px-8 py-3; }
+.btnFormTDC-rounded-lg { @apply text-lg px-8 py-3; }
+.btnFormTDC-sm { @apply text-sm px-2 py-1; }
+.btnFormTDC-md { @apply text-base px-4 py-2; }
+.btnFormTDC-lg { @apply text-lg px-8 py-3; }
+.image-light {
+  filter: invert(100%) brightness(1.5) !important; /* Increase brightness to make it whiter */
+  -webkit-filter: invert(100%) brightness(1.5) !important;
+}
+
+.image-dark {
+  filter: invert(0%) !important; /* Revert the inversion for hover effect */
+  -webkit-filter: invert(0%) !important;
+}
+
+.hover\:image-dark:hover {
+  filter: invert(0%) !important; /* Apply the dark filter on hover */
+  -webkit-filter: invert(0%) !important;
+}
+.hover\:image-light:hover  {
+  filter: invert(100%) !important; /* Ensure this style is applied only to elements with this class */
+  -webkit-filter: invert(100%) !important;
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+  h1 { @apply text-2xl; }
+  h2 { @apply text-xl; }
+  h3 { @apply text-lg; }
+  h4 { @apply text-base; }
+  h5 { @apply text-sm; }
+  h6 { @apply text-xs; }
+  p { @apply text-sm; }
+}
+
+.scrollable {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollable::-webkit-scrollbar {
+  display: none;
+}
+
+.h-18 { height: 72px !important; }
+
+.bg-enquiry {
+  background-color: #FCFAF6;
+}
+
+.h-45r {
+  height: 45rem !important;
+}
+
+.text-modulux-green {
+  color: #0A4834;
+}
+
+.bg-project-detail {
+  background-color: #F1F1F1;
+ }
+
+ .shadow-even {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15),
+              0 -4px 20px rgba(0, 0, 0, 0.15),
+              4px 0 20px rgba(0, 0, 0, 0.15),
+              -4px 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.aspect-15-16 {
+  aspect-ratio: 15 / 16;
+}
+
+.bg-news-modulux {
+  @apply w-full h-35r lg:h-96 bg-gradient-to-r from-gray-900 to-custom-green;
+}
+
+.h-600 {
+  height: 600px !important;
+}
+
+.text-xss {
+  font-size: 10px !important;
+}

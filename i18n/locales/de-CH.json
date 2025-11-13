@@ -1,0 +1,65 @@
+{
+    "app": {
+        "menu": {
+          "aboutus": "Über uns",
+          "capabilities": "Fähigkeiten",
+          "woodenfurniture": "Holzmöbel",
+          "metalfurniture": "Metallmöbel",
+          "upholstery": "Polstermöbel",
+          "door": "Tür",
+          "finishing": "Oberflächenbehandlung",
+          "projects": "Projekte",
+          "referenceprice": "Referenzpreis",
+          "news": "Nachrichten",
+          "contact": "Kontakt"
+        }
+      },
+      "banner": {
+        "title": "Unsere Designs.",
+        "description": "Unsere Kollektion modularer Hausdesigns bietet Grundrisse für jeden Lebensstil mit innovativen Designs, die an Ihre Bedürfnisse angepasst werden können.",
+        "button": "Alle Designs ansehen"
+      },
+      "footer": {
+        "titleForm": "Abonnieren Sie unseren E-Mail-Newsletter für regelmäßige Updates und exklusive Inhalte",
+        "firstName": "Vorname",
+        "lastName": "Nachname",
+        "email": "E-Mail",
+        "phone": "Telefon",
+        "subscribe": "Abonnieren",
+        "about": "Über uns",
+        "ourStory": "Unsere Geschichte",
+        "forResidential": "Für Wohnhäuser",
+        "forCommercial": "Für Gewerbe",
+        "ourProcess": "Unser Prozess",
+        "FAQs": "Häufig gestellte Fragen",
+        "ourDesigns": "Unsere Designs",
+        "twoBedroomDesigns": "Zwei-Schlafzimmer-Designs",
+        "threeBedroomDesigns": "Drei-Schlafzimmer-Designs",
+        "fourBedroomDesigns": "Vier-Schlafzimmer-Designs",
+        "facades": "Fassaden",
+        "projects": "Projekte",
+        "newsAndInsights": "Neuigkeiten und Einblicke",
+        "contact": "Kontakt",
+        "resources": "Ressourcen",
+        "modularHomes": "Modulare Häuser",
+        "familyHomes": "Familienhäuser",
+        "holidayHomes": "Ferienhäuser",
+        "investors": "Investoren",
+        "downsizing": "Verkleinerung",
+        "melbourneDisplayCentre": "Melbourne Ausstellungszentrum",
+        "contactNumber": "03 8736 9520",
+        "address": "1 Jersey Road, Bayswater VIC 3153",
+        "factoryAndHeadOffice": "Fabrik und Hauptsitz",
+        "factory": "03 5145 7110",
+        "headOffice": "55 Industrial Road, Stratford VIC 3862",
+        "policy": "Datenschutzrichtlinie"
+      },
+      "toast": {
+        "notification": "Bitte überprüfen Sie Ihre E-Mails (Posteingang oder Spam) nach 1 - 5 Minuten.",
+        "help": "Support: (+84) 931 866 698 (Mr. Duc).",
+        "errorName": "Bitte geben Sie Ihren Namen ein.",
+        "errorEmail": "Bitte geben Sie Ihre E-Mail-Adresse ein.",
+        "errorPhone": "Bitte geben Sie Ihre Telefonnummer ein.",
+        "errorEmailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein."
+      }
+}
