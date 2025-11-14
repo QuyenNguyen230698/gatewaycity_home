@@ -78,10 +78,10 @@ module.exports = {
         "35r": "35rem",
       },
       colors: {
-        'custom-green': '#0A4834',
+        'custom-green': '#253B22',
         "emerald-green": "#0A4834",
         "black-hole": "#222222",
-        "pyramid-gold": "#9F8151",
+        "pyramid-gold": "#BF9C79",
         "sustainable-linen": "#FAF3E1",
       },
     },

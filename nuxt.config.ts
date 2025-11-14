@@ -69,29 +69,6 @@ export default defineNuxtConfig({
 
   plugins: [],
 
-  i18n: {
-    locales: [
-      { code: 'fr-CA', file: 'fr-CA.json' },
-      { code: 'de-CH', file: 'de-CH.json' },
-      { code: 'zh-CN', file: 'zh-CN.json' },
-      { code: 'ja-JP', file: 'ja-JP.json' },
-      { code: 'vi-VN', file: 'vi-VN.json' },
-      { code: 'en-US', file: 'en-US.json' },
-    ],
-    detectBrowserLanguage: {
-      useCookie: false,
-      cookieKey: "i18n_redirected",
-    },
-    defaultLocale: 'en-US',
-    strategy: 'no_prefix',
-    lazy: true,
-    langDir: 'locales',
-    vueI18n: '../i18n/i18n.config.ts',
-    bundle: {
-      optimizeTranslationDirective: false,
-    },
-  },
-
   robots: {
     groups: [
       {

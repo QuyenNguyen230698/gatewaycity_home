@@ -7,7 +7,7 @@
             <NuxtImg
               quality="75"
               loading="eager"
-              src="/Logo_MDL.svg"
+              src="/Logo.svg"
               aria-label="logo"
               alt="logo"
               class="h-18 max-w-full max-h-full object-contain"
@@ -19,7 +19,7 @@
             <NuxtImg
               quality="75"
               loading="eager"
-              src="/Logo_MDL.svg"
+              src="/Logo.svg"
               aria-label="logo"
               alt="logo"
               class="h-14 max-w-full max-h-full object-contain"
@@ -44,9 +44,6 @@
                   d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
                 />
               </svg>
-            </div>
-            <div>
-              <LanguageSwitch />
             </div>
             <div class="drawer">
               <input id="my-drawer" type="checkbox" class="drawer-toggle" v-model="isDrawerOpen" />
@@ -96,7 +93,7 @@
                     </label>
                   </li>
                   <li class="py-1 px-6 text-nowrap text-xl flex flex-col">
-                    <NuxtLink to="/about" aria-label="Sidebar Item 1" class="font-geoform-medium" @click="closeDrawer">
+                    <NuxtLink to="/about" aria-label="Sidebar Item 1" class="font-montserrat-medium" @click="closeDrawer">
                       {{ $t("app.menu.about") }}
                     </NuxtLink>
                     <span class="border-b border-custom-green w-16 my-2 p-0"></span>
@@ -113,7 +110,7 @@
                       <label
                         @click="isCollapseOpen = !isCollapseOpen"
                         for="collapse-toggle"
-                        class="collapse-title px-3 py-0 min-h-0 text-xl font-geoform-medium"
+                        class="collapse-title px-3 py-0 min-h-0 text-xl font-montserrat-medium"
                       >
                         {{ $t("app.menu.WhatWeDo") }}
                         <i class="fa-solid fa-caret-down"></i>
@@ -175,13 +172,13 @@
                     <span class="border-b border-custom-green w-16 my-2 ml-3 p-0"></span>
                   </li>
                   <li class="py-1 px-6 text-nowrap text-xl flex flex-col">
-                    <NuxtLink aria-label="Blogs" to="/blogs" @click="closeDrawer" class="font-geoform-medium">
+                    <NuxtLink aria-label="Blogs" to="/blogs" @click="closeDrawer" class="font-montserrat-medium">
                       {{ $t("app.menu.Blog") }}
                     </NuxtLink>
                     <span class="border-b border-custom-green w-16 my-2 p-0"></span>
                   </li>
                   <li class="py-1 px-6 text-nowrap text-xl flex flex-col">
-                    <NuxtLink aria-label="contact" to="/contact?type=project" @click="closeDrawer" class="font-geoform-medium">
+                    <NuxtLink aria-label="contact" to="/contact?type=project" @click="closeDrawer" class="font-montserrat-medium">
                       {{ $t("app.menu.contact") }}
                     </NuxtLink>
                     <span class="border-b border-custom-green w-16 my-2 p-0"></span>
@@ -229,14 +226,14 @@
             </div>
           </div>
           <!-- Desktop Menu -->
-          <div class="hidden lg:flex lg:flex-row justify-end items-center lg:w-full lg:text-sm xl:text-base font-quicksand-bold">
+          <div class="hidden lg:flex lg:flex-row justify-end items-center lg:w-full lg:text-sm xl:text-base font-montserrat-bold">
             <div class="flex gap-8 w-full text-center justify-center items-center">
               <!-- About Us Menu Item -->
               <div class="text-nowrap flex-grow text-base min-h-10 w-14 flex justify-center items-center">
                 <NuxtLink
                   aria-label="about"
                   to="/about"
-                  :class="isActiveRoute('/about') ? 'font-geoform-medium text-custom-green' : 'font-geoform-hover'"
+                  :class="isActiveRoute('/about') ? 'font-montserrat-medium text-custom-green' : 'font-montserrat-hover'"
                   @click="closeDropdown"
                 >
                   {{ $t("app.menu.about") }}
@@ -250,7 +247,7 @@
                       <div @mouseenter="isDropdownOpen = true" @mouseleave="isDropdownOpen = false" class="pl-0 pr-0">
                         <span
                           class="text-nowrap w-24 text-base text-center cursor-pointer flex justify-center items-center"
-                          :class="isDropdownActive || isDropdownOpen ? 'font-geoform-medium text-custom-green' : 'font-geoform-regular'"
+                          :class="isDropdownActive || isDropdownOpen ? 'font-montserrat-medium text-custom-green' : 'font-montserrat-regular'"
                         >
                           {{ $t("app.menu.WhatWeDo") }}
                         </span>
@@ -262,7 +259,7 @@
                             <NuxtLink
                               aria-label="whymodulux"
                               to="/why-modulux"
-                              :class="isActiveRoute('/why-modulux') ? 'font-geoform-medium text-custom-green' : 'font-geoform-medium hover:text-custom-green'"
+                              :class="isActiveRoute('/why-modulux') ? 'font-montserrat-medium text-custom-green' : 'font-montserrat-medium hover:text-custom-green'"
                               @click="closeDropdown"
                             >
                               {{ $t("app.menu.WhyModulux") }}
@@ -272,7 +269,7 @@
                             <NuxtLink
                               aria-label="OurTechnology"
                               to="/our-technology"
-                              :class="isActiveRoute('/our-technology') ? 'font-geoform-medium text-custom-green' : 'font-geoform-medium hover:text-custom-green'"
+                              :class="isActiveRoute('/our-technology') ? 'font-montserrat-medium text-custom-green' : 'font-montserrat-medium hover:text-custom-green'"
                               @click="closeDropdown"
                             >
                               {{ $t("app.menu.OurTechnology") }}
@@ -282,7 +279,7 @@
                             <NuxtLink
                               aria-label="StandardInclusions"
                               to="/technical-specification"
-                              :class="isActiveRoute('/technical-specification') ? 'font-geoform-medium text-custom-green' : 'font-geoform-medium hover:text-custom-green'"
+                              :class="isActiveRoute('/technical-specification') ? 'font-montserrat-medium text-custom-green' : 'font-montserrat-medium hover:text-custom-green'"
                               @click="closeDropdown"
                             >
                             {{ $t("app.menu.TechnicalSpecification") }}
@@ -292,7 +289,7 @@
                             <NuxtLink
                               aria-label="OurProccess"
                               to="/our-process"
-                              :class="isActiveRoute('/our-process') ? 'font-geoform-medium text-custom-green' : 'font-geoform-medium hover:text-custom-green'"
+                              :class="isActiveRoute('/our-process') ? 'font-montserrat-medium text-custom-green' : 'font-montserrat-medium hover:text-custom-green'"
                               @click="closeDropdown"
                             >
                               {{ $t("app.menu.OurProcess") }}
@@ -302,7 +299,7 @@
                             <NuxtLink
                               aria-label="Projects"
                               to="/projects"
-                              :class="isActiveRoute('/projects') ? 'font-geoform-medium text-custom-green' : 'font-geoform-medium hover:text-custom-green'"
+                              :class="isActiveRoute('/projects') ? 'font-montserrat-medium text-custom-green' : 'font-montserrat-medium hover:text-custom-green'"
                               @click="closeDropdown"
                             >
                               {{ $t("app.menu.Projects") }}
@@ -311,7 +308,7 @@
                           <li class="hover:text-custom-green text-base leading-none pb-2">
                             <NuxtLink
                               to="/faqs"
-                              :class="isActiveRoute('/faqs') ? 'font-geoform-medium text-custom-green' : 'font-geoform-medium hover:text-custom-green'"
+                              :class="isActiveRoute('/faqs') ? 'font-montserrat-medium text-custom-green' : 'font-montserrat-medium hover:text-custom-green'"
                               @click="closeDropdown"
                             >
                               FAQs
@@ -328,7 +325,7 @@
                 <NuxtLink
                   aria-label="Blogs"
                   to="/blogs"
-                  :class="isActiveRoute('/blogs') ? 'font-geoform-medium text-custom-green' : 'font-geoform-hover'"
+                  :class="isActiveRoute('/blogs') ? 'font-montserrat-medium text-custom-green' : 'font-montserrat-hover'"
                   @click="closeDropdown"
                 >
                   {{ $t("app.menu.Blog") }}
@@ -338,7 +335,7 @@
                 <NuxtLink
                   aria-label="contact"
                   to="/contact?type=project"
-                  :class="isActiveRoute('/contact') ? 'font-geoform-medium text-custom-green' : 'font-geoform-hover'"
+                  :class="isActiveRoute('/contact') ? 'font-montserrat-medium text-custom-green' : 'font-montserrat-hover'"
                   @click="closeDropdown"
                 >
                   {{ $t("app.menu.contact") }}
@@ -364,10 +361,28 @@
               <div class="flex-grow min-h-10 flex justify-center items-center">
                 <NuxtLink external
                   to="/contact?type=general"
-                  class="font-geoform-medium cursor-pointer text-nowrap bg-black text-white my-4 px-4 py-2 text-base hover:bg-stone-800 duration-300 ease-in-out"
+                  class="font-montserrat-medium cursor-pointer text-nowrap bg-black text-white my-4 px-4 py-2 text-base hover:bg-stone-800 duration-300 ease-in-out"
                 >
                   Enquire Now
                 </NuxtLink>
+                <!-- Nút mở menu cho Desktop -->
+                  <div class="hidden lg:flex items-center justify-center ml-4">
+                    <label for="my-drawer" class="cursor-pointer p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        class="inline-block h-7 w-7 stroke-current"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                          d="M4 6h16M4 12h16M4 18h16"
+                        />
+                      </svg>
+                    </label>
+                  </div>
               </div>
             </div>
           </div>

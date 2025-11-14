@@ -42,7 +42,7 @@
               />
           </section>
           <div class="absolute left-0 right-0 bottom-5 md:bottom-10 flex items-center justify-center">
-            <button class="font-geoform-bold bg-white rounded-full w-10/12 py-1 titlelg">Get a quote</button>
+            <button class="font-montserrat-bold bg-white rounded-full w-10/12 py-1 titlelg">Get a quote</button>
           </div>
         </div>
       </dialog>
@@ -64,7 +64,7 @@
         >
           <form method="dialog">
             <button
-              class="focus:outline-none font-geoform-regular absolute right-5 top-3 text-lg border bg-black-hole text-white hover:bg-stone-500 px-2 flex items-center justify-center"
+              class="focus:outline-none font-montserrat-regular absolute right-5 top-3 text-lg border bg-black-hole text-white hover:bg-stone-500 px-2 flex items-center justify-center"
               :class="isCloseIcon === true ? 'block' : 'hidden'"
             >
               {{ popUpRender.closebtn }}

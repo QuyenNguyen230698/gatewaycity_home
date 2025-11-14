@@ -11,7 +11,7 @@
         >
           <NuxtLink external to="/" class="col-span-12 lg:col-span-3 w-full">
             <NuxtImg
-              src="/Logo_MDL_white.svg"
+              src="/Logo.svg"
               quality="75"
               loading="eager"
               alt="logo"
@@ -19,7 +19,7 @@
             />
           </NuxtLink>
           <p
-            class="col-span-12 lg:col-span-4 lg:col-start-9 lg:col-end-13 text-xs md:text-sm font-geoform-regular tracking-footer text-gray-300 w-full lg:text-end"
+            class="col-span-12 lg:col-span-4 lg:col-start-9 lg:col-end-13 text-xs md:text-sm font-montserrat-regular tracking-footer text-gray-300 w-full lg:text-end"
           >
             {{ $t("footer.title") }}
           </p>
@@ -32,7 +32,7 @@
             data-aos="fade-up"
             data-aos-offset="20"
             data-aos-delay="50"
-            class="text-lg font-geoform-medium"
+            class="text-lg font-montserrat-medium"
           >
             {{ $t("footer.titleForm") }}
           </h2>
@@ -93,7 +93,7 @@
           <button
             @click="submit"
             :disabled="isSubmitting"
-            class="font-geoform-medium w-full md:w-1/2 bg-white text-black px-4 py-2 text-base hover:bg-gray-300 duration-300 ease-in-out"
+            class="font-montserrat-medium w-full md:w-1/2 bg-white text-black px-4 py-2 text-base hover:bg-gray-300 duration-300 ease-in-out"
           >
             {{ isSubmitting ? "Submitting..." : "Submit" }}
           </button>
@@ -108,7 +108,7 @@
             data-aos-delay="50"
             external
             to="/about"
-            class="text-lg lg:text-xl font-geoform-medium hover:text-custom-green duration-300 ease-in-out cursor-pointer w-fit"
+            class="text-lg lg:text-xl font-montserrat-medium hover:text-custom-green duration-300 ease-in-out cursor-pointer w-fit"
             >{{ $t("footer.about") }}</NuxtLink
           >
           <span
@@ -122,7 +122,7 @@
               data-aos="fade-up"
               data-aos-offset="20"
               data-aos-delay="50"
-              class="text-lg lg:text-xl font-geoform-medium w-fit"
+              class="text-lg lg:text-xl font-montserrat-medium w-fit"
               >{{ $t("footer.WhatWeDo") }}</NuxtLink
             >
             <NuxtLink
@@ -174,7 +174,7 @@
             data-aos="fade-up"
             data-aos-offset="20"
             data-aos-delay="50"
-            class="text-lg lg:text-xl font-geoform-medium hover:text-custom-green duration-300 ease-in-out cursor-pointer w-fit"
+            class="text-lg lg:text-xl font-montserrat-medium hover:text-custom-green duration-300 ease-in-out cursor-pointer w-fit"
             >{{ $t("footer.Projects") }}</NuxtLink
           >
           <span
@@ -189,7 +189,7 @@
             data-aos="fade-up"
             data-aos-offset="20"
             data-aos-delay="50"
-            class="text-lg lg:text-xl font-geoform-medium hover:text-custom-green duration-300 ease-in-out cursor-pointer w-fit"
+            class="text-lg lg:text-xl font-montserrat-medium hover:text-custom-green duration-300 ease-in-out cursor-pointer w-fit"
             >{{ $t("footer.Blog") }}</NuxtLink
           >
         </div>
@@ -203,7 +203,7 @@
             data-aos="fade-up"
             data-aos-offset="20"
             data-aos-delay="50"
-            class="text-lg lg:text-xl font-geoform-medium hover:text-custom-green duration-300 ease-in-out cursor-pointer w-fit"
+            class="text-lg lg:text-xl font-montserrat-medium hover:text-custom-green duration-300 ease-in-out cursor-pointer w-fit"
             >{{ $t("footer.contact") }}</NuxtLink
           >
           <span
@@ -218,7 +218,7 @@
             data-aos="fade-up"
             data-aos-offset="20"
             data-aos-delay="50"
-            class="text-lg lg:text-xl font-geoform-medium hover:text-custom-green duration-300 ease-in-out cursor-pointer w-fit"
+            class="text-lg lg:text-xl font-montserrat-medium hover:text-custom-green duration-300 ease-in-out cursor-pointer w-fit"
             >{{ $t("footer.faqs") }}</NuxtLink
           >
         </div>
@@ -231,7 +231,7 @@
               data-aos="fade-up"
               data-aos-offset="20"
               data-aos-delay="50"
-              class="text-lg lg:text-xl font-geoform-medium"
+              class="text-lg lg:text-xl font-montserrat-medium"
             >
               {{ $t("footer.headOffice") }}
             </h2>
@@ -282,7 +282,7 @@
               data-aos="fade-up"
               data-aos-offset="20"
               data-aos-delay="50"
-              class="text-lg lg:text-xl font-geoform-medium"
+              class="text-lg lg:text-xl font-montserrat-medium"
             >
               {{ $t("footer.factory") }}
             </h2>

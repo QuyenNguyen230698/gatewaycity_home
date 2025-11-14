@@ -4,7 +4,7 @@
     <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="container mx-auto w-full h-fit bg-image-enquiry rounded-lg">
       <div class="py-6 md:p-10 grid grid-cols-1 lg:grid-cols-2 lg:gap-10 h-fit place-items-center">
         <div class="col-span-1 gap-2 w-full h-full flex flex-col pb-3 lg:pb-0 lg:justify-between">
-          <h2 class="textSubBanner text-white font-geoform-bold">General Enquiry</h2>
+          <h2 class="textSubBanner text-white font-montserrat-bold">General Enquiry</h2>
           <p class="text-white titlebase leading-tight">
             Have questions or need more information? Fill in the contact form, and we’ll get back to you promptly.
           </p>
@@ -102,20 +102,20 @@
             <button 
               @click="submitNow"
               :disabled="isSubmitting"
-              class="font-geoform-regular w-full bg-black text-white px-4 py-2 text-base hover:bg-stone-800 duration-300 ease-in-out"
+              class="font-montserrat-regular w-full bg-black text-white px-4 py-2 text-base hover:bg-stone-800 duration-300 ease-in-out"
             >
               {{ isSubmitting ? 'Submitting...' : 'Submit' }}
             </button>
           </div>
           <div v-else class="flex flex-col gap-4 col-span-2">
-              <h2 class="title2xl font-geoform-bold">Thank you for submitting the form.</h2>
-              <p class="titlebase font-geoform-regular">
+              <h2 class="title2xl font-montserrat-bold">Thank you for submitting the form.</h2>
+              <p class="titlebase font-montserrat-regular">
                 Our team will be in touch with you soon! <br>
                 In the meantime, check out some of our recent projects:
               </p>
               <NuxtLink
                 to="/projects"
-                class="font-geoform-medium w-fit bg-black text-white rounded-full py-2 my-4 px-6 titlebase text-center hover:bg-stone-800 duration-300 ease-in-out"
+                class="font-montserrat-medium w-fit bg-black text-white rounded-full py-2 my-4 px-6 titlebase text-center hover:bg-stone-800 duration-300 ease-in-out"
               >
                 EXPLORE OUR PROJECTS
               </NuxtLink>

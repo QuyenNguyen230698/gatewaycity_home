@@ -46,7 +46,7 @@
         <div :class="searchInputValue.length > 0 ? 'h-72' : 'h-28'" class="text-nowrap overflow-hidden flex flex-col w-full pb-4 overflow-y-auto scroll-smooth scrollable">
           <div class="flex flex-col">
             <div class="text-lg">
-              <span class="font-quicksand-medium">Recommended</span>
+              <span class="font-montserrat-medium">Recommended</span>
             </div>
             <NuxtLink
               v-for="result in recommendedData"

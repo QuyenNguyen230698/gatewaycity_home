@@ -10,108 +10,61 @@
   --vh: 100%;
 }
 @font-face {
-  font-family: 'Quicksand-Bold';
+  font-family: 'Montserrat-Bold';
   font-style: normal;
-  src: local('Quicksand-Bold'), url('/font/Quicksand-Bold.ttf') format('truetype');
+  src: local('Montserrat-Bold'), url('/font/Montserrat-Bold.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'Quicksand-Medium';
+  font-family: 'Montserrat-Medium';
   font-style: normal;
-  src: local('Quicksand-Medium'), url('/font/Quicksand-Medium.ttf') format('truetype');
+  src: local('Montserrat-Medium'), url('/font/Montserrat-Medium.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'Quicksand-Regular';
+  font-family: 'Montserrat-Regular';
   font-style: normal;
-  src: local('Quicksand-Regular'), url('/font/Quicksand-Regular.ttf') format('truetype');
+  src: local('Montserrat-Regular'), url('/font/Montserrat-Regular.ttf') format('truetype');
 }
-@font-face {
-  font-family: 'Geoform-Bold';
-  font-style: normal;
-  src: local('Geoform-Bold'), url('/font/Geoform-Bold.otf') format('truetype');
-}
-@font-face {
-  font-family: 'Geoform-Medium';
-  font-style: normal;
-  src: local('Geoform-Medium'), url('/font/Geoform-Medium.otf') format('truetype');
-}
-@font-face {
-  font-family: 'Geoform-Regular';
-  font-style: normal;
-  src: local('Geoform-Regular'), url('/font/Geoform.otf') format('truetype');
-}
-@font-face {
-  font-family: 'Geoform-BoldItalic';
-  font-style: normal;
-  src: local('Geoform-BoldItalic'), url('/font/Geoform-BoldItalic.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Geoform-MediumItalic';
-  font-style: normal;
-  src: local('Geoform-MediumItalic'), url('/font/Geoform-MediumItalic.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Geoform-RegularItalic';
-  font-style: normal;
-  src: local('Geoform-RegularItalic'), url('/font/Geoform-Italic.ttf') format('truetype');
-}
+
 /* Base styles */
 body {
   background-color: #ffffff;
   background: #ffffff;
   margin: 0; /* Reset body margin to avoid extra gaps */
 }
-.font-quicksand-bold{
-  font-family: 'Quicksand-Bold', sans-serif;
+.font-montserrat-bold{
+  font-family: 'Montserrat-Bold', sans-serif;
 }
-.font-quicksand-medium{
-  font-family: 'Quicksand-Medium', sans-serif;
+.font-montserrat-medium{
+  font-family: 'Montserrat-Medium', sans-serif;
 }
-.font-quicksand-regular{
-  font-family: 'Quicksand-Regular', sans-serif;
+.font-montserrat-regular{
+  font-family: 'Montserrat-Regular', sans-serif;
 }
-/* Font family classes */
-.font-geoform-bold {
-  font-family: "Geoform-Bold", serif;
-}
-.font-geoform-medium {
-  font-family: "Geoform-Medium", serif;
-}
-.font-geoform-regular {
-  font-family: "Geoform-Regular", serif;
-}
-.font-geoform-bold-italic {
-  font-family: "Geoform-BoldItalic", serif;
-}
-.font-geoform-medium-italic {
-  font-family: "Geoform-MediumItalic", serif;
-}
-.font-geoform-regular-italic {
-  font-family: "Geoform-RegularItalic", serif;
-}
+
 @layer components {
-  .font-geoform-medium {
-    font-family: "Geoform-Medium", serif;
+  .font-Montserrat-medium {
+    font-family: "Montserrat-Medium", serif;
   }
-  .font-geoform-regular {
-    font-family: "Geoform-Regular", serif;
+  .font-Montserrat-regular {
+    font-family: "Montserrat-Regular", serif;
   }
-  .font-geoform-hover {
-    @apply font-geoform-regular;
+  .font-Montserrat-hover {
+    @apply font-Montserrat-regular;
   }
-  .font-geoform-hover:hover {
-    @apply font-geoform-medium;
+  .font-Montserrat-hover:hover {
+    @apply font-Montserrat-medium;
   }
 }
 
 /* Typography using Tailwind CSS classes */
 h1, h2, h3{
-  font-family: 'Quicksand-Bold', sans-serif;
+  font-family: 'Montserrat-Bold', sans-serif;
 }
 h4, h5, h6, p, small{
-  font-family: 'Quicksand-Medium', sans-serif;
+  font-family: 'Montserrat-Medium', sans-serif;
 }
 a, ul, li, input, textarea, select, option, label, button, div {
-  font-family: 'Geoform-Regular', sans-serif;
+  font-family: 'Montserrat-Regular', sans-serif;
 }
 p{
   @apply text-base md:text-lg
@@ -229,8 +182,8 @@ b, strong {
   height: 45rem !important;
 }
 
-.text-modulux-green {
-  color: #0A4834;
+.gatewaycity-green {
+  color: #253B22;
 }
 
 .bg-project-detail {

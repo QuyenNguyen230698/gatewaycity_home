@@ -20,17 +20,17 @@
                             <div><p data-aos="fade-up"
                             data-aos-offset="20"
                             data-aos-delay="50"
-                                 class="title2xl uppercase font-quicksand-regular text-gray-200">{{ $t('banner.title') }}</p></div>
+                                 class="title2xl uppercase font-montserrat-regular text-gray-200">{{ $t('banner.title') }}</p></div>
                             <div><p data-aos="fade-up"
                             data-aos-offset="20"
                             data-aos-delay="100"
-                                 class="title2xl uppercase font-quicksand-bold">{{ $t('banner.description') }}</p></div>
+                                 class="title2xl uppercase font-montserrat-bold">{{ $t('banner.description') }}</p></div>
                         </div>
                     </div>
                     <button data-aos="fade-up"
                     data-aos-offset="20"
                     data-aos-delay="150"
-                     class="font-geoform-medium w-fit bg-white text-black px-4 py-2 text-base hover:bg-gray-300 duration-300 ease-in-out">
+                     class="font-montserrat-medium w-fit bg-white text-black px-4 py-2 text-base hover:bg-gray-300 duration-300 ease-in-out">
                         <NuxtLink to="/projects">{{ $t('banner.button') }}</NuxtLink>
                     </button>
                 </div>
@@ -50,7 +50,7 @@ const props = defineProps({
     isVideo: {type: Boolean, default: false}
 })
 
-const videoSrc = ref('https://api-gateway.tranduc.com/api/video/tdc-video.mp4')
+const videoSrc = ref('https://res.cloudinary.com/dgkceewlq/video/upload/v1763050492/Gateway_Map_2_megnwx.mov')
 const video = ref(null)
 const bannerSrc = ref('https://imagedelivery.net/KHaby7r0MOA4Gt7v7Yk1jg/a52f1a20-b2bb-4d4d-a002-ea57f0b77500/2K')
 
