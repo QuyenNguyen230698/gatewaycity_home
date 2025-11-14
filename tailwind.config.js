@@ -78,7 +78,7 @@ module.exports = {
         "35r": "35rem",
       },
       colors: {
-        'custom-green': '#253B22',
+        'custom-green': '#1C351C',
         "emerald-green": "#0A4834",
         "black-hole": "#222222",
         "pyramid-gold": "#BF9C79",

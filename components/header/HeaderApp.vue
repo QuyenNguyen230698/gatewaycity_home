@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col w-full">
-    <header data-aos="fade-down" data-aos-offset="20" data-aos-delay="50" class="fixed top-0 w-full z-50 bg-white shadow">
+    <header data-aos="fade-down" data-aos-offset="20" data-aos-delay="1500" class="fixed top-0 w-full z-50 bg-transparent">
       <div class="navbar h-16 lg:h-20 justify-between items-center w-full container mx-auto">
         <div class="h-18 md:h-fit navbar-start md:justify-evenly lg:justify-start hidden lg:flex">
           <NuxtLink aria-label="logo" external to="/" @click="closeDropdown">

@@ -60,16 +60,16 @@ body {
 h1, h2, h3{
   font-family: 'Montserrat-Bold', sans-serif;
 }
-h4, h5, h6, p, small{
+h4, h5, h6{
   font-family: 'Montserrat-Medium', sans-serif;
 }
-a, ul, li, input, textarea, select, option, label, button, div {
+a, ul, li, input, textarea, select, option, label, button, div, span, small {
   font-family: 'Montserrat-Regular', sans-serif;
 }
 p{
-  @apply text-base md:text-lg
+  @apply text-base md:text-lg tracking-wide
 }
-span { @apply text-sm; }
+span { @apply text-sm tracking-wide; }
 small { @apply text-xs text-gray-500; }
 b, strong {
 
@@ -180,10 +180,6 @@ b, strong {
 
 .h-45r {
   height: 45rem !important;
-}
-
-.gatewaycity-green {
-  color: #253B22;
 }
 
 .bg-project-detail {
