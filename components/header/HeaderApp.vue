@@ -1,59 +1,33 @@
 <template>
   <div class="flex flex-col w-full">
-    <header data-aos="fade-down" data-aos-offset="20" data-aos-delay="1500" class="fixed top-0 w-full z-50 bg-transparent">
-      <div class="navbar h-16 lg:h-20 justify-between items-center w-full container mx-auto">
-        <div class="h-18 md:h-fit navbar-start md:justify-evenly lg:justify-start hidden lg:flex">
-          <NuxtLink aria-label="logo" external to="/" @click="closeDropdown">
-            <NuxtImg
-              quality="75"
-              loading="eager"
-              src="/Logo.svg"
-              aria-label="logo"
-              alt="logo"
-              class="h-18 max-w-full max-h-full object-contain"
-            />
-          </NuxtLink>
-        </div>
-        <div class="h-12 md:h-fit navbar-start md:justify-start flex lg:hidden">
-          <NuxtLink aria-label="logo" external to="/" @click="closeDropdown">
-            <NuxtImg
-              quality="75"
-              loading="eager"
-              src="/Logo.svg"
-              aria-label="logo"
-              alt="logo"
-              class="h-14 max-w-full max-h-full object-contain"
-            />
-          </NuxtLink>
-        </div>
-        <div class="h-full w-fit flex navbar-end lg:flex-row items-center justify-end">
-          <!-- Mobile Menu -->
-          <div class="flex gap-3 items-center lg:hidden">
-            <div @click="openSearchModal" class="py-2 flex-grow flex items-center justify-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                class="size-5"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-                />
-              </svg>
-            </div>
-            <div class="drawer">
-              <input id="my-drawer" type="checkbox" class="drawer-toggle" v-model="isDrawerOpen" />
-              <div class="drawer-content">
-                <label for="my-drawer" class="rounded-none bg-transparent border-none">
+    <header
+      data-aos="fade-down"
+      data-aos-offset="20"
+      data-aos-delay="1500"
+      class="fixed top-0 w-full z-50 transition-all duration-500 ease-in-out"
+    >
+      <!-- Mobile Menu -->
+      <div
+        class="navbar h-28 py-4 justify-between items-center w-full container mx-auto lg:hidden"
+      >
+        <div class="h-20 md:h-fit navbar-start w-fit lg:hidden">
+            <div class="drawer w-fit">
+              <input
+                id="my-drawer"
+                type="checkbox"
+                class="drawer-toggle"
+                v-model="isDrawerOpen"
+              />
+              <div class="drawer-content w-fit">
+                <label
+                  for="my-drawer"
+                  class="rounded-full w-fit bg-transparent border border-pyramid-gold p-2 flex items-center justify-center"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
-                    class="inline-block h-8 w-8 stroke-current"
+                    class="inline-block h-8 w-8 stroke-current text-pyramid-gold"
                   >
                     <path
                       stroke-linecap="round"
@@ -65,338 +39,374 @@
                 </label>
               </div>
               <div class="drawer-side flex flex-col z-50 min-h-screen">
-                <ul class="menu bg-white text-base w-full h-full overflow-y-scroll">
-                  <li class="px-4 flex flex-row justify-between items-center w-full">
+                <ul
+                  class="bg-custom-green text-base w-full h-full overflow-y-scroll px-4"
+                >
+                  <li class="flex flex-row justify-between items-center w-full py-4">
                     <NuxtLink aria-label="logo" to="/" @click="closeDrawer">
                       <NuxtImg
                         quality="75"
                         loading="eager"
-                        src="/Logo_MDL.svg"
+                        src="/Logo.svg"
                         aria-label="logo"
                         alt="logo"
                         class="min-w-full h-18 object-contain"
                       />
                     </NuxtLink>
-                    <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay">
-                      <span class="p-2 rounded-full text-white bg-neutral-800 hover:bg-neutral-500 cursor-pointer rotate-360">
+                    <label
+                      for="my-drawer"
+                      aria-label="close sidebar"
+                      class="drawer-overlay"
+                    >
+                      <span
+                        class="p-2 rounded-full text-white cursor-pointer"
+                      >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke-width="2"
                           stroke="currentColor"
-                          class="size-6"
+                          class="size-8"
                         >
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6 18 18 6M6 6l12 12"
+                          />
                         </svg>
                       </span>
                     </label>
                   </li>
-                  <li class="py-1 px-6 text-nowrap text-xl flex flex-col">
-                    <NuxtLink to="/about" aria-label="Sidebar Item 1" class="font-montserrat-medium" @click="closeDrawer">
-                      {{ $t("app.menu.about") }}
+                  <li class="text-nowrap w-full pb-4">
+                    <NuxtLink
+                      to=""
+                      @click="closeDrawer"
+                      class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
+                    >
+                      <p class="text-2xl">Tổng Quan</p>
                     </NuxtLink>
-                    <span class="border-b border-custom-green w-16 my-2 p-0"></span>
                   </li>
-                  <li @click="isCollapseOpen = !isCollapseOpen" class="cursor-pointer text-nowrap px-3">
-                    <div class="collapse bg-transparent">
-                      <input
-                        type="checkbox"
-                        id="collapse-toggle"
-                        v-model="isCollapseOpen"
-                        aria-expanded="false"
-                        class="hidden"
-                      />
-                      <label
-                        @click="isCollapseOpen = !isCollapseOpen"
-                        for="collapse-toggle"
-                        class="collapse-title px-3 py-0 min-h-0 text-xl font-montserrat-medium"
-                      >
-                        {{ $t("app.menu.WhatWeDo") }}
-                        <i class="fa-solid fa-caret-down"></i>
-                      </label>
-                      <div
-                        class="collapse-content px-3 py-0 min-h-0 flex flex-col gap-2 text-base"
-                        v-show="isCollapseOpen"
-                      >
-                        <NuxtLink
-                          aria-label="whymodulux"
-                          to="/why-modulux"
-                          class="py-2 text-nowrap"
-                          @click="closeDrawerAndCollapse"
-                        >
-                          {{ $t("app.menu.WhyModulux") }}
-                        </NuxtLink>
-                        <NuxtLink
-                          aria-label="OurTechnology"
-                          to="/our-technology"
-                          class="py-2 text-nowrap"
-                          @click="closeDrawerAndCollapse"
-                        >
-                          {{ $t("app.menu.OurTechnology") }}
-                        </NuxtLink>
-                        <NuxtLink
-                          aria-label="StandardInclusions"
-                          to="/technical-specification"
-                          class="py-2 text-nowrap"
-                          @click="closeDrawerAndCollapse"
-                        >
-                        {{ $t("app.menu.TechnicalSpecification") }}
-                        </NuxtLink>
-                        <NuxtLink
-                          aria-label="OurProcess"
-                          to="/our-process"
-                          class="py-2 text-nowrap"
-                          @click="closeDrawerAndCollapse"
-                        >
-                          {{ $t("app.menu.OurProcess") }}
-                        </NuxtLink>
-                        <NuxtLink
-                          aria-label="Projects"
-                          to="/projects"
-                          class="py-2 text-nowrap"
-                          @click="closeDrawerAndCollapse"
-                        >
-                          {{ $t("app.menu.Projects") }}
-                        </NuxtLink>
-                        <NuxtLink
-                          aria-label="FAQs"
-                          to="/faqs"
-                          class="py-2 text-nowrap"
-                          @click="closeDrawerAndCollapse"
-                        >
-                          FAQs
-                        </NuxtLink>
-                      </div>
-                    </div>
-                    <span class="border-b border-custom-green w-16 my-2 ml-3 p-0"></span>
-                  </li>
-                  <li class="py-1 px-6 text-nowrap text-xl flex flex-col">
-                    <NuxtLink aria-label="Blogs" to="/blogs" @click="closeDrawer" class="font-montserrat-medium">
-                      {{ $t("app.menu.Blog") }}
+                  <li class="text-nowrap w-full pb-4">
+                    <NuxtLink
+                      to=""
+                      @click="closeDrawer"
+                      class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
+                    >
+                      <p class="text-2xl">Chủ Đầu Tư</p>
                     </NuxtLink>
-                    <span class="border-b border-custom-green w-16 my-2 p-0"></span>
                   </li>
-                  <li class="py-1 px-6 text-nowrap text-xl flex flex-col">
-                    <NuxtLink aria-label="contact" to="/contact?type=project" @click="closeDrawer" class="font-montserrat-medium">
-                      {{ $t("app.menu.contact") }}
+                  <li class="text-nowrap w-full pb-4">
+                    <NuxtLink
+                      to=""
+                      @click="closeDrawer"
+                      class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
+                    >
+                      <p class="text-2xl">Vị Trí</p>
                     </NuxtLink>
-                    <span class="border-b border-custom-green w-16 my-2 p-0"></span>
+                  </li>
+                  <li class="text-nowrap w-full pb-4">
+                    <NuxtLink
+                      to=""
+                      @click="closeDrawer"
+                      class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
+                    >
+                      <p class="text-2xl">Tiện Ích</p>
+                    </NuxtLink>
+                  </li>
+                  <li class="text-nowrap w-full pb-4">
+                    <NuxtLink
+                      to=""
+                      @click="closeDrawer"
+                      class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
+                    >
+                      <p class="text-2xl">Lợi Thế</p>
+                    </NuxtLink>
                   </li>
                 </ul>
-                <div class="flex gap-10 bg-white w-full justify-center items-center py-8" aria-label="Social Media Links">
-                  <a
-                    href="https://www.facebook.com/moduluxhomes"
-                    target="_blank"
-                    aria-label="Facebook"
-                    title="Facebook"
-                    @click="closeDrawerAndCollapse"
-                  >
-                    <i class="bi bi-facebook text-2xl hover:text-custom-green"></i>
-                  </a>
-                  <a
-                    href="https://www.youtube.com/@tranduccorp"
-                    target="_blank"
-                    aria-label="YouTube"
-                    title="YouTube"
-                    @click="closeDrawerAndCollapse"
-                  >
-                    <i class="bi bi-youtube text-2xl hover:text-custom-green"></i>
-                  </a>
-                  <a
-                    href="https://www.instagram.com/moduluxhomes_/"
-                    target="_blank"
-                    aria-label="Instagram"
-                    title="Instagram"
-                    @click="closeDrawerAndCollapse"
-                  >
-                    <i class="bi bi-instagram text-2xl hover:text-custom-green"></i>
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/company/tranduccorp"
-                    target="_blank"
-                    aria-label="LinkedIn"
-                    title="LinkedIn"
-                    @click="closeDrawerAndCollapse"
-                  >
-                    <i class="bi bi-linkedin text-2xl hover:text-custom-green"></i>
-                  </a>
-                </div>
               </div>
             </div>
-          </div>
-          <!-- Desktop Menu -->
-          <div class="hidden lg:flex lg:flex-row justify-end items-center lg:w-full lg:text-sm xl:text-base font-montserrat-bold">
-            <div class="flex gap-8 w-full text-center justify-center items-center">
-              <!-- About Us Menu Item -->
-              <div class="text-nowrap flex-grow text-base min-h-10 w-14 flex justify-center items-center">
-                <NuxtLink
-                  aria-label="about"
-                  to="/about"
-                  :class="isActiveRoute('/about') ? 'font-montserrat-medium text-custom-green' : 'font-montserrat-hover'"
-                  @click="closeDropdown"
-                >
-                  {{ $t("app.menu.about") }}
-                </NuxtLink>
-              </div>
-              <!-- WhyModulux Dropdown Menu Item -->
-              <div class="relative flex-grow">
-                <div class="navbar-center text-nowrap flex cursor-pointer justify-center">
-                  <ul class="menu">
-                    <li>
-                      <div @mouseenter="isDropdownOpen = true" @mouseleave="isDropdownOpen = false" class="pl-0 pr-0">
-                        <span
-                          class="text-nowrap w-24 text-base text-center cursor-pointer flex justify-center items-center"
-                          :class="isDropdownActive || isDropdownOpen ? 'font-montserrat-medium text-custom-green' : 'font-montserrat-regular'"
-                        >
-                          {{ $t("app.menu.WhatWeDo") }}
-                        </span>
-                        <ul
-                          v-if="isDropdownOpen"
-                          class="absolute fade-up -left-2 top-10 rounded-lg transition-all bg-base-100 w-56 text-left z-50 shadow-even"
-                        >
-                          <li class="hover:text-custom-green text-base leading-none pt-2">
-                            <NuxtLink
-                              aria-label="whymodulux"
-                              to="/why-modulux"
-                              :class="isActiveRoute('/why-modulux') ? 'font-montserrat-medium text-custom-green' : 'font-montserrat-medium hover:text-custom-green'"
-                              @click="closeDropdown"
-                            >
-                              {{ $t("app.menu.WhyModulux") }}
-                            </NuxtLink>
-                          </li>
-                          <li class="hover:text-custom-green text-base leading-none">
-                            <NuxtLink
-                              aria-label="OurTechnology"
-                              to="/our-technology"
-                              :class="isActiveRoute('/our-technology') ? 'font-montserrat-medium text-custom-green' : 'font-montserrat-medium hover:text-custom-green'"
-                              @click="closeDropdown"
-                            >
-                              {{ $t("app.menu.OurTechnology") }}
-                            </NuxtLink>
-                          </li>
-                          <li class="hover:text-custom-green text-base leading-none">
-                            <NuxtLink
-                              aria-label="StandardInclusions"
-                              to="/technical-specification"
-                              :class="isActiveRoute('/technical-specification') ? 'font-montserrat-medium text-custom-green' : 'font-montserrat-medium hover:text-custom-green'"
-                              @click="closeDropdown"
-                            >
-                            {{ $t("app.menu.TechnicalSpecification") }}
-                            </NuxtLink>
-                          </li>
-                          <li class="hover:text-custom-green text-base leading-none">
-                            <NuxtLink
-                              aria-label="OurProccess"
-                              to="/our-process"
-                              :class="isActiveRoute('/our-process') ? 'font-montserrat-medium text-custom-green' : 'font-montserrat-medium hover:text-custom-green'"
-                              @click="closeDropdown"
-                            >
-                              {{ $t("app.menu.OurProcess") }}
-                            </NuxtLink>
-                          </li>
-                          <li class="hover:text-custom-green text-base leading-none">
-                            <NuxtLink
-                              aria-label="Projects"
-                              to="/projects"
-                              :class="isActiveRoute('/projects') ? 'font-montserrat-medium text-custom-green' : 'font-montserrat-medium hover:text-custom-green'"
-                              @click="closeDropdown"
-                            >
-                              {{ $t("app.menu.Projects") }}
-                            </NuxtLink>
-                          </li>
-                          <li class="hover:text-custom-green text-base leading-none pb-2">
-                            <NuxtLink
-                              to="/faqs"
-                              :class="isActiveRoute('/faqs') ? 'font-montserrat-medium text-custom-green' : 'font-montserrat-medium hover:text-custom-green'"
-                              @click="closeDropdown"
-                            >
-                              FAQs
-                            </NuxtLink>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- Other Menu Items -->
-              <div class="text-nowrap cursor-pointer flex-grow text-base min-h-10 flex justify-center items-center">
-                <NuxtLink
-                  aria-label="Blogs"
-                  to="/blogs"
-                  :class="isActiveRoute('/blogs') ? 'font-montserrat-medium text-custom-green' : 'font-montserrat-hover'"
-                  @click="closeDropdown"
-                >
-                  {{ $t("app.menu.Blog") }}
-                </NuxtLink>
-              </div>
-              <div class="text-nowrap cursor-pointer flex-grow text-base min-h-10 flex justify-center items-center">
-                <NuxtLink
-                  aria-label="contact"
-                  to="/contact?type=project"
-                  :class="isActiveRoute('/contact') ? 'font-montserrat-medium text-custom-green' : 'font-montserrat-hover'"
-                  @click="closeDropdown"
-                >
-                  {{ $t("app.menu.contact") }}
-                </NuxtLink>
-              </div>
-              <div style="width: 2px; height: 16px; background-color: #222222;"></div>
-              <div @click="openSearchModal" class="flex-grow min-h-10 flex justify-center items-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  class="size-5 hover:text-custom-green duration-300 ease-in-out cursor-pointer"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-                  />
-                </svg>
-              </div>
-              <div class="flex-grow min-h-10 flex justify-center items-center">
-                <NuxtLink external
-                  to="/contact?type=general"
-                  class="font-montserrat-medium cursor-pointer text-nowrap bg-black text-white my-4 px-4 py-2 text-base hover:bg-stone-800 duration-300 ease-in-out"
-                >
-                  Enquire Now
-                </NuxtLink>
-                <!-- Nút mở menu cho Desktop -->
-                  <div class="hidden lg:flex items-center justify-center ml-4">
-                    <label for="my-drawer" class="cursor-pointer p-2 rounded-lg hover:bg-gray-100 transition-colors">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        class="inline-block h-7 w-7 stroke-current"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.5"
-                          d="M4 6h16M4 12h16M4 18h16"
-                        />
-                      </svg>
-                    </label>
-                  </div>
-              </div>
+        </div>
+        <div class="h-20 md:h-fit w-fit navbar-center md:justify-center flex lg:hidden">
+          <NuxtLink aria-label="logo" external to="/" @click="closeDropdown">
+            <NuxtImg
+              quality="75"
+              loading="eager"
+              src="/Logo.svg"
+              aria-label="logo"
+              alt="logo"
+              class="h-20 max-w-full max-h-full object-contain"
+            />
+          </NuxtLink>
+        </div>
+        <div class="h-full w-fit flex navbar-end lg:flex-row items-center justify-end">
+          <div class="flex gap-3 items-center lg:hidden">
+            <div
+              @click="openSearchModal"
+              class="py-2 flex-grow flex items-center justify-center rounded-full bg-transparent border border-pyramid-gold p-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-8 text-pyramid-gold"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                />
+              </svg>
             </div>
           </div>
         </div>
       </div>
+      <!-- Desktop Menu -->
+      <div
+        class="navbar h-36 py-4 items-center justify-center w-full container mx-auto hidden lg:block"
+      >
+        <!-- ==== NAVBAR 3 PHẦN ==== -->
+        <div class="hidden lg:flex w-full h-full items-center justify-between">
+          <!-- 1. START – nút menu + about -->
+          <div class="navbar-start flex items-center gap-6">
+            <!-- Nút menu (mở drawer desktop) -->
+            <label
+              for="my-drawer2"
+              class="cursor-pointer px-4 py-1 rounded-full border border-pyramid-gold flex items-center justify-center gap-2 text-white hover:text-pyramid-gold transition-all duration-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                class="inline-block h-6 w-6 stroke-current text-pyramid-gold"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+              <p class="text-sm uppercase">Menu</p>
+            </label>
+
+            <!-- Contact -->
+            <NuxtLink
+              to=""
+              @click="closeDropdown"
+              class="whitespace-nowrap text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
+            >
+              <p class="text-sm uppercase">Contact Us</p>
+            </NuxtLink>
+          </div>
+
+          <!-- 2. CENTER – logo -->
+          <div class="navbar-center">
+            <NuxtLink aria-label="logo" external to="/" @click="closeDropdown">
+              <NuxtImg
+                quality="75"
+                loading="eager"
+                src="/Logo.svg"
+                aria-label="logo"
+                alt="logo"
+                class="h-28 max-w-full object-contain"
+              />
+            </NuxtLink>
+          </div>
+
+          <!-- 3. END – WhatWeDo + search -->
+          <div class="navbar-end flex items-center gap-6">
+            <NuxtLink
+              to=""
+              @click="closeDropdown"
+              class="whitespace-nowrap text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
+            >
+              <a href="tel:0919542618" class="text-base">0919.542.618</a>
+            </NuxtLink>
+            <!-- WhatWeDo dropdown -->
+            <div class="relative">
+              <div
+                @mouseenter="isDropdownOpen = true"
+                @mouseleave="isDropdownOpen = false"
+                class="cursor-pointer"
+              >
+                <p
+                  class="text-sm px-4 py-2 rounded-full uppercase whitespace-nowrap flex gap-1 items-center text-white hover:text-pyramid-gold bg-pyramid-gold hover:bg-white cursor-pointer transition-all duration-300"
+                >
+                <span>Chọn Sản Phẩm</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="size-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+                </p>
+
+                <ul
+                  v-if="isDropdownOpen"
+                  class="absolute right-0 top-9 w-44 rounded-lg bg-white z-50 text-left fade-up"
+                >
+                  <li class="hover:text-pyramid-gold text-sm pt-2 px-4">
+                    <NuxtLink
+                      to=""
+                      :class="
+                        isActiveRoute('/why-modulux')
+                          ? 'font-montserrat-medium text-pyramid-gold'
+                          : 'font-montserrat-medium hover:text-pyramid-gold'
+                      "
+                      @click="closeDropdown"
+                    >
+                      Contact
+                    </NuxtLink>
+                  </li>
+                  <li class="hover:text-pyramid-gold text-sm px-4 pb-2">
+                    <NuxtLink
+                      to="/faqs"
+                      :class="
+                        isActiveRoute('/faqs')
+                          ? 'font-montserrat-medium text-pyramid-gold'
+                          : 'font-montserrat-medium hover:text-pyramid-gold'
+                      "
+                      @click="closeDropdown"
+                    >
+                      FAQs
+                    </NuxtLink>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div style="width: 2px; height: 16px; background-color: #FFFFFF;"></div>
+
+            <!-- Search -->
+            <div
+              @click="openSearchModal"
+              class="cursor-pointer p-2 rounded-lg text-white hover:text-pyramid-gold transition-all duration-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="size-6 duration-300"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ==== DRAWER DESKTOP -->
+      <div class="drawer">
+        <input
+          id="my-drawer2"
+          type="checkbox"
+          class="drawer-toggle"
+          v-model="isDrawerOpen2"
+        />
+        <div class="drawer-content"></div>
+
+        <div class="drawer-side z-50">
+          <label for="my-drawer2" class="drawer-overlay"></label>
+          <div
+            class="bg-custom-green w-full lg:w-1/3 min-h-screen shadow-2xl overflow-y-auto"
+          >
+            <ul class="bg-custom-green text-base w-full h-full overflow-y-scroll">
+              <li class="h-36 py-4 grid grid-cols-4 w-full">
+          <div class="col-start-2 flex items-center gap-6">
+            <!-- Nút menu (mở drawer desktop) -->
+            <label
+              for="my-drawer2"
+              class="cursor-pointer px-4 py-1 rounded-full border border-pyramid-gold flex items-center justify-center gap-2 text-white hover:text-pyramid-gold transition-all duration-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                class="inline-block h-6 w-6 stroke-current text-pyramid-gold"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+              <p class="text-sm uppercase">Menu</p>
+            </label>
+
+            <!-- Contact -->
+            <NuxtLink
+              to=""
+              @click="closeDropdown"
+              class="whitespace-nowrap text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
+            >
+              <p class="text-sm uppercase">Contact Us</p>
+            </NuxtLink>
+          </div>
+              </li>
+              <li class="text-nowrap grid grid-cols-4 w-full pb-4">
+                <NuxtLink
+                  to=""
+                  @click="closeDrawer"
+                  class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
+                >
+                  <p class="text-3xl">Tổng Quan</p>
+                </NuxtLink>
+              </li>
+              <li class="text-nowrap grid grid-cols-4 w-full pb-4">
+                <NuxtLink
+                  to=""
+                  @click="closeDrawer"
+                  class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
+                >
+                  <p class="text-3xl">Chủ Đầu Tư</p>
+                </NuxtLink>
+              </li>
+              <li class="text-nowrap grid grid-cols-4 w-full pb-4">
+                <NuxtLink
+                  to=""
+                  @click="closeDrawer"
+                  class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
+                >
+                  <p class="text-3xl">Vị Trí</p>
+                </NuxtLink>
+              </li>
+              <li class="text-nowrap grid grid-cols-4 w-full pb-4">
+                <NuxtLink
+                  to=""
+                  @click="closeDrawer"
+                  class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
+                >
+                  <p class="text-3xl">Tiện Ích</p>
+                </NuxtLink>
+              </li>
+              <li class="text-nowrap grid grid-cols-4 w-full pb-4">
+                <NuxtLink
+                  to=""
+                  @click="closeDrawer"
+                  class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
+                >
+                  <p class="text-3xl">Lợi Thế</p>
+                </NuxtLink>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </header>
-    </div>
+  </div>
 </template>
 
 <script setup>
-import { ref, watch, computed, onMounted, onUnmounted, nextTick } from 'vue';
-import { useRoute } from 'vue-router';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { ref, watch, computed, onMounted, onUnmounted, nextTick } from "vue";
+import { useRoute } from "vue-router";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const props = defineProps({
   isGeneralSliceShow: {
@@ -405,7 +415,7 @@ const props = defineProps({
   },
 });
 
-const emit = defineEmits(['open-search']);
+const emit = defineEmits(["open-search"]);
 
 const activeDropdown = ref(null);
 const isHovered = ref(false);
@@ -413,6 +423,7 @@ const isHeaderVisible = ref(true);
 const isDropdownOpen = ref(false);
 const isCollapseOpen = ref(false);
 const isDrawerOpen = ref(false);
+const isDrawerOpen2 = ref(false);
 let lastScrollY = 0;
 
 // Theo dõi isDrawerOpen để mở collapse khi drawer mở
@@ -424,6 +435,10 @@ watch(isDrawerOpen, (newValue) => {
 
 const closeDrawer = () => {
   isDrawerOpen.value = false;
+};
+
+const closeDrawer2 = () => {
+  isDrawerOpen2.value = false;
 };
 
 const closeCollapse = () => {
@@ -440,7 +455,7 @@ const closeDropdown = () => {
 };
 
 const openSearchModal = () => {
-  emit('open-search');
+  emit("open-search");
   activeDropdown.value = null;
   isHovered.value = false;
 };
@@ -465,11 +480,17 @@ const isActiveRoute = (path) => {
 
 // Kiểm tra nếu route hiện tại thuộc dropdown hoặc là route con của /projects
 const isDropdownActive = computed(() => {
-  const dropdownPaths = [
-    '/why-modulux',
-  ];
-  return dropdownPaths.some((path) => route.path === path || route.path.startsWith(`${path}/`));
+  const dropdownPaths = ["/why-modulux"];
+  return dropdownPaths.some(
+    (path) => route.path === path || route.path.startsWith(`${path}/`)
+  );
 });
+
+const isVisible = ref(false)
+
+const checkScroll = () => {
+  isVisible.value = window.pageYOffset > 0
+}
 
 onMounted(() => {
   nextTick().then(() => {
@@ -479,19 +500,19 @@ onMounted(() => {
         offset: 5,
         delay: 0,
         duration: 1000,
-        easing: 'ease',
+        easing: "ease",
         mirror: true,
       });
-      window.addEventListener('scroll', () => {
+      window.addEventListener("scroll", () => {
         AOS.refresh();
       });
     }, 1);
   });
-  window.addEventListener('scroll', handleScroll);
+  window.addEventListener("scroll", checkScroll);
 });
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll);
+  window.removeEventListener("scroll", checkScroll);
 });
 </script>
 
@@ -551,7 +572,8 @@ onUnmounted(() => {
 .menu li > *:not(ul, .menu-title, details, .btn):active {
   background-color: transparent;
 }
-.collapse:not(.collapse-close) > :where(input[type="checkbox"]:checked ~ .collapse-content) {
+.collapse:not(.collapse-close)
+  > :where(input[type="checkbox"]:checked ~ .collapse-content) {
   padding-bottom: 0;
 }
 .white-line::after {

@@ -143,32 +143,10 @@ import { ref, computed } from 'vue';
 
 // Dữ liệu gán cứng cho tìm kiếm
 const searchData = ref([
-  { id: 1, name: 'About', slug: '/about', description: 'Learn about our company' },
-  { id: 2, name: 'What We Do', slug: '/why-modulux', child: 'Why Modulux', description: 'Discover why Modulux is unique' },
-  { id: 3, name: 'What We Do', slug: '/our-technology', child: 'Our Technology', description: 'Explore our innovative technology' },
-  { id: 4, name: 'What We Do', slug: '/technical-specification', child: 'Standard Inclusions', description: 'See our standard offerings' },
-  { id: 5, name: 'What We Do', slug: '/our-process', child: 'Our Process', description: 'Understand our process' },
-  { id: 6, name: 'What We Do', slug: '/projects', child: 'Projects', description: 'View our projects' },
-  { id: 6.1, name: 'What We Do', slug: '/projects/hawaii-garden-studio', child: 'Projects', description: 'Hawaii Garden Studio' },
-  { id: 7, name: 'What We Do', slug: '/projects/ecolux', child: 'Projects', description: 'Ecolux' },
-  { id: 8, name: 'What We Do', slug: '/projects/greenscape', child: 'Projects', description: 'NAHB IBS 2024 (Las Vegas)' },
-  { id: 9, name: 'What We Do', slug: '/projects/nahb-ibs-lv', child: 'Projects', description: 'NAHB IBS 2025 (Las Vegas)' },
-  { id: 10, name: 'What We Do', slug: '/projects/the-building-show-2024-canada', child: 'Projects', description: 'The Building Show 2024 (Canada)' },
-  { id: 11, name: 'What We Do', slug: '/projects/hawaii-garden-villa', child: 'Projects', description: 'Hawaii Garden Villa' },
-  { id: 12, name: 'What We Do', slug: '/projects/hawaii-garden-villa', child: 'Projects', description: 'Hawaii Garden Villa' },
-  { id: 13, name: 'What We Do', slug: '/projects/hawaii-garden-executive', child: 'Projects', description: 'Hawaii Garden Executive' },
-  { id: 14, name: 'Blog', slug: '/blogs', description: 'Read our latest blog posts' },
-  { id: 15, name: 'Blog', slug: '/blogs/modulux-homes-the-comprehensive-solution-for-developers-and-general-contractors-to-accelerate-progress-optimize-costs-and-control-quality', child: 'Blogs', description: 'Modulux Homes The Comprehensive Solution for Developers and General Contractors to Accelerate Progress, Optimize Costs, and Control Quality' },
-  { id: 16, name: 'Blog', slug: '/blogs/powering-modulux-homes-modern-prefabricated-home-solution', child: 'Blogs', description: 'Powering Modulux Homes Modern Prefabricated Home Solution' },
-  { id: 17, name: 'Blog', slug: '/blogs/tranduc-corporation-breaks-ground-on-nam-tan-uyen-factory', child: 'Blogs', description: 'TranDuc Corporation breaks ground on Nam Tan Uyen factory' },
-  { id: 18, name: 'Blog', slug: '/blogs/tranduc-at-sydney-build-expo-2025-vietnamese-pioneer-showcases-green-building-solutions', child: 'Blogs', description: 'TranDuc at Sydney Build Expo 2025: Vietnamese Pioneer Showcases Green Building Solutions' },
-  { id: 19, name: 'Blog', slug: '/blogs/modulux-homes-impressive-presence-at-nahb-ibs-2025', child: 'Blogs', description: "Modulux Homes' Impressive Presence at NAHB IBS 2025" },
-  { id: 20, name: 'Contact', slug: '/contact?type=project', description: 'Get in touch with us' },
-  { id: 21, name: 'Faqs', slug: '/faqs', description: 'Our FAQs' },
+
 ]);
 const recommendedData = ref([
-  { id: 1, name: 'What We Do', slug: '/projects/nahb-ibs-lv', child: 'Projects', description: 'NAHB IBS 2025 (Las Vegas)' },
-  { id: 2, name: 'What We Do', slug: '/projects/the-building-show-2024-canada', child: 'Projects', description: 'The Building Show 2024 (Canada)' },
+
 ]);
 
 // References for search input and value
