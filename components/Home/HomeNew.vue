@@ -1,0 +1,61 @@
+<template>
+    <div class="w-full h-full container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-16 py-16 justify-stretch">
+            <div class="col-span-1 flex flex-col gap-4 lg:gap-6 h-full">
+                <h2 class="text-2xl lg:text-4xl">Tin Tức</h2>
+                <div class="flex flex-col gap-3 w-full h-full">
+                    <NuxtImg src="/image/gatewaycity/tintuc.png" class="w-full h-full object-cover"/>
+                    <h3 class="text-lg lg:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, error.</h3>
+                    <p class="text-sm lg:text-base font-montserrat-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem repellat aspernatur impedit ea veniam officia expedita provident mollitia quidem! Placeat quod ipsa qui autem nisi aspernatur quis. Porro nihil doloremque deleniti eius a accusantium, atque quis impedit commodi mollitia suscipit.</p>
+                    <NuxtLink to="" class="font-montserrat-regular w-fit text-sm flex items-center gap-1 pt-2">Thông tin chi tiết
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                            </svg>
+                        </span>
+                    </NuxtLink>
+                </div>
+            </div>
+            <div class="col-span-1 flex flex-col gap-4 lg:gap-6 h-full">
+                <h2 class="text-2xl lg:text-4xl">Tin Tức</h2>
+                <div class="flex flex-col gap-3 w-full h-full">
+                    <NuxtImg src="/image/gatewaycity/sukien.png" class="w-full h-full object-cover"/>
+                    <h3 class="text-lg lg:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, error.</h3>
+                    <p class="text-sm lg:text-base font-montserrat-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem repellat aspernatur impedit ea veniam officia expedita provident mollitia quidem! Placeat quod ipsa qui autem nisi aspernatur quis. Porro nihil doloremque deleniti eius a accusantium, atque quis impedit commodi mollitia suscipit.</p>
+                    <NuxtLink to="" class="font-montserrat-regular w-fit text-sm flex items-center gap-1 pt-2">Thông tin chi tiết
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                            </svg>
+                        </span>
+                    </NuxtLink>
+                </div>
+            </div>
+            <div class="col-span-1 flex flex-col gap-2">
+                <h2 class="text-2xl lg:text-4xl">Chủ đầu tư</h2>
+                <div class="flex justify-center items-center py-10">
+                    <NuxtImg src="/image/gatewaycity/thanhdogroup.png" class="w-full h-full object-cover"/>
+                </div>
+            </div>
+            <div class="col-span-1 flex flex-col gap-2">
+                <h2 class="text-2xl lg:text-4xl">Đối tác</h2>
+                <div class="grid grid-cols-3">
+                    <NuxtImg src="/image/gatewaycity/brandliftasia.png" class="w-full h-full object-contain"/>
+                    <NuxtImg src="/image/gatewaycity/hdbank.png" class="w-full h-full object-contain"/>
+                    <NuxtImg src="/image/gatewaycity/scid.png" class="w-full h-full object-contain"/>
+                    <NuxtImg src="/image/gatewaycity/vas.png" class="w-full h-full object-contain"/>
+                    <NuxtImg src="/image/gatewaycity/hoaphat.png" class="w-full h-full object-contain"/>
+                    <NuxtImg src="/image/gatewaycity/dic.png" class="w-full h-full object-contain"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script setup>
+
+</script>
+
+<style lang="scss" scoped>
+
+</style>

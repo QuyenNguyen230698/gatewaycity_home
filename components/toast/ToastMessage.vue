@@ -54,7 +54,7 @@ const props = defineProps({
   },
   customTop: {
     type: String,
-    default: 'top-20', // Giá trị mặc định cho vị trí top tùy chỉnh
+    default: 'top-40', // Giá trị mặc định cho vị trí top tùy chỉnh
     required: false,
   }
 });

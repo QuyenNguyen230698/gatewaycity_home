@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full py-4 lg:py-8 flex flex-col justify-center items-center">
+  <div class="w-full pt-4 lg:pt-8 flex flex-col justify-center items-center">
     <h1 class="text-2xl md:text-5xl text-custom-green text-center mb-6 md:mb-8">Sản phẩm</h1>
     <!-- Tab Buttons -->
     <div class="flex flex-wrap gap-4 md:gap-8 lg:gap-16 mb-6 md:mb-8">

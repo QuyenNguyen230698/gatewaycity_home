@@ -7,6 +7,7 @@
         <HomeCarousel2></HomeCarousel2>
         <HomeProduct></HomeProduct>
         <HomeGeneralEnquiry></HomeGeneralEnquiry>
+        <HomeNew></HomeNew>
     </div>
 </template>
 
