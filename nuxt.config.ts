@@ -59,7 +59,6 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    '@nuxtjs/i18n',
     '@nuxt/image',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
@@ -108,12 +107,17 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    preset: 'cloudflare-pages',
-    storage: {
-      db: {
-        driver: 'cloudflare-kv-binding',
-      },
+    serveStatic: true,
+    prerender: {},
+    routeRules: {
+      "/api/**": { headers: { "Cache-Control": "public, max-age=86400, must-revalidate" } },
+      "/_nuxt/**": { headers: { "Cache-Control": "public, max-age=31536000, immutable" } },
+      "/**/*.webp": { headers: { "Cache-Control": "public, max-age=2592000, immutable" } },
+      "/**": { headers: { "Cache-Control": "public, max-age=604800, must-revalidate" } },
+      "/image/**": { headers: { "Cache-Control": "public, max-age=2592000, immutable" } },
+      "/_ipx/**": { headers: { "Cache-Control": "public, max-age=2592000, immutable" } },
     },
+    compressPublicAssets: true,
   },
 
   css: [
