@@ -76,6 +76,8 @@ module.exports = {
         "33r": "33rem",
         "34r": "34rem",
         "35r": "35rem",
+        "40r": "40rem",
+        "45r": "45rem",
       },
       colors: {
         'custom-green': '#1C351C',

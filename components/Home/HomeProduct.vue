@@ -19,7 +19,7 @@
     </div>
 
     <!-- Tab Content -->
-    <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="grid grid-cols-10 h-35r w-full">
+    <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="grid grid-cols-10 h-35r lg:h-40r w-full">
       <!-- Text Section (3/10) -->
       <div class="col-span-10 md:col-span-3 grid grid-cols-4 justify-center items-center bg-img py-4">
         <h3 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-2xl md:text-2xl lg:text-4xl text-white col-start-2 col-end-5 lg:col-end-4">
@@ -35,7 +35,7 @@
 
       <!-- Carousel Section (7/10) -->
       <div class="col-span-10 md:col-span-7 relative bg-gray-50 overflow-hidden">
-        <div class="relative h-64 md:h-35r">
+        <div class="relative h-64 md:h-35r lg:h-40r">
           <!-- Images -->
           <transition-group name="fade" tag="div" class="absolute inset-0">
             <img
