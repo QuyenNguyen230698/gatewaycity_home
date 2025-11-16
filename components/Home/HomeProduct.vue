@@ -1,8 +1,8 @@
 <template>
   <div class="w-full pt-4 lg:pt-8 flex flex-col justify-center items-center">
-    <h1 class="text-2xl md:text-5xl text-custom-green text-center mb-6 md:mb-8">Sản phẩm</h1>
+    <h1 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-2xl md:text-5xl text-custom-green text-center mb-6 md:mb-8">Sản phẩm</h1>
     <!-- Tab Buttons -->
-    <div class="flex flex-wrap gap-4 md:gap-8 lg:gap-16 mb-6 md:mb-8">
+    <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-wrap justify-center gap-2 md:gap-8 lg:gap-16 mb-6 md:mb-8">
       <button
         v-for="(tab, index) in tabs"
         :key="index"
@@ -19,23 +19,23 @@
     </div>
 
     <!-- Tab Content -->
-    <div class="grid grid-cols-1 lg:grid-cols-10 h-35r w-full">
+    <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="grid grid-cols-10 h-35r w-full">
       <!-- Text Section (3/10) -->
-      <div class="col-span-3 grid grid-cols-4 justify-center items-center bg-img">
-        <h3 class="text-2xl md:text-4xl text-white col-start-2 col-end-4">
+      <div class="col-span-10 md:col-span-3 grid grid-cols-4 justify-center items-center bg-img py-4">
+        <h3 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-2xl md:text-2xl lg:text-4xl text-white col-start-2 col-end-5 lg:col-end-4">
           {{ tabs[activeTab].title }}
         </h3>
         <ul class="space-y-2 lg:space-y-4 text-white col-start-2 col-end-4">
           <li v-for="(feature, i) in tabs[activeTab].features" :key="i" class="flex flex-col items-start">
-            <p class="text-sm lg:text-base">{{ feature.title }}</p>
-            <h3 class="text-sm lg:text-base">{{ feature.des }}</h3>
+            <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-sm lg:text-base">{{ feature.title }}</p>
+            <h3 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-sm lg:text-base">{{ feature.des }}</h3>
           </li>
         </ul>
       </div>
 
       <!-- Carousel Section (7/10) -->
-      <div class="col-span-7 relative bg-gray-50 overflow-hidden">
-        <div class="relative h-35r">
+      <div class="col-span-10 md:col-span-7 relative bg-gray-50 overflow-hidden">
+        <div class="relative h-64 md:h-35r">
           <!-- Images -->
           <transition-group name="fade" tag="div" class="absolute inset-0">
             <img

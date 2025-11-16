@@ -13,8 +13,8 @@
                 :class="[
                 'flex-shrink-0',
                 index === 1 
-                    ? 'w-full md:w-[37.5%] lg:w-1/4'  // Hình 2: 50% của w-3/4 = 37.5%
-                    : 'w-full md:w-3/4 lg:w-1/2'      // Hình 1 & 3: giữ nguyên
+                    ? 'w-2/3 md:w-1/3 lg:w-1/4'  // Hình 2: 50% của w-3/4 = 37.5%
+                    : 'w-2/3 md:w-1/2 lg:w-1/2'      // Hình 1 & 3: giữ nguyên
                 ]"
             >
                 <NuxtImg
@@ -34,9 +34,9 @@
             <HomeTest />
             </div>
         </div>
-            <div class="w-full h-35r bg-custom-green flex flex-col gap-4 justify-center items-center">
-                <NuxtImg src="/image/gatewaycity/Text2.png" alt="text" class="w-1/2 h-fit object-contain" /> 
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10 text-white">
+            <div class="w-full h-64 md:h-35r bg-custom-green flex flex-col gap-4 justify-center items-center">
+                <NuxtImg data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" src="/image/gatewaycity/Text2.png" alt="text" class="w-1/2 h-fit object-contain" /> 
+                <svg data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10 text-white">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
                 </svg>
             </div>

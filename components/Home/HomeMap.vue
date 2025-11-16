@@ -9,10 +9,10 @@
                 </video>
             </div>
         </div>
-        <div class="relative w-full h-35r bg-white flex justify-center items-center">
-            <div class="flex flex-col gap-4 absolute justify-center items-center -top-8 w-1/2">
-                <NuxtImg src="/image/gatewaycity/videoBanner.png" alt="video" class="w-full h-fit object-contain" />
-                <h1 class="text-3xl">Giới thiệu dự án Gateway City - Vĩnh Long</h1>
+        <div class="relative w-full h-64 md:h-35r bg-white flex justify-center items-center">
+            <div class="flex flex-col gap-4 absolute justify-center items-center -top-2 md:-top-8 w-4/5 lg:w-1/2">
+                <NuxtImg data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" src="/image/gatewaycity/videoBanner.png" alt="video" class="w-full h-fit object-contain" />
+                <h1 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-base md:text-3xl">Giới thiệu dự án Gateway City - Vĩnh Long</h1>
             </div>
         </div>
     </div>

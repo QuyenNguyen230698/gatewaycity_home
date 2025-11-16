@@ -12,8 +12,8 @@
                 :class="[
                 'flex-shrink-0',
                 index === 1 
-                    ? 'w-full md:w-3/4 lg:w-1/2'
-                    : 'w-full md:w-3/4 lg:w-1/2'
+                    ? 'w-2/3 md:w-1/2 lg:w-1/2'
+                    : 'w-2/3 md:w-1/2 lg:w-1/2'
                 ]"
             >
                 <NuxtImg
