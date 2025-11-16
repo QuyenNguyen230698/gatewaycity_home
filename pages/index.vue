@@ -4,6 +4,7 @@
         <HomeBanner :isBanner="true" :isVideo="false"></HomeBanner>
         <HomeCarousel></HomeCarousel>
         <HomeMap :isVideo="true"></HomeMap>
+        <HomeContent></HomeContent>
         <HomeCarousel2></HomeCarousel2>
         <HomeProduct></HomeProduct>
         <HomeGeneralEnquiry></HomeGeneralEnquiry>

@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-full container mx-auto">
+    <div class="w-full h-full container mx-auto overflow-hidden">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-16 pb-6 md:pb-0 md:py-16 justify-stretch">
             <div class="col-span-1 flex flex-col gap-6 h-full">
                 <h2 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-2xl lg:text-4xl">Tin Tức</h2>
