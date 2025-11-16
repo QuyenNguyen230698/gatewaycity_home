@@ -1,7 +1,7 @@
 {
-    "name": "Modulux Homes",
-    "short_name": "Modulux",
-    "description": "Official website for Modulux Homes",
+    "name": "Gateway City Homes",
+    "short_name": "Gateway City",
+    "description": "Official website for Gateway City Homes",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",
