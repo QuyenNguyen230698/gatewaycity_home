@@ -1,8 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { compression } from "vite-plugin-compression2";
-import dotenv from "dotenv";
-dotenv.config({ path: `.env.${process.env.NODE_ENV}` });
-
 export default defineNuxtConfig({
   compatibilityDate: '2025-11-13',
   devtools: { enabled: false },
@@ -41,7 +38,7 @@ export default defineNuxtConfig({
         { property: "og:title", content: "Gatewaycity Homes" },
         { property: "og:description", content: "Gatewaycity Homes" },
         { property: "og:type", content: "website" },
-        { property: "og:url", content: `${process.env.BASE_URL}` },
+        { property: "og:url", content: `https://gatewaycityhomes.com` },
         {
           property: "og:image",
           content: `https://imagedelivery.net/KHaby7r0MOA4Gt7v7Yk1jg/cd815c4e-4692-4051-392c-d9c992537e00/2K`,
@@ -68,36 +65,9 @@ export default defineNuxtConfig({
 
   plugins: [],
 
-  robots: {
-    groups: [
-      {
-        userAgent: "*",
-        allow: ["/"],
-      },
-    ],
-    metaTag: true,
-    mergeWithRobotsTxtPath: true,
-    blockNonSeoBots: true,
-    sitemap: `${process.env.BASE_URL}/sitemap_index.xml`,
-  },
-
   imports: {
     dirs: ["store"],
     autoImport: true,
-  },
-
-  appConfig: {
-    auth: {
-      jwtSecret: process.env.JWT_SECRET,
-    },
-  },
-
-  runtimeConfig: {
-    public: {
-      baseUrl: process.env.BASE_URL,
-      apiBase: process.env.API_BASE,
-      env: process.env.ENV,
-    },
   },
 
   ssr: true,
@@ -155,11 +125,6 @@ export default defineNuxtConfig({
           content.match(/[\w-/:]+(?<!:)/g) || [],
       },
     },
-  },
-
-  site: {
-    url: process.env.BASE_URL,
-    name: "Gatewaycity Homes",
   },
 
   sitemap: {
