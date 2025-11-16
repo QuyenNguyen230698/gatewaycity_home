@@ -41,7 +41,7 @@ export default defineNuxtConfig({
         { property: "og:url", content: `https://gatewaycityhomes.com` },
         {
           property: "og:image",
-          content: `https://imagedelivery.net/KHaby7r0MOA4Gt7v7Yk1jg/cd815c4e-4692-4051-392c-d9c992537e00/2K`,
+          content: ``,
         },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:site", content: "@gatewaycityhomes" },
@@ -49,7 +49,7 @@ export default defineNuxtConfig({
         { name: "twitter:description", content: "Gatewaycity Homes" },
         {
           name: "twitter:image",
-          content: `https://imagedelivery.net/KHaby7r0MOA4Gt7v7Yk1jg/cd815c4e-4692-4051-392c-d9c992537e00/2K`,
+          content: ``,
         },
       ],
     },
