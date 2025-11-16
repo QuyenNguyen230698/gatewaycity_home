@@ -1,13 +1,14 @@
 <template>
   <div class="flex flex-col w-full">
     <header
-      data-aos="fade-down"
-      data-aos-offset="20"
-      data-aos-delay="1500"
       class="fixed top-0 w-full z-50 transition-all duration-500 ease-in-out"
+      :class="headerClasses"
     >
       <!-- Mobile Menu -->
       <div
+        data-aos="fade-down"
+        data-aos-offset="20"
+        data-aos-delay="1500"
         class="navbar h-28 py-4 justify-between items-center w-full container mx-auto lg:hidden"
       >
         <div class="h-20 md:h-fit navbar-start w-fit lg:hidden">
@@ -165,6 +166,9 @@
       </div>
       <!-- Desktop Menu -->
       <div
+        data-aos="fade-down"
+        data-aos-offset="20"
+        data-aos-delay="1500"
         class="navbar h-36 py-4 items-center justify-center w-full container mx-auto hidden lg:block"
       >
         <!-- ==== NAVBAR 3 PHẦN ==== -->
@@ -460,15 +464,28 @@ const openSearchModal = () => {
   isHovered.value = false;
 };
 
+const isAtTop = ref(true)
+
 const handleScroll = () => {
-  const currentScrollY = window.scrollY;
+  const currentScrollY = window.scrollY
+  isAtTop.value = currentScrollY === 0  // Chỉ kiểm tra === 0
+
+  // Ẩn/hiện header
   if (currentScrollY > lastScrollY && currentScrollY > 20) {
-    isHeaderVisible.value = false;
+    isHeaderVisible.value = false
   } else if (currentScrollY < lastScrollY) {
-    isHeaderVisible.value = true;
+    isHeaderVisible.value = true
   }
-  lastScrollY = currentScrollY;
-};
+  lastScrollY = currentScrollY
+}
+
+// === COMPUTED CLASS - NHƯ MẪU ===
+const headerClasses = computed(() => {
+  return [
+    isAtTop.value ? 'bg-transparent' : 'bg-custom-green/70 backdrop-blur-sm shadow-lg',
+    !isHeaderVisible.value ? 'translate-y-[-100%]' : ''
+  ].filter(Boolean).join(' ')
+})
 
 // Lấy route hiện tại
 const route = useRoute();
@@ -508,11 +525,11 @@ onMounted(() => {
       });
     }, 1);
   });
-  window.addEventListener("scroll", checkScroll);
+  window.addEventListener("scroll", handleScroll);
 });
 
 onUnmounted(() => {
-  window.removeEventListener("scroll", checkScroll);
+  window.removeEventListener("scroll", handleScroll);
 });
 </script>
 

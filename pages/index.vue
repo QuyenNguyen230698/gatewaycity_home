@@ -5,6 +5,7 @@
         <HomeCarousel></HomeCarousel>
         <HomeMap :isVideo="true"></HomeMap>
         <HomeCarousel2></HomeCarousel2>
+        <HomeProduct></HomeProduct>
         <HomeGeneralEnquiry></HomeGeneralEnquiry>
     </div>
 </template>

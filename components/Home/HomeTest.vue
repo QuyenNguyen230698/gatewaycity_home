@@ -1,7 +1,7 @@
 <template>
   <button
     ref="buttonRef"
-    class="group relative inline-flex items-center justify-center w-24 h-24 rounded-full bg-custom-green hover:bg-pyramid-gold text-white border border-pyramid-gold font-medium text-sm overflow-hidden cursor-pointer transition-all duration-500 shadow-md hover:shadow-xl focus:outline-none"
+    class="group relative inline-flex items-center justify-center w-24 h-24 rounded-full bg-custom-green hover:bg-pyramid-gold text-white border border-pyramid-gold font-medium text-sm overflow-hidden cursor-pointer transition-all duration-500 shadow-md focus:outline-none"
     aria-label="Xem thêm"
   >
     <!-- SVG Circle Border -->

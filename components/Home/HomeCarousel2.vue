@@ -1,6 +1,6 @@
 <template>
-    <div class="flex flex-col bg-transparent">
-        <div ref="container" class=" relative">
+    <div class="flex flex-col bg-transparent overflow-hidden">
+        <div ref="container" class=" relative pb-12">
             <div
             ref="track"
             class="flex gap-4 lg:gap-8 transition-transform duration-300 ease-out"
@@ -29,7 +29,7 @@
             </div>
 
             <!-- Button -->
-            <div class="absolute left-0 right-0 -bottom-12 w-full flex justify-center pb-1">
+            <div class="absolute left-0 right-0 bottom-0 w-full flex justify-center pb-1">
             <HomeTest />
             </div>
         </div>

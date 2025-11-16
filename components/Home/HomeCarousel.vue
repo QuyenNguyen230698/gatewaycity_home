@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col bg-custom-green">
+    <div class="flex flex-col bg-custom-green overflow-hidden">
         <div ref="container" class=" relative">
             <div
             ref="track"
