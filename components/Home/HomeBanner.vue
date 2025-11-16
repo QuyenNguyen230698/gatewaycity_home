@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col">
-        <div class="w-full h-full min-h-screen relative">
+        <div class="w-full h-full min-h-screen relative bg-custom-green">
             <NuxtImg src="/image/gatewaycity/banner1.jpg" alt="banner" class="w-full h-full min-h-screen object-cover absolute inset-0" />
             <div class="absolute top-0 left-0 w-full h-full bg-black opacity-20"></div>
             <div class="absolute -bottom-28 left-0 right-0 w-full z-10">
