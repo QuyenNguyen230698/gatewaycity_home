@@ -95,6 +95,7 @@ module.exports = {
     require("daisyui"), // DaisyUI plugin for Tailwind
     require("@tailwindcss/typography"), // Typography plugin
     require("tailwindcss-animated"), // Animation plugin
+    require("@tailwindcss/line-clamp"),
     function ({ addUtilities }) {
       addUtilities({
         ".scrollbar-thin": {

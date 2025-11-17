@@ -249,30 +249,43 @@
                   v-if="isDropdownOpen"
                   class="absolute right-0 top-9 w-44 rounded-lg bg-white z-50 text-left fade-up"
                 >
-                  <li class="hover:text-pyramid-gold text-sm pt-2 px-4">
+                  <li class="text-sm pt-2 px-4">
                     <NuxtLink
                       to=""
                       :class="
-                        isActiveRoute('/why-modulux')
+                        isActiveRoute('/san-pham/biet-thu-don-lap')
                           ? 'font-montserrat-medium text-pyramid-gold'
                           : 'font-montserrat-medium hover:text-pyramid-gold'
                       "
                       @click="closeDropdown"
                     >
-                      Contact
+                      BIỆT THỰ ĐƠN LẬP
+                    </NuxtLink>
+                  </li>
+                  <li class="hover:text-pyramid-gold text-sm py-2 px-4">
+                    <NuxtLink
+                      to=""
+                      :class="
+                        isActiveRoute('/san-pham/biet-thu-song-lap')
+                          ? 'font-montserrat-medium text-pyramid-gold'
+                          : 'font-montserrat-medium hover:text-pyramid-gold'
+                      "
+                      @click="closeDropdown"
+                    >
+                      BIỆT THỰ SONG LẬP
                     </NuxtLink>
                   </li>
                   <li class="hover:text-pyramid-gold text-sm px-4 pb-2">
                     <NuxtLink
-                      to="/faqs"
+                      to=""
                       :class="
-                        isActiveRoute('/faqs')
+                        isActiveRoute('/san-pham/nha-pho-thuong-mai')
                           ? 'font-montserrat-medium text-pyramid-gold'
                           : 'font-montserrat-medium hover:text-pyramid-gold'
                       "
                       @click="closeDropdown"
                     >
-                      FAQs
+                      NHÀ PHỐ THƯƠNG MẠI
                     </NuxtLink>
                   </li>
                 </ul>
