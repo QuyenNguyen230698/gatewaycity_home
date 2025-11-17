@@ -230,68 +230,65 @@
               <a href="tel:0919542618" class="text-base">0919.542.618</a>
             </NuxtLink>
             <!-- WhatWeDo dropdown -->
-            <div class="relative">
-              <div
-                @mouseenter="isDropdownOpen = true"
-                @mouseleave="isDropdownOpen = false"
-                class="cursor-pointer"
-              >
-                <p
-                  class="text-sm px-4 py-2 rounded-full uppercase whitespace-nowrap flex gap-1 items-center text-white hover:text-pyramid-gold bg-pyramid-gold hover:bg-white cursor-pointer transition-all duration-300"
-                >
-                <span>Chọn Sản Phẩm</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="size-4">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                </svg>
-                </p>
+<div class="relative">
+    <!-- Nút click để mở dropdown -->
+    <div
+      @click="toggleDropdown"
+      class="cursor-pointer"
+    >
+      <p
+        class="text-sm px-4 py-2 w-52 uppercase whitespace-nowrap flex gap-1 items-center justify-center text-white hover:text-pyramid-gold bg-pyramid-gold hover:bg-white cursor-pointer transition-all duration-300"
+        :class="isDropdownOpen ? 'rounded-t-3xl' : 'rounded-3xl'"
+        >
+        <span>Chọn Sản Phẩm</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1"
+          stroke="currentColor"
+          :class="['size-4 transition-transform duration-300', { 'rotate-180': isDropdownOpen }]"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+        </svg>
+      </p>
+    </div>
 
-                <ul
-                  v-if="isDropdownOpen"
-                  class="absolute right-0 top-9 w-44 rounded-lg bg-white z-50 text-left fade-up"
-                >
-                  <li class="text-sm pt-2 px-4">
-                    <NuxtLink
-                      to=""
-                      :class="
-                        isActiveRoute('/san-pham/biet-thu-don-lap')
-                          ? 'font-montserrat-medium text-pyramid-gold'
-                          : 'font-montserrat-medium hover:text-pyramid-gold'
-                      "
-                      @click="closeDropdown"
-                    >
-                      BIỆT THỰ ĐƠN LẬP
-                    </NuxtLink>
-                  </li>
-                  <li class="hover:text-pyramid-gold text-sm py-2 px-4">
-                    <NuxtLink
-                      to=""
-                      :class="
-                        isActiveRoute('/san-pham/biet-thu-song-lap')
-                          ? 'font-montserrat-medium text-pyramid-gold'
-                          : 'font-montserrat-medium hover:text-pyramid-gold'
-                      "
-                      @click="closeDropdown"
-                    >
-                      BIỆT THỰ SONG LẬP
-                    </NuxtLink>
-                  </li>
-                  <li class="hover:text-pyramid-gold text-sm px-4 pb-2">
-                    <NuxtLink
-                      to=""
-                      :class="
-                        isActiveRoute('/san-pham/nha-pho-thuong-mai')
-                          ? 'font-montserrat-medium text-pyramid-gold'
-                          : 'font-montserrat-medium hover:text-pyramid-gold'
-                      "
-                      @click="closeDropdown"
-                    >
-                      NHÀ PHỐ THƯƠNG MẠI
-                    </NuxtLink>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
+    <!-- Dropdown menu -->
+    <ul
+      v-if="isDropdownOpen"
+      v-click-away="closeDropdown"
+      class="absolute right-0 top-9 bg-white z-50 text-left fade-down w-52 rounded-b-3xl shadow-lg"
+    >
+      <li class="text-sm pt-2 px-4">
+        <NuxtLink
+          to="/san-pham/biet-thu-don-lap"
+          :class="isActiveRoute('/san-pham/biet-thu-don-lap') ? 'font-montserrat-medium text-pyramid-gold' : 'font-montserrat-medium hover:text-pyramid-gold'"
+          @click="closeDropdown"
+        >
+          BIỆT THỰ ĐƠN LẬP
+        </NuxtLink>
+      </li>
+      <li class="hover:text-pyramid-gold text-sm py-2 px-4">
+        <NuxtLink
+          to="/san-pham/biet-thu-song-lap"
+          :class="isActiveRoute('/san-pham/biet-thu-song-lap') ? 'font-montserrat-medium text-pyramid-gold' : 'font-montserrat-medium hover:text-pyramid-gold'"
+          @click="closeDropdown"
+        >
+          BIỆT THỰ SONG LẬP
+        </NuxtLink>
+      </li>
+      <li class="hover:text-pyramid-gold text-sm px-4 pb-2">
+        <NuxtLink
+          to="/san-pham/nha-pho-thuong-mai"
+          :class="isActiveRoute('/san-pham/nha-pho-thuong-mai') ? 'font-montserrat-medium text-pyramid-gold' : 'font-montserrat-medium hover:text-pyramid-gold'"
+          @click="closeDropdown"
+        >
+          NHÀ PHỐ THƯƠNG MẠI
+        </NuxtLink>
+      </li>
+    </ul>
+  </div>
             <div style="width: 2px; height: 16px; background-color: #FFFFFF;"></div>
 
             <!-- Search -->
@@ -443,6 +440,14 @@ const isDrawerOpen = ref(false);
 const isDrawerOpen2 = ref(false);
 let lastScrollY = 0;
 
+const toggleDropdown = () => {
+  isDropdownOpen.value = !isDropdownOpen.value
+}
+
+const closeDropdown = () => {
+  isDropdownOpen.value = false
+}
+
 // Theo dõi isDrawerOpen để mở collapse khi drawer mở
 watch(isDrawerOpen, (newValue) => {
   if (newValue) {
@@ -467,9 +472,9 @@ const closeDrawerAndCollapse = () => {
   closeCollapse();
 };
 
-const closeDropdown = () => {
-  isDropdownOpen.value = false;
-};
+// const closeDropdown = () => {
+//   isDropdownOpen.value = false;
+// };
 
 const openSearchModal = () => {
   emit("open-search");
@@ -643,6 +648,21 @@ onUnmounted(() => {
   0% {
     opacity: 0;
     transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-down {
+  animation: fadeDownAnimation 0.3s ease-in-out forwards;
+}
+
+/* Animation cho fade-down */
+@keyframes fadeDownAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
   }
   100% {
     opacity: 1;
