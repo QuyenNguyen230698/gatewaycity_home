@@ -50,6 +50,7 @@ module.exports = {
         small: "#6B7280", // text-gray-500
       },
       height: {
+        "25": "100px",
         "10r": "10rem",
         "11r": "11rem",
         "12r": "12rem",

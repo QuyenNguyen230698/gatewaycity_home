@@ -9,126 +9,119 @@
         data-aos="fade-down"
         data-aos-offset="20"
         data-aos-delay="1500"
-        class="navbar h-28 py-4 justify-between items-center w-full container mx-auto lg:hidden"
+        class="navbar h-24 py-4 justify-between items-center w-full container mx-auto lg:hidden"
       >
         <div class="h-20 md:h-fit navbar-start w-fit lg:hidden">
-            <div class="drawer w-fit">
-              <input
-                id="my-drawer"
-                type="checkbox"
-                class="drawer-toggle"
-                v-model="isDrawerOpen"
-              />
-              <div class="drawer-content w-fit">
-                <label
-                  for="my-drawer"
-                  class="rounded-full w-fit bg-transparent border border-pyramid-gold p-2 flex items-center justify-center"
+          <div class="drawer w-fit">
+            <input
+              id="my-drawer"
+              type="checkbox"
+              class="drawer-toggle"
+              v-model="isDrawerOpen"
+            />
+            <div class="drawer-content w-fit">
+              <label
+                for="my-drawer"
+                class="rounded-full w-fit bg-transparent border border-pyramid-gold p-2 flex items-center justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  class="inline-block h-8 w-8 stroke-current text-pyramid-gold"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    class="inline-block h-8 w-8 stroke-current text-pyramid-gold"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
-                </label>
-              </div>
-              <div class="drawer-side flex flex-col z-50 min-h-screen">
-                <ul
-                  class="bg-custom-green text-base w-full h-full overflow-y-scroll px-4"
-                >
-                  <li class="flex flex-row justify-between items-center w-full py-4">
-                    <NuxtLink aria-label="logo" to="/" @click="closeDrawer">
-                      <NuxtImg
-                        quality="75"
-                        loading="eager"
-                        src="/Logo.svg"
-                        aria-label="logo"
-                        alt="logo"
-                        class="min-w-full h-18 object-contain"
-                      />
-                    </NuxtLink>
-                    <label
-                      for="my-drawer"
-                      aria-label="close sidebar"
-                      class="drawer-overlay"
-                    >
-                      <span
-                        class="p-2 rounded-full text-white cursor-pointer"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke-width="2"
-                          stroke="currentColor"
-                          class="size-8"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M6 18 18 6M6 6l12 12"
-                          />
-                        </svg>
-                      </span>
-                    </label>
-                  </li>
-                  <li class="text-nowrap w-full pb-4">
-                    <NuxtLink
-                      to=""
-                      @click="closeDrawer"
-                      class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
-                    >
-                      <p class="text-2xl">Tổng Quan</p>
-                    </NuxtLink>
-                  </li>
-                  <li class="text-nowrap w-full pb-4">
-                    <NuxtLink
-                      to=""
-                      @click="closeDrawer"
-                      class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
-                    >
-                      <p class="text-2xl">Chủ Đầu Tư</p>
-                    </NuxtLink>
-                  </li>
-                  <li class="text-nowrap w-full pb-4">
-                    <NuxtLink
-                      to=""
-                      @click="closeDrawer"
-                      class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
-                    >
-                      <p class="text-2xl">Vị Trí</p>
-                    </NuxtLink>
-                  </li>
-                  <li class="text-nowrap w-full pb-4">
-                    <NuxtLink
-                      to=""
-                      @click="closeDrawer"
-                      class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
-                    >
-                      <p class="text-2xl">Tiện Ích</p>
-                    </NuxtLink>
-                  </li>
-                  <li class="text-nowrap w-full pb-4">
-                    <NuxtLink
-                      to=""
-                      @click="closeDrawer"
-                      class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
-                    >
-                      <p class="text-2xl">Lợi Thế</p>
-                    </NuxtLink>
-                  </li>
-                </ul>
-              </div>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </label>
             </div>
+            <div class="drawer-side flex flex-col z-50 min-h-screen">
+              <ul
+                class="bg-custom-green text-base w-full h-full overflow-y-scroll px-4"
+              >
+                <li
+                  class="flex flex-row justify-between items-center w-full py-4"
+                >
+                  <NuxtLink aria-label="logo" to="/" @click="closeDrawer">
+                    <NuxtImg
+                      quality="75"
+                      loading="eager"
+                      src="/Logo.svg"
+                      aria-label="logo"
+                      alt="logo"
+                      class="min-w-full h-18 object-contain"
+                    />
+                  </NuxtLink>
+                  <label
+                    for="my-drawer"
+                    aria-label="close sidebar"
+                    class="drawer-overlay"
+                  >
+                    <span class="p-2 rounded-full text-white cursor-pointer">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        class="size-8"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M6 18 18 6M6 6l12 12"
+                        />
+                      </svg>
+                    </span>
+                  </label>
+                </li>
+                <li class="text-nowrap w-full pb-4">
+                  <NuxtLink
+                    to=""
+                    @click="closeDrawer"
+                    class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
+                  >
+                    <p class="text-2xl">Tổng Quan</p>
+                  </NuxtLink>
+                </li>
+                <li class="text-nowrap w-full pb-4">
+                  <NuxtLink
+                    to=""
+                    @click="closeDrawer"
+                    class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
+                  >
+                    <p class="text-2xl">Chủ Đầu Tư</p>
+                  </NuxtLink>
+                </li>
+                <li class="text-nowrap w-full pb-4">
+                  <NuxtLink
+                    to=""
+                    @click="closeDrawer"
+                    class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
+                  >
+                    <p class="text-2xl">Vị Trí</p>
+                  </NuxtLink>
+                </li>
+                <li class="text-nowrap w-full pb-4">
+                  <NuxtLink
+                    to=""
+                    @click="closeDrawer"
+                    class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
+                  >
+                    <p class="text-2xl">Tiện Ích</p>
+                  </NuxtLink>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="h-20 md:h-fit w-fit navbar-center md:justify-center flex lg:hidden">
+        <div
+          class="h-20 md:h-fit w-fit navbar-center md:justify-center flex lg:hidden"
+        >
           <NuxtLink aria-label="logo" external to="/" @click="closeDropdown">
             <NuxtImg
               quality="75"
@@ -140,7 +133,9 @@
             />
           </NuxtLink>
         </div>
-        <div class="h-full w-fit flex navbar-end lg:flex-row items-center justify-end">
+        <div
+          class="h-full w-fit flex navbar-end lg:flex-row items-center justify-end"
+        >
           <div class="flex gap-3 items-center lg:hidden">
             <div
               @click="openSearchModal"
@@ -169,7 +164,7 @@
         data-aos="fade-down"
         data-aos-offset="20"
         data-aos-delay="1500"
-        class="navbar h-36 py-4 items-center justify-center w-full container mx-auto hidden lg:block"
+        class="navbar h-25 py-4 items-center justify-center w-full container mx-auto hidden lg:block"
       >
         <!-- ==== NAVBAR 3 PHẦN ==== -->
         <div class="hidden lg:flex w-full h-full items-center justify-between">
@@ -215,7 +210,7 @@
                 src="/Logo.svg"
                 aria-label="logo"
                 alt="logo"
-                class="h-28 max-w-full object-contain"
+                class="h-20 max-w-full object-contain"
               />
             </NuxtLink>
           </div>
@@ -230,66 +225,84 @@
               <a href="tel:0919542618" class="text-base">0919.542.618</a>
             </NuxtLink>
             <!-- WhatWeDo dropdown -->
-<div class="relative">
-    <!-- Nút click để mở dropdown -->
-    <div
-      @click="toggleDropdown"
-      class="cursor-pointer"
-    >
-      <p
-        class="text-sm px-4 py-2 w-52 uppercase whitespace-nowrap flex gap-1 items-center justify-center text-white hover:text-pyramid-gold bg-pyramid-gold hover:bg-white cursor-pointer transition-all duration-300"
-        :class="isDropdownOpen ? 'rounded-t-3xl' : 'rounded-3xl'"
-        >
-        <span>Chọn Sản Phẩm</span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1"
-          stroke="currentColor"
-          :class="['size-4 transition-transform duration-300', { 'rotate-180': isDropdownOpen }]"
-        >
-          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-        </svg>
-      </p>
-    </div>
+            <div class="relative">
+              <!-- Nút click để mở dropdown -->
+              <div @click="toggleDropdown" class="cursor-pointer">
+                <p
+                  class="text-sm px-4 py-2 w-52 uppercase whitespace-nowrap flex gap-1 items-center justify-center text-white hover:text-pyramid-gold bg-pyramid-gold hover:bg-white cursor-pointer transition-all duration-300"
+                  :class="isDropdownOpen ? 'rounded-t-3xl' : 'rounded-3xl'"
+                >
+                  <span>Chọn Sản Phẩm</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1"
+                    stroke="currentColor"
+                    :class="[
+                      'size-4 transition-transform duration-300',
+                      { 'rotate-180': isDropdownOpen },
+                    ]"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </p>
+              </div>
 
-    <!-- Dropdown menu -->
-    <ul
-      v-if="isDropdownOpen"
-      v-click-away="closeDropdown"
-      class="absolute right-0 top-9 bg-white z-50 text-left fade-down w-52 rounded-b-3xl shadow-lg"
-    >
-      <li class="text-sm pt-2 px-4">
-        <NuxtLink
-          to="/san-pham/biet-thu-don-lap"
-          :class="isActiveRoute('/san-pham/biet-thu-don-lap') ? 'font-montserrat-medium text-pyramid-gold' : 'font-montserrat-medium hover:text-pyramid-gold'"
-          @click="closeDropdown"
-        >
-          BIỆT THỰ ĐƠN LẬP
-        </NuxtLink>
-      </li>
-      <li class="hover:text-pyramid-gold text-sm py-2 px-4">
-        <NuxtLink
-          to="/san-pham/biet-thu-song-lap"
-          :class="isActiveRoute('/san-pham/biet-thu-song-lap') ? 'font-montserrat-medium text-pyramid-gold' : 'font-montserrat-medium hover:text-pyramid-gold'"
-          @click="closeDropdown"
-        >
-          BIỆT THỰ SONG LẬP
-        </NuxtLink>
-      </li>
-      <li class="hover:text-pyramid-gold text-sm px-4 pb-2">
-        <NuxtLink
-          to="/san-pham/nha-pho-thuong-mai"
-          :class="isActiveRoute('/san-pham/nha-pho-thuong-mai') ? 'font-montserrat-medium text-pyramid-gold' : 'font-montserrat-medium hover:text-pyramid-gold'"
-          @click="closeDropdown"
-        >
-          NHÀ PHỐ THƯƠNG MẠI
-        </NuxtLink>
-      </li>
-    </ul>
-  </div>
-            <div style="width: 2px; height: 16px; background-color: #FFFFFF;"></div>
+              <!-- Dropdown menu -->
+              <ul
+                v-if="isDropdownOpen"
+                v-click-away="closeDropdown"
+                class="absolute right-0 top-9 bg-white z-50 text-left fade-down w-52 rounded-b-3xl shadow-lg"
+              >
+                <li class="text-sm pt-2 px-4">
+                  <NuxtLink
+                    to="/san-pham/biet-thu-don-lap"
+                    :class="
+                      isActiveRoute('/san-pham/biet-thu-don-lap')
+                        ? 'font-montserrat-medium text-pyramid-gold'
+                        : 'font-montserrat-medium hover:text-pyramid-gold'
+                    "
+                    @click="closeDropdown"
+                  >
+                    BIỆT THỰ ĐƠN LẬP
+                  </NuxtLink>
+                </li>
+                <li class="hover:text-pyramid-gold text-sm py-2 px-4">
+                  <NuxtLink
+                    to="/san-pham/biet-thu-song-lap"
+                    :class="
+                      isActiveRoute('/san-pham/biet-thu-song-lap')
+                        ? 'font-montserrat-medium text-pyramid-gold'
+                        : 'font-montserrat-medium hover:text-pyramid-gold'
+                    "
+                    @click="closeDropdown"
+                  >
+                    BIỆT THỰ SONG LẬP
+                  </NuxtLink>
+                </li>
+                <li class="hover:text-pyramid-gold text-sm px-4 pb-2">
+                  <NuxtLink
+                    to="/san-pham/nha-pho-thuong-mai"
+                    :class="
+                      isActiveRoute('/san-pham/nha-pho-thuong-mai')
+                        ? 'font-montserrat-medium text-pyramid-gold'
+                        : 'font-montserrat-medium hover:text-pyramid-gold'
+                    "
+                    @click="closeDropdown"
+                  >
+                    NHÀ PHỐ THƯƠNG MẠI
+                  </NuxtLink>
+                </li>
+              </ul>
+            </div>
+            <div
+              style="width: 2px; height: 16px; background-color: #ffffff"
+            ></div>
 
             <!-- Search -->
             <div
@@ -329,39 +342,41 @@
           <div
             class="bg-custom-green w-full lg:w-1/3 min-h-screen shadow-2xl overflow-y-auto"
           >
-            <ul class="bg-custom-green text-base w-full h-full overflow-y-scroll">
+            <ul
+              class="bg-custom-green text-base w-full h-full overflow-y-scroll"
+            >
               <li class="h-36 py-4 grid grid-cols-4 w-full">
-          <div class="col-start-2 flex items-center gap-6">
-            <!-- Nút menu (mở drawer desktop) -->
-            <label
-              for="my-drawer2"
-              class="cursor-pointer px-4 py-1 rounded-full border border-pyramid-gold flex items-center justify-center gap-2 text-white hover:text-pyramid-gold transition-all duration-300"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                class="inline-block h-6 w-6 stroke-current text-pyramid-gold"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-              <p class="text-sm uppercase">Menu</p>
-            </label>
+                <div class="col-start-2 flex items-center gap-6">
+                  <!-- Nút menu (mở drawer desktop) -->
+                  <label
+                    for="my-drawer2"
+                    class="cursor-pointer px-4 py-1 rounded-full border border-pyramid-gold flex items-center justify-center gap-2 text-white hover:text-pyramid-gold transition-all duration-300"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      class="inline-block h-6 w-6 stroke-current text-pyramid-gold"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1"
+                        d="M4 6h16M4 12h16M4 18h16"
+                      />
+                    </svg>
+                    <p class="text-sm uppercase">Menu</p>
+                  </label>
 
-            <!-- Contact -->
-            <NuxtLink
-              to=""
-              @click="closeDropdown"
-              class="whitespace-nowrap text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
-            >
-              <p class="text-sm uppercase">Contact Us</p>
-            </NuxtLink>
-          </div>
+                  <!-- Contact -->
+                  <NuxtLink
+                    to=""
+                    @click="closeDropdown"
+                    class="whitespace-nowrap text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
+                  >
+                    <p class="text-sm uppercase">Contact Us</p>
+                  </NuxtLink>
+                </div>
               </li>
               <li class="text-nowrap grid grid-cols-4 w-full pb-4">
                 <NuxtLink
@@ -399,15 +414,6 @@
                   <p class="text-3xl">Tiện Ích</p>
                 </NuxtLink>
               </li>
-              <li class="text-nowrap grid grid-cols-4 w-full pb-4">
-                <NuxtLink
-                  to=""
-                  @click="closeDrawer"
-                  class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
-                >
-                  <p class="text-3xl">Lợi Thế</p>
-                </NuxtLink>
-              </li>
             </ul>
           </div>
         </div>
@@ -441,12 +447,12 @@ const isDrawerOpen2 = ref(false);
 let lastScrollY = 0;
 
 const toggleDropdown = () => {
-  isDropdownOpen.value = !isDropdownOpen.value
-}
+  isDropdownOpen.value = !isDropdownOpen.value;
+};
 
 const closeDropdown = () => {
-  isDropdownOpen.value = false
-}
+  isDropdownOpen.value = false;
+};
 
 // Theo dõi isDrawerOpen để mở collapse khi drawer mở
 watch(isDrawerOpen, (newValue) => {
@@ -482,28 +488,32 @@ const openSearchModal = () => {
   isHovered.value = false;
 };
 
-const isAtTop = ref(true)
+const isAtTop = ref(true);
 
 const handleScroll = () => {
-  const currentScrollY = window.scrollY
-  isAtTop.value = currentScrollY === 0  // Chỉ kiểm tra === 0
+  const currentScrollY = window.scrollY;
+  isAtTop.value = currentScrollY === 0; // Chỉ kiểm tra === 0
 
   // Ẩn/hiện header
   if (currentScrollY > lastScrollY && currentScrollY > 20) {
-    isHeaderVisible.value = false
+    isHeaderVisible.value = false;
   } else if (currentScrollY < lastScrollY) {
-    isHeaderVisible.value = true
+    isHeaderVisible.value = true;
   }
-  lastScrollY = currentScrollY
-}
+  lastScrollY = currentScrollY;
+};
 
 // === COMPUTED CLASS - NHƯ MẪU ===
 const headerClasses = computed(() => {
   return [
-    isAtTop.value ? 'bg-transparent' : 'bg-custom-green/70 backdrop-blur-sm shadow-lg',
-    !isHeaderVisible.value ? 'translate-y-[-100%]' : ''
-  ].filter(Boolean).join(' ')
-})
+    isAtTop.value
+      ? "bg-transparent"
+      : "bg-custom-green/90 backdrop-blur-sm shadow-lg",
+    !isHeaderVisible.value ? "translate-y-[-100%]" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+});
 
 // Lấy route hiện tại
 const route = useRoute();
@@ -521,11 +531,11 @@ const isDropdownActive = computed(() => {
   );
 });
 
-const isVisible = ref(false)
+const isVisible = ref(false);
 
 const checkScroll = () => {
-  isVisible.value = window.pageYOffset > 0
-}
+  isVisible.value = window.pageYOffset > 0;
+};
 
 onMounted(() => {
   nextTick().then(() => {

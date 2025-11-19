@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-custom-green text-white">
+  <div class="bg-img text-white">
     <div class="container mx-auto">
       <div class="grid grid-cols-12 pt-4 lg:pt-8">
         <!-- banner & title -->
@@ -58,13 +58,13 @@
               Chủ Đầu Tư
             </NuxtLink>
             <NuxtLink to="/" class="col-span-6 md:col-span-2 hover:underline cursor-pointer md:text-center">
+              Sản Phẩm
+            </NuxtLink>
+            <NuxtLink to="/" class="col-span-6 md:col-span-2 hover:underline cursor-pointer md:text-center">
               Vị Trí
             </NuxtLink>
             <NuxtLink to="/" class="col-span-6 md:col-span-2 hover:underline cursor-pointer md:text-center">
               Tiện Ích
-            </NuxtLink>
-            <NuxtLink to="/" class="col-span-6 md:col-span-2 hover:underline cursor-pointer md:text-center">
-              Lợi Thế
             </NuxtLink>
             <NuxtLink to="/" class="col-span-6 md:col-span-2 hover:underline cursor-pointer md:text-center">
               Liên Hệ
@@ -265,5 +265,10 @@ onMounted(() => {
 }
 .tracking-footer {
   letter-spacing: 0.2em;
+}
+.bg-img {
+  background-image: url('/image/gatewaycity/background.jpg');
+  background-size: cover;
+  background-position: center;
 }
 </style>

@@ -37,7 +37,7 @@
             <div class="w-full h-64 md:h-35r bg-custom-green flex flex-col gap-4 justify-center items-center bg-map">
                 <NuxtImg data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" src="/image/gatewaycity/Textmap.png" alt="text" class="w-1/2 h-fit object-contain" />
                 <span data-aos="fade-up" data-aos-offset="20" data-aos-delay="50">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10 text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 md:size-8 lg:size-10 text-white">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
                     </svg>
                 </span>
