@@ -46,7 +46,7 @@
                 <li
                   class="flex flex-row justify-between items-center w-full py-4"
                 >
-                  <NuxtLink aria-label="logo" to="/" @click="closeDrawer">
+                  <NuxtLink aria-label="logo" external to="/" @click="closeDrawer">
                     <NuxtImg
                       quality="75"
                       loading="eager"
@@ -81,7 +81,8 @@
                 </li>
                 <li class="text-nowrap w-full pb-4">
                   <NuxtLink
-                    to=""
+                    to="/tong-quan"
+                    external
                     @click="closeDrawer"
                     class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
                   >
@@ -90,7 +91,8 @@
                 </li>
                 <li class="text-nowrap w-full pb-4">
                   <NuxtLink
-                    to=""
+                    to="/chu-dau-tu"
+                    external
                     @click="closeDrawer"
                     class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
                   >
@@ -99,7 +101,8 @@
                 </li>
                 <li class="text-nowrap w-full pb-4">
                   <NuxtLink
-                    to=""
+                    to="/vi-tri"
+                    external
                     @click="closeDrawer"
                     class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
                   >
@@ -108,7 +111,8 @@
                 </li>
                 <li class="text-nowrap w-full pb-4">
                   <NuxtLink
-                    to=""
+                    to="/tien-ich-du-an"
+                    external
                     @click="closeDrawer"
                     class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
                   >
@@ -193,8 +197,9 @@
 
             <!-- Contact -->
             <NuxtLink
-              to=""
-              @click="closeDropdown"
+              to="/lien-he"
+              external
+              @click="closeDrawer2"
               class="whitespace-nowrap text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
             >
               <p class="text-sm uppercase">Contact Us</p>
@@ -203,7 +208,7 @@
 
           <!-- 2. CENTER – logo -->
           <div class="navbar-center">
-            <NuxtLink aria-label="logo" external to="/" @click="closeDropdown">
+            <NuxtLink aria-label="logo" external to="/" @click="closeDrawer2">
               <NuxtImg
                 quality="75"
                 loading="eager"
@@ -370,8 +375,9 @@
 
                   <!-- Contact -->
                   <NuxtLink
-                    to=""
-                    @click="closeDropdown"
+                    to="/lien-he"
+                    external
+                    @click="closeDrawer2"
                     class="whitespace-nowrap text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
                   >
                     <p class="text-sm uppercase">Contact Us</p>
@@ -380,8 +386,9 @@
               </li>
               <li class="text-nowrap grid grid-cols-4 w-full pb-4">
                 <NuxtLink
-                  to=""
-                  @click="closeDrawer"
+                  to="/tong-quan"
+                  external
+                  @click="closeDrawer2"
                   class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
                 >
                   <p class="text-3xl">Tổng Quan</p>
@@ -389,8 +396,9 @@
               </li>
               <li class="text-nowrap grid grid-cols-4 w-full pb-4">
                 <NuxtLink
-                  to=""
-                  @click="closeDrawer"
+                  to="/chu-dau-tu"
+                  external
+                  @click="closeDrawer2"
                   class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
                 >
                   <p class="text-3xl">Chủ Đầu Tư</p>
@@ -398,8 +406,9 @@
               </li>
               <li class="text-nowrap grid grid-cols-4 w-full pb-4">
                 <NuxtLink
-                  to=""
-                  @click="closeDrawer"
+                  to="/vi-tri"
+                  external
+                  @click="closeDrawer2"
                   class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
                 >
                   <p class="text-3xl">Vị Trí</p>
@@ -407,8 +416,9 @@
               </li>
               <li class="text-nowrap grid grid-cols-4 w-full pb-4">
                 <NuxtLink
-                  to=""
-                  @click="closeDrawer"
+                  to="/tien-ich-du-an"
+                  external
+                  @click="closeDrawer2"
                   class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
                 >
                   <p class="text-3xl">Tiện Ích</p>

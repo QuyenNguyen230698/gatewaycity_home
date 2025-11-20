@@ -60,13 +60,13 @@
             <NuxtLink to="/" class="col-span-6 md:col-span-2 hover:underline cursor-pointer md:text-center">
               Sản Phẩm
             </NuxtLink>
-            <NuxtLink to="/" class="col-span-6 md:col-span-2 hover:underline cursor-pointer md:text-center">
+            <NuxtLink to="/vi-tri" class="col-span-6 md:col-span-2 hover:underline cursor-pointer md:text-center">
               Vị Trí
             </NuxtLink>
-            <NuxtLink to="/" class="col-span-6 md:col-span-2 hover:underline cursor-pointer md:text-center">
+            <NuxtLink to="/tien-ich-du-an" class="col-span-6 md:col-span-2 hover:underline cursor-pointer md:text-center">
               Tiện Ích
             </NuxtLink>
-            <NuxtLink to="/" class="col-span-6 md:col-span-2 hover:underline cursor-pointer md:text-center">
+            <NuxtLink to="/lien-he" class="col-span-6 md:col-span-2 hover:underline cursor-pointer md:text-center">
               Liên Hệ
             </NuxtLink>
           </div>
