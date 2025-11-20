@@ -47,7 +47,7 @@
             <button 
               @click="submitNow"
               :disabled="isSubmitting"
-              class="font-montserrat-regular w-full bg-custom-green rounded-full text-white px-4 py-2 text-base hover:bg-green-900 duration-300 ease-in-out"
+              class="font-montserrat-bold w-full bg-custom-green rounded-full text-white px-4 py-2 text-base hover:bg-green-900 duration-300 ease-in-out"
             >
               {{ isSubmitting ? 'Đang gửi...' : 'Nhận Báo Giá Ngay' }}
             </button>
@@ -188,7 +188,6 @@ const resetFormEnquiry = () => {
     phoneNumber: '',
     note: '',
   };
-  countrySearchGeneral.value = '';
 };
 
 const removeLeadingZero = (phone) => {
