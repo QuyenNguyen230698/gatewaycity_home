@@ -1,5 +1,6 @@
 <template>
-    <div class="flex flex-col">
+    <LoadingScreen v-if="isLoading" />
+    <div v-else class="flex flex-col">
         <div class="w-full h-96 md:h-35r lg:h-full lg:min-h-screen relative bg-custom-green">
             <NuxtImg src="/image/gatewaycity/banner-contact.jpg" alt="banner" class="w-full h-96 md:h-35r lg:h-full lg:min-h-screen object-cover absolute inset-0" />
             <div class="absolute top-0 left-0 w-full h-full bg-black opacity-20"></div>
@@ -100,6 +101,7 @@ const showMessageToast = (type, message, url = "") => {
   }
 };
 
+const isLoading = ref(true)
 const isSubmit = ref(false);
 const isSubmitting = ref(false)
 
@@ -167,6 +169,12 @@ const submitNow = async () => {
     isSubmitting.value = false;
   }
 };
+
+onMounted(() => {
+    setTimeout(() => {
+        isLoading.value = false
+    }, 1500)
+})
 
 </script>
 

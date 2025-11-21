@@ -94,9 +94,9 @@
         </div>
         </div>
         <div v-else>
-            <p class="text-white text-base text-center py-12 lg:py-20">Sản phẩm hiện đang cập nhật, vui lòng đợi</p>
+            <p class="text-white text-base text-center py-12 lg:py-20 bg-custom-green">Sản phẩm hiện đang cập nhật, vui lòng đợi</p>
         </div>
-        <div class="flex flex-col bg-custom-green">
+        <div v-if="product.blueprint.length > 0" class="flex flex-col bg-custom-green">
 
             <!-- Tabs -->
             <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50"

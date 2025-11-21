@@ -1,5 +1,6 @@
 <template>
-    <div class="flex flex-col">
+    <LoadingScreen v-if="isLoading" />
+    <div v-else class="flex flex-col">
         <ProductBanner />
         <ProductDetail :product="findProduct" />
         <ProductContent />
@@ -11,7 +12,7 @@
 <script setup>
 import { ref } from 'vue';
 
-
+const isLoading = ref(true)
 const route = useRoute()
 const slug = route.params.slug
 
@@ -108,7 +109,9 @@ const product = ref([
 const findProduct = product.value.find(item => item.slug === slug)
 
 onMounted(() => {
-    
+    setTimeout(() => {
+        isLoading.value = false
+    }, 1500)
 })
 
 </script>
