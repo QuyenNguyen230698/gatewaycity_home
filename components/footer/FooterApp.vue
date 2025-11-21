@@ -51,13 +51,13 @@
             data-aos="fade-up"
             data-aos-offset="20"
             data-aos-delay="50">
-            <NuxtLink to="/" class="col-span-6 md:col-span-2 hover:underline cursor-pointer">
+            <NuxtLink to="/tong-quan" class="col-span-6 md:col-span-2 hover:underline cursor-pointer">
               Tổng Quan
             </NuxtLink>
             <NuxtLink to="/" class="col-span-6 md:col-span-2 hover:underline cursor-pointer md:text-center">
               Chủ Đầu Tư
             </NuxtLink>
-            <NuxtLink to="/" class="col-span-6 md:col-span-2 hover:underline cursor-pointer md:text-center">
+            <NuxtLink to="/san-pham/biet-thu-don-lap" class="col-span-6 md:col-span-2 hover:underline cursor-pointer md:text-center">
               Sản Phẩm
             </NuxtLink>
             <NuxtLink to="/vi-tri" class="col-span-6 md:col-span-2 hover:underline cursor-pointer md:text-center">
