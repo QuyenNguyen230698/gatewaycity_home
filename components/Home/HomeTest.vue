@@ -3,7 +3,9 @@
     ref="buttonRef"
     class="group relative inline-flex items-center justify-center w-20 h-20 md:w-24 md:h-24 rounded-full bg-custom-green hover:bg-pyramid-gold text-white border border-pyramid-gold font-medium text-sm overflow-hidden cursor-pointer transition-all duration-500 shadow-md focus:outline-none"
     aria-label="Xem thêm"
+    :class="isHidden ? 'hidden' : ''"
   >
+    <NuxtLink :to="props.to">
     <!-- SVG Circle Border -->
     <svg
       class="absolute inset-0 w-full h-full pointer-events-none -rotate-90 z-10"
@@ -32,12 +34,18 @@
     <span class="relative z-10 flex items-center">
       Xem <br> thêm
     </span>
+    </NuxtLink>
   </button>
 </template>
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { gsap } from 'gsap'
+
+const props = defineProps({
+    to: {type: String, default: ''},
+    isHidden: {type: Boolean, default: false}
+})
 
 const buttonRef = ref(null)
 const circleRef = ref(null)
