@@ -5,6 +5,7 @@
       <slot />
       <FooterApp />
       <ButtonScrollToTopButton />
+      <GeneralDrawer ref="drawerRef" />
       <ModalSearch ref="modalSearch" />
     </div>
   </ClientOnly>
@@ -15,6 +16,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const modalSearch = ref(null);
+const drawerRef = ref(null);
 
 // Hàm để mở modal tìm kiếm
 const showSearchModal = () => {

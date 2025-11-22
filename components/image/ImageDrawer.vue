@@ -124,9 +124,17 @@ const thumbnailContainer = ref(null); // Ref cho thumbnail container
 
 // Computed properties
 const listImage = computed(() => imageStore.getListImage || []);
+// const paddedImages = computed(() => {
+//   return listImage.value.map((item, index) => ({
+//     src: item?.image && item.image !== '' ? item.image : '/placeholder.png',
+//     alt: item?.alt || `Image ${index + 1}`,
+//     key: `image-${index}-${Date.now()}`,
+//   }));
+// });
+
 const paddedImages = computed(() => {
   return listImage.value.map((item, index) => ({
-    src: item?.image && item.image !== '' ? item.image : '/placeholder.png',
+    src: item && item !== '' ? item : '/placeholder.png',
     alt: item?.alt || `Image ${index + 1}`,
     key: `image-${index}-${Date.now()}`,
   }));

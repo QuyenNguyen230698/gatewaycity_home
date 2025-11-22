@@ -122,7 +122,7 @@
                     <!-- GSAP cần duplicating images để chạy loop -->
                     <template v-for="i in 2">
                         <div 
-                            v-for="(img, index) in currentImages"
+                            v-for="(img, index) in currentImages.slice(0,2)"
                             :key="`${i}-${index}`"
                             class="flex-shrink-0 w-2/3 md:w-1/2 lg:w-1/2"
                         >
@@ -139,7 +139,41 @@
                 </div>
 
                 <div class="absolute left-0 right-0 bottom-0 w-full flex justify-center pb-1">
-                    <HomeTest />
+                      <button @click="actionShowImage(0)"
+                            ref="buttonRef"
+                            class="group relative inline-flex items-center justify-center w-20 h-20 md:w-24 md:h-24 rounded-full bg-custom-green hover:bg-pyramid-gold text-white border border-pyramid-gold font-medium text-sm overflow-hidden cursor-pointer transition-all duration-500 shadow-md focus:outline-none"
+                            aria-label="Xem thêm"
+                            :class="isHidden ? 'hidden' : ''"
+                        >
+                            <!-- SVG Circle Border -->
+                            <svg
+                            class="absolute inset-0 w-full h-full pointer-events-none -rotate-90 z-10"
+                            viewBox="0 0 100 100"
+                            xmlns="http://www.w3.org/2000/svg"
+                            >
+                            <circle
+                                ref="circleRef"
+                                cx="50"
+                                cy="50"
+                                r="50"
+                                fill="none"
+                                stroke="url(#gradient)"
+                                stroke-width="1.5"
+                                class="transition-all"
+                            />
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#ffffff" />
+                                <stop offset="100%" stop-color="#ffffff" />
+                                </linearGradient>
+                            </defs>
+                            </svg>
+
+                            <!-- Nội dung nút -->
+                            <span class="relative z-10 flex items-center">
+                            Xem <br> thêm
+                            </span>
+                        </button>
                 </div>
             </div>
         </div>
@@ -155,6 +189,8 @@ const props = defineProps({
     }
 })
 
+const imageStore = useImageStore();
+
 const currentImage = ref(0)
 const tabs = [
     { title: "TẦNG 01", key: "floor1" },
@@ -165,10 +201,23 @@ const tabs = [
 const activeTab = ref(0)
 const track = ref(null)
 let animation = null
+const buttonRef = ref(null)
+const circleRef = ref(null)
+let ctx = null
+
+// Bán kính và chu vi
+const radius = 50
+const circumference = 2 * Math.PI * radius
 
 const currentImages = computed(() => {
     return props.product[tabs[activeTab.value].key].image
 })
+
+const actionShowImage = (index) => {
+  let updatedImages = [...props.product[tabs[activeTab.value].key].image];
+  imageStore.setListImage(updatedImages, index);
+  imageStore.setIsOpen(true);
+};
 
 /* ---- Hàm tạo GSAP Animation chạy vô hạn ---- */
 const initSlide = () => {
@@ -185,7 +234,7 @@ const initSlide = () => {
 
     animation = gsap.to(track.value, {
         x: -trackWidth,
-        duration: 40,         // tốc độ, càng nhỏ càng nhanh
+        duration: 30,         // tốc độ, càng nhỏ càng nhanh
         ease: "linear",
         repeat: -1,
         modifiers: {
@@ -202,6 +251,51 @@ const switchTab = (index) => {
 
 onMounted(() => {
     nextTick(() => initSlide())
+      ctx = gsap.context(() => {
+    // Đặt trạng thái ban đầu: dashoffset = chu vi (ẩn hoàn toàn)
+    gsap.set(circleRef.value, {
+      strokeDasharray: circumference,
+      strokeDashoffset: circumference
+    })
+
+    const button = buttonRef.value
+
+    // Hover vào: chạy hiệu ứng 1 lần
+    button.addEventListener('mouseenter', () => {
+      gsap.to(circleRef.value, {
+        strokeDashoffset: 0,
+        duration: 1.5,
+        ease: 'power2.out'
+      })
+
+      // Phóng to nhẹ
+      gsap.to(button, {
+        duration: 0.3,
+        ease: 'back.out(1.4)'
+      })
+    })
+
+    // Rời chuột: reset border + scale
+    button.addEventListener('mouseleave', () => {
+      // Reset border về trạng thái ban đầu
+      gsap.to(circleRef.value, {
+        strokeDashoffset: circumference,
+        duration: 0.6,
+        ease: 'power1.in'
+      })
+
+      // Trở về kích thước ban đầu
+      gsap.to(button, {
+        scale: 1,
+        duration: 0.4,
+        ease: 'power2.out'
+      })
+    })
+  })
+})
+
+onBeforeUnmount(() => {
+  if (ctx) ctx.revert()
 })
 
 onUnmounted(() => {
