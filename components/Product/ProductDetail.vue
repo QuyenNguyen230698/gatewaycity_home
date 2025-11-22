@@ -124,7 +124,7 @@
                         <div 
                             v-for="(img, index) in currentImages.slice(0,2)"
                             :key="`${i}-${index}`"
-                            class="flex-shrink-0 w-2/3 md:w-1/2 lg:w-1/2"
+                            class="flex-shrink-0 w-2/3 md:w-1/2 lg:w-1/2 h-64 md:h-80 lg:h-30r"
                         >
                             <NuxtImg
                                 :src="img"
