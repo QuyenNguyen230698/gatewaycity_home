@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-12 md:col-span-6 lg:col-span-7 py-8 lg:py-6 flex justify-center items-center w-full h-fit">
-                <NuxtLink to="" class="px-6 py-2 rounded-full cursor-pointer text-white uppercase bg-pyramid-gold text-base md:text-xl">ĐĂNG KÝ THĂM QUAN</NuxtLink>
+                <NuxtLink to="" class="text-sm md:text-base text-white text-center px-8 py-2 rounded-full bg-pyramid-gold hover:bg-pyramid-gold/80 transition-colors duration-300">ĐĂNG KÝ THĂM QUAN</NuxtLink>
             </div>
         </div>
         <div class="relative w-full h-25r md:h-33r lg:h-full">
