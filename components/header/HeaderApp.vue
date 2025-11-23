@@ -353,7 +353,7 @@
             <ul
               class="bg-custom-green text-base w-full h-full overflow-y-scroll"
             >
-              <li class="h-36 py-4 grid grid-cols-4 w-full">
+              <li class="h-25 py-4 grid grid-cols-4 w-full">
                 <div class="col-start-2 flex items-center gap-6">
                   <!-- Nút menu (mở drawer desktop) -->
                   <label
