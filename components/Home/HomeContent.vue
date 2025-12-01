@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-12 md:col-span-6 lg:col-span-7 py-8 lg:py-6 flex justify-center items-center w-full h-fit">
-                <NuxtLink to="" class="text-sm md:text-base text-white text-center px-8 py-2 rounded-full bg-pyramid-gold hover:bg-pyramid-gold/80 transition-colors duration-300">ĐĂNG KÝ THĂM QUAN</NuxtLink>
+                <button @click="actionShowPopUp()" class="text-sm md:text-base text-white text-center px-8 py-2 rounded-full bg-pyramid-gold hover:bg-pyramid-gold/80 transition-colors duration-300">ĐĂNG KÝ THĂM QUAN</button>
             </div>
         </div>
         <div class="relative w-full h-25r md:h-33r lg:h-full">
@@ -29,10 +29,18 @@
                     <span class="hidden md:inline text-base">Clubhouse tiêu chuẩn nghỉ dưỡng, hồ bơi, phòng gym và khu sinh hoạt cộng đồng đáp ứng nhu cầu chăm sóc sức khỏe và thư giãn hằng ngày. Không gian chợ nổi và phố ẩm thực tái hiện trọn vẹn văn hóa đặc trưng miền Tây, góp phần tạo nên điểm đến giải trí – du lịch mới cho cư dân và du khách. Hệ thống công viên cảnh quan, đường dạo bộ, khu vui chơi trẻ em cùng an ninh compound 24/7 giúp Gateway City trở thành một môi trường sống trọn vẹn, an toàn và giàu trải nghiệm.</span></p>
             </div>
         </div>
+
+        <GeneralQuotePrice ref="popUp"/>
+
     </div>
 </template>
 
 <script setup>
+const popUp = ref(null);
+
+const actionShowPopUp = () => {
+    popUp.value.actionShowPopUp();
+};
 
 </script>
 

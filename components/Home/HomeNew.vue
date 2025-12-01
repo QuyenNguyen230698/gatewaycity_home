@@ -1,6 +1,6 @@
 <template>
     <div class="w-full h-full container mx-auto overflow-hidden">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-16 pb-6 md:pb-0 md:py-16 justify-stretch">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-16 py-8 md:py-16 justify-stretch">
             <div class="col-span-1 flex flex-col gap-6 h-full">
                 <h2 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-2xl lg:text-4xl">Tin Tức</h2>
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-3 w-full h-full">
@@ -31,13 +31,13 @@
                     </NuxtLink>
                 </div>
             </div>
-            <div class="col-span-1 flex flex-col gap-2">
+            <div v-if="doitac" class="col-span-1 flex flex-col gap-2">
                 <h2 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-2xl lg:text-4xl">Chủ đầu tư</h2>
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex justify-center items-center py-10">
                     <NuxtImg src="/image/gatewaycity/thanhdogroup.png" class="w-full h-full object-cover"/>
                 </div>
             </div>
-            <div class="col-span-1 flex flex-col gap-2">
+            <div v-if="doitac" class="col-span-1 flex flex-col gap-2">
                 <h2 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-2xl lg:text-4xl">Đối tác</h2>
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="grid grid-cols-3">
                     <NuxtImg src="/image/gatewaycity/brandliftasia.png" class="w-full h-full object-contain"/>
@@ -53,7 +53,12 @@
 </template>
 
 <script setup>
-
+const props = defineProps({
+    doitac: {
+        type: Boolean,
+        default: true
+    }
+})
 </script>
 
 <style lang="scss" scoped>

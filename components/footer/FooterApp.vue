@@ -54,7 +54,7 @@
             <NuxtLink external to="/tong-quan" class="col-span-6 md:col-span-2 hover:underline cursor-pointer">
               Tổng Quan
             </NuxtLink>
-            <NuxtLink external to="/" class="col-span-6 md:col-span-2 hover:underline cursor-pointer md:text-center">
+            <NuxtLink external to="/chu-dau-tu" class="col-span-6 md:col-span-2 hover:underline cursor-pointer md:text-center">
               Chủ Đầu Tư
             </NuxtLink>
             <NuxtLink external to="/san-pham/biet-thu-don-lap" class="col-span-6 md:col-span-2 hover:underline cursor-pointer md:text-center">
