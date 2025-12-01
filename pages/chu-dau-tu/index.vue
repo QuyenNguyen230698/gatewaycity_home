@@ -6,7 +6,7 @@
             <div class="absolute top-0 left-0 w-full h-full bg-black opacity-20"></div>
         </div>
         <div class="container mx-auto flex flex-col overflow-hidden">
-            <div class="grid grid-cols-1 md:grid-cols-2 items-center justify-center py-4 md:py-8 lg:py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center py-4 md:py-8 lg:py-16">
                 <NuxtImg data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" src="/image/gatewaycity/thanhdo-group-nobg.png" alt="" class="w-full h-full object-contain md:pr-14 col-span-1" format="png" quality="85" loading="lazy" />
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-2 md:gap-4 col-span-1">
                     <div class="flex flex-col">
@@ -20,11 +20,11 @@
         <div class="bg-custom-green w-full py-8 lg:py-16 overflow-hidden">
             <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-6 md:gap-8 lg:gap-10 text-white col-span-1">
-                    <h2 class="text-xl md:text-3xl lg:text-5xl text-center">•Tầm Nhìn</h2>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl text-center">•Tầm Nhìn</h2>
                     <p class="text-base text-justify">Trở thành tập đoàn đầu tư – phát triển đô thị hàng đầu Việt Nam, tiên phong trong việc dẫn dắt xu hướng đô thị mới, đóng góp vào sự phát triển thịnh vượng và bền vững của các địa phương.</p>
                 </div>
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-6 md:gap-8 lg:gap-10 text-white col-span-1">
-                    <h2 class="text-xl md:text-3xl lg:text-5xl text-center">•Sứ Mệnh</h2>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl text-center">•Sứ Mệnh</h2>
                     <p class="text-base text-center">
                         Kiến tạo những khu đô thị văn minh, hiện đại và giàu bản sắc.
                         <br>
@@ -39,7 +39,7 @@
                     </p>
                 </div>
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-6 md:gap-8 lg:gap-10 text-white col-span-1">
-                    <h2 class="text-xl md:text-3xl lg:text-5xl text-center">•Giá Trị Cốt Lõi</h2>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl text-center">•Giá Trị Cốt Lõi</h2>
                     <p class="text-base text-center">
                         <span class="font-montserrat-bold text-base">Uy tín:</span> Cam kết rõ ràng, thực thi chuẩn mực, lấy chữ tín làm trọng tâm.
                         <br>
@@ -56,16 +56,16 @@
             </div>
         </div>
         <div class="w-full container mx-auto bg-transparent overflow-hidden flex flex-col gap-6 md:py-10 lg:py-6">
-            <h2 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-xl md:text-3xl lg:text-5xl py-4">Lĩnh Vực Hoạt Động</h2>
+            <h2 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-3xl md:text-4xl lg:text-5xl py-4">Lĩnh Vực Hoạt Động</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-2 lg:gap-6 w-full h-full col-span-1">
                     <h2 class="text-lg md:text-xl lg:text-3xl">1. Phát triển BĐS đô thị</h2>
                     <h4 class="text-base md:text-lg text-justify">Thành Đô Group phát triển nhiều dự án đô thị quy mô lớn tại các khu vực giàu tiềm năng, định hình phong cách sống mới, gắn với xu hướng phát triển của kinh tế ven biển, công nghiệp – dịch vụ và thương mại.</h4>
                 </div>
-                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-1 md:px-14">
+                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-1 lg:px-14">
                     <NuxtImg src="/image/gatewaycity/banner1.jpg" alt="" class="w-full h-26r md:h-96 lg:h-25r object-cover" format="webp" quality="85" loading="lazy" />
                 </div>
-                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-1 md:px-14">
+                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-1 lg:px-14">
                     <NuxtImg src="/image/chudautu/chudautu1.jpg" alt="" class="w-full h-26r md:h-96 lg:h-25r object-cover" format="webp" quality="85" loading="lazy" />
                 </div>
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-2 lg:gap-6 w-full h-full col-span-1">
@@ -76,7 +76,7 @@
                     <h2 class="text-lg md:text-xl lg:text-3xl">3. Dịch vụ – thương mại – du lịch</h2>
                     <h4 class="text-base md:text-lg text-justify">Phát triển chuỗi tiện ích đi kèm, từ thương mại – dịch vụ – lưu trú đến vận hành khu đô thị, góp phần hoàn thiện hệ sinh thái bền vững.</h4>
                 </div>
-                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-1 md:px-14">
+                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-1 lg:px-14">
                     <NuxtImg src="/image/chudautu/banner-chudautu.jpg" alt="" class="w-full h-26r md:h-96 lg:h-25r object-cover" format="webp" quality="85" loading="lazy" />
                 </div>
             </div>

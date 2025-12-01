@@ -8,7 +8,7 @@
     </a>
     <button
       @click="actionShowPopUp()"
-      class="bg-black-hole text-white p-2 rounded-full shadow-lg hover:bg-custom-green transition-colors translate-all duration-500 ease-in-out z-30"
+      class="bg-yellow-600 text-white p-2 rounded-full shadow-lg hover:bg-yellow-700 transition-colors translate-all duration-500 ease-in-out z-30"
       :class="{ 'opacity-0 pointer-events-none animate-jump-out': !isVisible, 'opacity-100 animate-jump-in': isVisible }"
     >
       <NuxtImg src="/Icon_BaoGia.svg" alt="Quality" class="w-6 h-6 object-contain" />
