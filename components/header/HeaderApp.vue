@@ -503,7 +503,7 @@
                     <p class="text-3xl">Biệt Thự Song Lập</p>
                   </NuxtLink>
                 </li>
-                              <li class="text-nowrap grid grid-cols-4 w-full pb-4">
+                <li class="text-nowrap grid grid-cols-4 w-full pb-4">
                   <NuxtLink
                     to="/san-pham/nha-pho-thuong-mai"
                     external
