@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col bg-custom-green">
-        <div class="relative w-full pb-40 md:pb-80 lg:pb-40">
+        <div class="relative w-full pb-48 md:pb-80 lg:pb-44">
             <div class="container mx-auto w-full grid grid-cols-1 md:grid-cols-2">
                 <div class="col-span-1 md:px-6">
                     <NuxtImg src="/image/gatewaycity/background.jpg" alt="text" class="w-full h-full object-contain md:px-4" />
@@ -10,9 +10,9 @@
                 <!-- Title -->
                 <div class="container mx-auto w-full grid grid-cols-1 md:grid-cols-2 py-4 md:py-10 overflow-hidden">
                     <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-1 md:px-12 pb-4 md:pb-0">
-                        <NuxtImg src="/image/tienich/text-1.png" alt="text" class="w-full h-auto object-contain px-4" />
+                        <NuxtImg src="/image/tienich/text-1.png" alt="text" class="w-full h-auto object-contain px-12 md:px-4" />
                     </div>
-                    <div class="col-span-1 px-4 md:px-0">
+                    <div class="col-span-1 px-10 md:px-0">
                         <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-white text-xs md:text-sm lg:text-base"><span class="font-montserrat-bold uppercase">SENSE FESTI VĨNH LONG</span> – Trung tâm thương mại – giải trí lớn nhất miền Tây</p>
                         <br>
                         <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-white text-xs md:text-sm lg:text-base">Vị trí chiến lược: cửa ngõ trung tâm hành chính mới, giữa cầu Mỹ Thuận 1 và 2, liền kề cao tốc TP.HCM – Cần Thơ</p>

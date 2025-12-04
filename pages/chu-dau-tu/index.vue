@@ -57,7 +57,7 @@
         </div>
         <div class="w-full container mx-auto bg-transparent overflow-hidden flex flex-col gap-6 md:py-10 lg:py-6">
             <h2 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-3xl md:text-4xl lg:text-5xl py-4">Lĩnh Vực Hoạt Động</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="hidden md:grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-2 lg:gap-6 w-full h-full col-span-1">
                     <h2 class="text-lg md:text-xl lg:text-3xl">1. Phát triển BĐS đô thị</h2>
                     <h4 class="text-base md:text-lg text-justify">Thành Đô Group phát triển nhiều dự án đô thị quy mô lớn tại các khu vực giàu tiềm năng, định hình phong cách sống mới, gắn với xu hướng phát triển của kinh tế ven biển, công nghiệp – dịch vụ và thương mại.</h4>
@@ -71,6 +71,29 @@
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-2 lg:gap-6 w-full h-full col-span-1">
                     <h2 class="text-lg md:text-xl lg:text-3xl">2. Đầu tư hạ tầng & khu công nghiệp</h2>
                     <h4 class="text-base md:text-lg text-justify">Tập đoàn tham gia đầu tư hệ thống hạ tầng, logistics và các khu công nghiệp thế hệ mới, tạo động lực thu hút dòng vốn FDI, thúc đẩy tăng trưởng kinh tế địa phương.</h4>
+                </div>
+                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-2 lg:gap-6 w-full h-full col-span-1">
+                    <h2 class="text-lg md:text-xl lg:text-3xl">3. Dịch vụ – thương mại – du lịch</h2>
+                    <h4 class="text-base md:text-lg text-justify">Phát triển chuỗi tiện ích đi kèm, từ thương mại – dịch vụ – lưu trú đến vận hành khu đô thị, góp phần hoàn thiện hệ sinh thái bền vững.</h4>
+                </div>
+                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-1 lg:px-14">
+                    <NuxtImg src="/image/chudautu/banner-chudautu.jpg" alt="" class="w-full h-26r md:h-96 lg:h-25r object-cover" format="webp" quality="85" loading="lazy" />
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:hidden">
+                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-2 lg:gap-6 w-full h-full col-span-1">
+                    <h2 class="text-lg md:text-xl lg:text-3xl">1. Phát triển BĐS đô thị</h2>
+                    <h4 class="text-base md:text-lg text-justify">Thành Đô Group phát triển nhiều dự án đô thị quy mô lớn tại các khu vực giàu tiềm năng, định hình phong cách sống mới, gắn với xu hướng phát triển của kinh tế ven biển, công nghiệp – dịch vụ và thương mại.</h4>
+                </div>
+                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-1 lg:px-14">
+                    <NuxtImg src="/image/gatewaycity/banner1.jpg" alt="" class="w-full h-26r md:h-96 lg:h-25r object-cover" format="webp" quality="85" loading="lazy" />
+                </div>
+                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-2 lg:gap-6 w-full h-full col-span-1">
+                    <h2 class="text-lg md:text-xl lg:text-3xl">2. Đầu tư hạ tầng & khu công nghiệp</h2>
+                    <h4 class="text-base md:text-lg text-justify">Tập đoàn tham gia đầu tư hệ thống hạ tầng, logistics và các khu công nghiệp thế hệ mới, tạo động lực thu hút dòng vốn FDI, thúc đẩy tăng trưởng kinh tế địa phương.</h4>
+                </div>
+                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-1 lg:px-14">
+                    <NuxtImg src="/image/chudautu/chudautu1.jpg" alt="" class="w-full h-26r md:h-96 lg:h-25r object-cover" format="webp" quality="85" loading="lazy" />
                 </div>
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-2 lg:gap-6 w-full h-full col-span-1">
                     <h2 class="text-lg md:text-xl lg:text-3xl">3. Dịch vụ – thương mại – du lịch</h2>

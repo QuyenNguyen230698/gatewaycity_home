@@ -12,7 +12,7 @@
             data-aos-delay="50"
             class="title2xl text-black font-geoform-bold text-center"
             >
-            Event Not Found
+            Không tìm thấy tin tức
             </h2>
             <p 
             data-aos="fade-up"
@@ -20,25 +20,25 @@
             data-aos-delay="100"
             class="titlebase text-stone-500 font-quicksand-regular text-center mt-4"
             >
-            Event you're looking for doesn't exist or has been removed.
+            Tin tức bạn tìm kiếm không tồn tại hoặc đã bị xóa.
             </p>
             <NuxtLink external
-            to="/su-kien"
+            to="/tin-tuc"
             data-aos="fade-up"
             data-aos-offset="20"
             data-aos-delay="150"
             class="font-geoform-medium uppercase w-fit mt-6 bg-black text-white px-4 py-2 titlebase hover:bg-stone-800 duration-300 ease-in-out"
             >
-            Back to Event
+            Back to News
             </NuxtLink>
         </div>
     </div>
 </template>
 
 <script setup>
-
 const route = useRoute()
 const slug = route.params.slug
+
 const isLoading = ref(true)
 
 const currentPost = computed(() => {

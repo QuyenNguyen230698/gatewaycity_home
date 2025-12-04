@@ -25,10 +25,17 @@
         <h3 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-2xl md:text-2xl lg:text-4xl text-white col-start-2 col-end-5 lg:col-end-4">
           {{ tabs[activeTab].title }}
         </h3>
-        <ul class="space-y-2 lg:space-y-4 text-white col-start-2 col-end-4">
+        <ul class="hidden md:block space-y-2 lg:space-y-4 text-white md:col-start-2 md:col-end-4">
           <li v-for="(feature, i) in tabs[activeTab].features" :key="i" class="flex flex-col items-start">
             <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-sm lg:text-base">{{ feature.title }}</p>
             <h3 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-sm lg:text-base">{{ feature.des }}</h3>
+          </li>
+        </ul>
+        <ul class="md:hidden gap-2 text-white col-span-4 grid grid-cols-2">
+          <li v-for="(feature, i) in tabs[activeTab].features" :key="i" class="flex flex-col items-start"
+          :class="{'pl-8': (i + 1) % 2 === 1,'pr-8': (i + 1) % 2 === 0 }">
+            <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-xs md:text-sm lg:text-base">{{ feature.title }}</p>
+            <h3 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-xs md:text-sm lg:text-base">{{ feature.des }}</h3>
           </li>
         </ul>
       </div>

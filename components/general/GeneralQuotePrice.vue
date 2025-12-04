@@ -1,7 +1,7 @@
 <template>
     <!-- Pop Up Quote Price -->
       <dialog ref="popUp" class="modal items-center h-auto backdrop-blur-lg">
-        <div class="modal-box relative w-6/12 h-fit overflow-hidden rounded-lg p-4 lg:p-6 max-w-5xl">
+        <div class="modal-box relative lg:w-6/12 h-fit overflow-hidden rounded-lg p-4 lg:p-6 max-w-5xl">
           <form method="dialog">
             <button class="absolute top-3 right-3 focus-visible:outline-none">
               <span class="flex justify-center items-center cursor-pointer text-black focus-visible:outline-none">

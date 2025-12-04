@@ -7,7 +7,7 @@
                     <NuxtImg :src="renderNews[0].src" class="w-full h-64 md:h-96 object-cover"/>
                     <h3 class="text-base md:text-lg lg:text-xl">{{ renderNews[0].title }}</h3>
                     <p class="text-sm md:text-base lg:text-base font-montserrat-medium">{{ renderNews[0].description }}</p>
-                    <NuxtLink :to="`/tin-tuc/${renderNews[0].slug}`" class="font-montserrat-regular w-fit text-sm flex items-center gap-1 md:pt-2">Thông tin chi tiết
+                    <NuxtLink external :to="`/tin-tuc-va-su-kien/${renderNews[0].slug}`" class="font-montserrat-regular w-fit text-sm flex items-center gap-1 md:pt-2">Thông tin chi tiết
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
@@ -22,7 +22,7 @@
                     <NuxtImg :src="renderEvents[0].src" class="w-full h-64 md:h-96 object-cover"/>
                     <h3 class="text-base md:text-lg lg:text-xl">{{ renderEvents[0].title }}</h3>
                     <p class="text-sm md:text-base lg:text-base font-montserrat-medium">{{ renderEvents[0].description }}</p>
-                    <NuxtLink :to="`/su-kien/${renderEvents[0].slug}`" class="font-montserrat-regular w-fit text-sm flex items-center gap-1 md:pt-2">Thông tin chi tiết
+                    <NuxtLink external :to="`/tin-tuc-va-su-kien/${renderEvents[0].slug}`" class="font-montserrat-regular w-fit text-sm flex items-center gap-1 md:pt-2">Thông tin chi tiết
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />

@@ -4,8 +4,8 @@
             <div class="w-full h-64 md:h-25r lg:h-45r bg-custom-green flex flex-col gap-4 justify-center items-center">
                 <NuxtImg src="/image/gatewaycity/bg-map.png" alt="text" class="w-full h-full object-cover" />
             </div>
-            <div class="w-full h-30r md:h-25r bg-custom-green"></div>
-            <div class="absolute bottom-0 left-0 right-0 w-full z-10 grid grid-cols-12 justify-center items-center px-4 md:px-0">
+            <div class="w-full h-30r md:h-25r bg-custom-green hidden md:block"></div>
+            <div class="bg-custom-green md:bg-transparent md:absolute  md:bottom-0 md:left-0 md:right-0 w-full z-10 grid grid-cols-12 justify-center items-center px-4 md:px-0">
                 <NuxtImg src="/image/gatewaycity/background.jpg" alt="text" class="col-span-12 md:col-start-4 md:col-end-10 lg:col-start-5 lg:col-end-9 w-full h-auto object-contain" />
             </div>
             <div class="absolute top-20 md:top-20 lg:top-40 right-0 left-0 z-20 w-full flex flex-col justify-center items-center">
@@ -16,9 +16,9 @@
                     </svg>
                 </span>
             </div>
-            <div class="flex flex-col gap-6 md:gap-12 absolute -bottom-32 md:-bottom-48 lg:-bottom-80 left-0 right-0 justify-center items-center z-30">
+            <div class="flex flex-col gap-6 md:gap-12 absolute -bottom-40 md:-bottom-48 lg:-bottom-80 left-0 right-0 justify-center items-center z-30">
                 <!-- text -->
-                <div class="flex flex-col gap-2 md:gap-6 w-full lg:w-1/2 px-6">
+                <div class="flex flex-col gap-2 md:gap-6 w-full lg:w-1/2 px-12 md:px-6">
                     <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-white text-xs md:text-sm lg:text-base text-center">
                         <span class="font-montserrat-bold text-white text-lg lg:text-xl">Kết nối giao thông</span>
                         <br>

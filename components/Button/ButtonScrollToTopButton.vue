@@ -1,6 +1,6 @@
 <template>
-  <div class="fixed bottom-8 right-3 lg:right-8 flex flex-col gap-4 justify-center items-center">
-    <a href="https://zalo.me/0792007470" target="_blank"
+  <div class="fixed bottom-8 right-3 lg:right-8 z-50 flex flex-col gap-3 justify-center items-center">
+    <a href="https://zalo.me/0919542618" target="_blank"
       class="bg-black-hole text-white rounded-full shadow-lg z-30"
       :class="{ 'opacity-0 pointer-events-none animate-jump-out': !isVisible, 'opacity-100 animate-jump-in': isVisible }"
     >
@@ -33,7 +33,7 @@
   const isVisible = ref(false)
   
   const checkScroll = () => {
-    isVisible.value = window.pageYOffset > 300
+    isVisible.value = window.pageYOffset > 200
   }
   
   const scrollToTop = () => {

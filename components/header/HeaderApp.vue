@@ -119,6 +119,16 @@
                     <p class="text-2xl">Tiện Ích</p>
                   </NuxtLink>
                 </li>
+                <li class="text-nowrap w-full pb-4">
+                    <NuxtLink
+                      to="/tin-tuc-va-su-kien"
+                      external
+                      @click="closeDrawer"
+                      class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
+                    >
+                      <p class="text-2xl">Tin Tức & Sự kiện</p>
+                    </NuxtLink>
+                  </li>
               </ul>
             </div>
           </div>
@@ -383,7 +393,7 @@
                     @click="closeDrawer2"
                     class="whitespace-nowrap text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
                   >
-                    <p class="text-sm uppercase">Contact Us</p>
+                    <p class="text-sm uppercase">Liên Hệ</p>
                   </NuxtLink>
                 </div>
               </li>
@@ -427,6 +437,16 @@
                   <p class="text-3xl">Tiện Ích</p>
                 </NuxtLink>
               </li>
+              <li class="text-nowrap grid grid-cols-4 w-full pb-4">
+                  <NuxtLink
+                    to="/tin-tuc-va-su-kien"
+                    external
+                    @click="closeDrawer2"
+                    class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
+                  >
+                    <p class="text-3xl">Tin Tức & Sự kiện</p>
+                  </NuxtLink>
+                </li>
             </ul>
           </div>
         </div>

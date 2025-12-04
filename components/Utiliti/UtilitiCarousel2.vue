@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col bg-custom-green">
-        <div class="relative w-full pb-24 md:pb-32 lg:pb-20">
+        <div class="relative w-full pb-20 md:pb-32 lg:pb-20">
             <div class="container mx-auto w-full grid grid-cols-1 md:grid-cols-2">
                 <div class="col-start-2 md:px-6">
                     <NuxtImg src="/image/gatewaycity/background.jpg" alt="text" class="w-full md:h-full object-contain md:px-4" />
@@ -10,9 +10,9 @@
                 <!-- Title -->
                 <div class="container mx-auto w-full grid grid-cols-1 md:grid-cols-2 py-10 overflow-hidden">
                     <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-1 md:px-12 pb-4 md:pb-0 order-1 md:order-2">
-                        <NuxtImg src="/image/tienich/text-2.png" alt="text" class="w-full h-auto object-contain px-4" />
+                        <NuxtImg src="/image/tienich/text-2.png" alt="text" class="w-full h-auto object-contain px-12 md:px-4" />
                     </div>
-                    <div class="col-span-1 px-4 md:px-0 order-2 md:order-1">
+                    <div class="col-span-1 px-10 md:px-0 order-2 md:order-1">
                         <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-white font-montserrat-bold text-sm lg:text-base">Biểu tượng thượng lưu – Điểm hẹn tinh hoa</p>
                         <br>
                         <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-white text-sm lg:text-base">Trải nghiệm du ngoạn sang trọng, kết nối giao thương đường thủy, khẳng định phong cách sống thượng lưu. Bến du thuyền chính là dấu ấn độc bản chỉ có tại Gateway City.</p>
