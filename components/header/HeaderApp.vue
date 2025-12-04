@@ -129,6 +129,39 @@
                       <p class="text-2xl">Tin Tức & Sự kiện</p>
                     </NuxtLink>
                   </li>
+                  <li class="text-nowrap w-full pb-4">
+                    <p class="text-2xl font-montserrat-medium col-start-2 text-pyramid-gold">Sản Phẩm</p>
+                  </li>
+                  <li class="text-nowrap w-full pb-4">
+                    <NuxtLink
+                      to="/san-pham/biet-thu-don-lap"
+                      external
+                      @click="closeDrawer"
+                      class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
+                    >
+                      <p class="text-2xl">Biệt Thự Đơn Lập</p>
+                    </NuxtLink>
+                  </li>
+                  <li class="text-nowrap w-full pb-4">
+                    <NuxtLink
+                      to="/san-pham/biet-thu-song-lap"
+                      external
+                      @click="closeDrawer"
+                      class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
+                    >
+                      <p class="text-2xl">Biệt Thự Song Lập</p>
+                    </NuxtLink>
+                  </li>
+                  <li class="text-nowrap w-full pb-4">
+                    <NuxtLink
+                      to="/san-pham/nha-pho-thuong-mai"
+                      external
+                      @click="closeDrawer"
+                      class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
+                    >
+                      <p class="text-2xl">Nhà Phố Thương Mại</p>
+                    </NuxtLink>
+                  </li>
               </ul>
             </div>
           </div>
@@ -212,7 +245,7 @@
               @click="closeDrawer2"
               class="whitespace-nowrap text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
             >
-              <p class="text-sm uppercase">Contact Us</p>
+              <p class="text-sm uppercase">Liên Hệ</p>
             </NuxtLink>
           </div>
 
@@ -445,6 +478,39 @@
                     class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
                   >
                     <p class="text-3xl">Tin Tức & Sự kiện</p>
+                  </NuxtLink>
+                </li>
+                <li class="text-nowrap grid grid-cols-4 w-full pb-4">
+                  <p class="text-3xl font-montserrat-medium col-start-2 text-pyramid-gold">Sản Phẩm</p>
+                </li>
+                <li class="text-nowrap grid grid-cols-4 w-full pb-4">
+                  <NuxtLink
+                    to="/san-pham/biet-thu-don-lap"
+                    external
+                    @click="closeDrawer2"
+                    class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
+                  >
+                    <p class="text-3xl">Biệt Thự Đơn Lập</p>
+                  </NuxtLink>
+                </li>
+                <li class="text-nowrap grid grid-cols-4 w-full pb-4">
+                  <NuxtLink
+                    to="/san-pham/biet-thu-song-lap"
+                    external
+                    @click="closeDrawer2"
+                    class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
+                  >
+                    <p class="text-3xl">Biệt Thự Song Lập</p>
+                  </NuxtLink>
+                </li>
+                              <li class="text-nowrap grid grid-cols-4 w-full pb-4">
+                  <NuxtLink
+                    to="/san-pham/nha-pho-thuong-mai"
+                    external
+                    @click="closeDrawer2"
+                    class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
+                  >
+                    <p class="text-3xl">Nhà Phố Thương Mại</p>
                   </NuxtLink>
                 </li>
             </ul>
