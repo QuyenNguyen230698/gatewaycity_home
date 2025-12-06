@@ -1,15 +1,15 @@
 <template>
     <div class="flex flex-col">
         <div class="flex flex-col relative">
-            <div class="w-full h-64 md:h-25r lg:h-45r bg-custom-green flex flex-col gap-4 justify-center items-center">
+            <div class="w-full h-96 md:h-40r bg-custom-green flex flex-col gap-4 justify-center items-center">
                 <NuxtImg src="/image/gatewaycity/bg-map.png" alt="text" class="w-full h-full object-cover" />
             </div>
             <div class="w-full h-30r md:h-25r bg-custom-green hidden md:block"></div>
             <div class="bg-custom-green md:bg-transparent md:absolute  md:bottom-0 md:left-0 md:right-0 w-full z-10 grid grid-cols-12 justify-center items-center px-4 md:px-0">
                 <NuxtImg src="/image/gatewaycity/background.jpg" alt="text" class="col-span-12 md:col-start-4 md:col-end-10 lg:col-start-5 lg:col-end-9 w-full h-auto object-contain" />
             </div>
-            <div class="absolute top-20 md:top-20 lg:top-40 right-0 left-0 z-20 w-full flex flex-col justify-center items-center">
-                <NuxtImg data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" src="/image/gatewaycity/Textmap.png" alt="text" class="w-1/2 h-fit object-contain" />
+            <div class="absolute top-40 right-0 left-0 z-20 w-full flex flex-col justify-center items-center">
+                <NuxtImg data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" src="/image/gatewaycity/Textmap.png" alt="text" class="w-3/4 lg:w-1/2 h-fit object-contain" />
                 <span data-aos="fade-up" data-aos-offset="20" data-aos-delay="50">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 md:size-8 lg:size-10 text-white">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />

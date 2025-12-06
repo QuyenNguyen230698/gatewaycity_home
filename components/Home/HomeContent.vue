@@ -2,7 +2,7 @@
     <div class="w-full bg-custom-green">
         <div class="container mx-auto grid grid-cols-12 relative pb-28 md:pb-0">
             <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="absolute flex flex-col left-0 right-0 -bottom-12 md:-bottom-40 lg:-bottom-52 z-10">
-                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-12 md:col-span-6 lg:col-span-7 py-8 lg:py-6 flex justify-center items-center w-full h-fit">
+                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-12 md:col-span-6 lg:col-span-7 py-8 lg:py-6 flex justify-center items-center w-full h-fit md:hidden">
                     <button @click="actionShowPopUp()" class="text-sm md:text-base text-white text-center px-8 py-2 rounded-full bg-pyramid-gold hover:bg-pyramid-gold/80 transition-colors duration-300">ĐĂNG KÝ THĂM QUAN</button>
                 </div>
                 <NuxtImg src="/image/gatewaycity/content.png" alt="text" class="w-full h-full object-cover" />
@@ -33,7 +33,7 @@
             </div>
         </div>
 
-        <GeneralQuotePrice ref="popUp"/>
+        <GeneralQuotePrice ref="popUp" :isTour="true" :isQuote="false" />
 
     </div>
 </template>

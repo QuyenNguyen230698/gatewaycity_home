@@ -1,6 +1,6 @@
 
 <template>
-  <div class="w-full h-full bg-enquiry min-h-screen grid place-items-center mb-12">
+  <div class="w-full h-full bg-enquiry lg:min-h-screen grid place-items-center py-12 md:py-20 lg:py-0">
     <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="container mx-auto w-full h-fit bg-image-enquiry rounded-lg">
       <div class="py-6 md:p-10 grid grid-cols-1 lg:grid-cols-2 lg:gap-10 h-fit place-items-center">
         <div class="col-span-1 gap-2 w-full h-full flex flex-col pb-3 lg:pb-0 lg:justify-between">

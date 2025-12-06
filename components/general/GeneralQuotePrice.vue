@@ -57,12 +57,17 @@
                   ></textarea>
                 </div>
               <div class="col-span-2 flex justify-center mt-4">
-                <button
-                  type="submit"
-                  class="font-geoform-bold bg-black focus:outline-2 focus:outline-custom-green text-white rounded-full w-10/12 py-2 text-base hover:bg-stone-800 duration-300 ease-in-out"
+                <button v-if="isQuote" type="submit"
+                  class="font-geoform-bold text-white rounded-full w-10/12 py-2 text-base bg-pyramid-gold hover:bg-pyramid-gold/80 transition-colors duration-300 ease-in-out"
                   :disabled="isSubmitting"
                 >
                   {{ isSubmitting ? 'Đang gửi...' : 'Nhận Báo Giá Ngay' }}
+                </button>
+                <button v-if="isTour" type="submit"
+                  class="font-geoform-bold text-white rounded-full w-10/12 py-2 text-base bg-pyramid-gold hover:bg-pyramid-gold/80 transition-colors duration-300 ease-in-out"
+                  :disabled="isSubmitting"
+                >
+                  {{ isSubmitting ? 'Đang gửi...' : 'Đăng Ký Tham Quan' }}
                 </button>
               </div>
             </form>
@@ -80,6 +85,18 @@
 </template>
 
 <script setup>
+
+const props = defineProps({
+    isTour: {
+        type: Boolean,
+        default: false,
+    },
+    isQuote: {
+        type: Boolean,
+        default: false,
+    },
+})
+
   // Toast
 const toastRef = ref(null);
 const toastImageRef = ref(null); // Thêm ref cho ToastImage

@@ -23,7 +23,7 @@
       </svg>
     </button>
 
-    <GeneralQuotePrice ref="popUp"/>
+    <GeneralQuotePrice ref="popUp" :isTour="false" :isQuote="true"/>
 
   </div>
   </template>

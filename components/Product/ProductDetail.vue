@@ -1,23 +1,30 @@
 <template>
     <div class="flex flex-col">
         <!-- carousel Section-->
-        <div class="grid grid-cols-10 h-35r lg:h-40r w-full">
+        <div class="grid grid-cols-10 h-35r w-full">
             <!-- Text Section (3/10) -->
-            <div class="col-span-10 md:col-span-3 grid grid-cols-4 justify-center items-center bg-img py-4">
-                <h3 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-2xl md:text-2xl lg:text-4xl text-white col-start-2 col-end-5 lg:col-end-4">
+            <div class="col-span-10 md:col-span-3 grid grid-cols-4 justify-center items-center bg-img py-4 h-15r md:h-full">
+                <h3 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-2xl md:text-2xl lg:text-4xl text-center md:text-start text-white col-span-4 md:col-start-2 md:col-end-5 lg:col-end-4">
                 {{ product.title }}
                 </h3>
-                <ul class="space-y-2 lg:space-y-4 text-white col-start-2 col-end-4">
+                <ul class="hidden md:block space-y-2 lg:space-y-4 text-white md:col-start-2 md:col-end-4">
                 <li v-for="(feature, i) in product.features" :key="i" class="flex flex-col items-start">
                     <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-sm lg:text-base">{{ feature.title }}</p>
                     <h3 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-sm lg:text-base">{{ feature.des }}</h3>
                 </li>
                 </ul>
+                <ul class="md:hidden gap-2 text-white col-span-4 grid grid-cols-2">
+                <li v-for="(feature, i) in product.features" :key="i" class="flex flex-col items-start"
+                :class="{'pl-8': (i + 1) % 2 === 1,'pr-8': (i + 1) % 2 === 0 }">
+                    <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-xs md:text-sm lg:text-base">{{ feature.title }}</p>
+                    <h3 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-xs md:text-sm lg:text-base">{{ feature.des }}</h3>
+                </li>
+                </ul>
             </div>
 
             <!-- Carousel Section (7/10) -->
-            <div class="col-span-10 md:col-span-7 relative bg-custom-green overflow-hidden">
-                <div class="relative h-64 md:h-35r lg:h-40r">
+            <div class="col-span-10 md:col-span-7 relative bg-custom-green overflow-hidden h-20r md:h-full">
+                <div class="relative h-full">
                 <!-- Images -->
                 <transition-group name="fade" tag="div" class="absolute inset-0">
                     <img
@@ -69,12 +76,12 @@
         <div v-if="product.blueprint.length > 0" class="w-full bg-custom-green py-12 lg:py-20">
         <!-- Container giới hạn width tối đa -->
         <div class="container mx-auto px-4 lg:px-8">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-6">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-6">
             <!-- Mỗi item là 1 cột -->
             <div
                 v-for="item in product.blueprint"
                 :key="item.id"
-                class="flex flex-col items-center"
+                class="flex flex-col items-center col-span-1"
             >
                 <!-- Hình ảnh -->
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="w-full aspect-[4/3] overflow-hidden shadow-lg">

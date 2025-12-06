@@ -13,7 +13,6 @@
                 <div class="col-span-12 md:col-span-8 flex flex-col gap-3">
                     <NuxtLink external :to="`/tin-tuc-va-su-kien/${item.slug}`" class="text-lg md:text-2xl font-montserrat-bold">{{ item.title }}</NuxtLink>
                     <p class="text-sm md:text-base">{{ item.description }}</p>
-                    <p class="font-montserrat-bold text-sm md:text-base">{{ item.type }}</p>
                 </div>
             </div>
         </div>

@@ -11,8 +11,8 @@
         data-aos-delay="1500"
         class="navbar h-24 py-4 justify-between items-center w-full container mx-auto lg:hidden"
       >
-        <div class="h-20 md:h-fit navbar-start w-fit lg:hidden">
-          <div class="drawer w-fit">
+        <div class="h-20 md:h-fit navbar-start lg:hidden">
+          <div class="drawer w-full">
             <input
               id="my-drawer"
               type="checkbox"
@@ -129,7 +129,7 @@
                       <p class="text-2xl">Tin Tức & Sự kiện</p>
                     </NuxtLink>
                   </li>
-                  <li class="text-nowrap w-full pb-4">
+                  <!-- <li class="text-nowrap w-full pb-4">
                     <p class="text-2xl font-montserrat-medium col-start-2 text-pyramid-gold">Sản Phẩm</p>
                   </li>
                   <li class="text-nowrap w-full pb-4">
@@ -161,13 +161,13 @@
                     >
                       <p class="text-2xl">Nhà Phố Thương Mại</p>
                     </NuxtLink>
-                  </li>
+                  </li> -->
               </ul>
             </div>
           </div>
         </div>
         <div
-          class="h-20 md:h-fit w-fit navbar-center md:justify-center flex lg:hidden"
+          class="h-20 md:h-fit navbar-center md:justify-center flex lg:hidden"
         >
           <NuxtLink aria-label="logo" external to="/" @click="closeDropdown">
             <NuxtImg
@@ -181,11 +181,91 @@
           </NuxtLink>
         </div>
         <div
-          class="h-full w-fit flex navbar-end lg:flex-row items-center justify-end"
+          class="h-full flex navbar-end lg:flex-row items-center justify-end"
         >
           <div class="flex gap-3 items-center lg:hidden">
-            <div
-              @click="openSearchModal"
+            <div class="relative">
+              <!-- Nút click để mở dropdown -->
+              <div @click="toggleDropdown" class="cursor-pointer">
+                <p
+                  class="text-sm px-4 py-2 uppercase whitespace-nowrap flex gap-1 items-center justify-center text-white hover:text-pyramid-gold bg-pyramid-gold hover:bg-white cursor-pointer transition-all duration-300"
+                  :class="isDropdownOpen ? 'rounded-t-3xl' : 'rounded-3xl'"
+                >
+                  <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                  </svg>
+                  </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1"
+                    stroke="currentColor"
+                    :class="[
+                      'size-4 transition-transform duration-300',
+                      { 'rotate-180': isDropdownOpen },
+                    ]"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </p>
+              </div>
+
+              <!-- Dropdown menu -->
+              <ul
+                v-if="isDropdownOpen"
+                v-click-away="closeDropdown"
+                class="absolute right-0 top-9 bg-white z-50 text-left fade-down w-52 rounded-b-3xl rounded-tl-3xl shadow-lg"
+              >
+                <li class="text-sm pt-2 px-4">
+                  <NuxtLink
+                    to="/san-pham/biet-thu-don-lap"
+                    external
+                    :class="
+                      isActiveRoute('/san-pham/biet-thu-don-lap')
+                        ? 'font-montserrat-medium text-pyramid-gold'
+                        : 'font-montserrat-medium hover:text-pyramid-gold'
+                    "
+                    @click="closeDropdown"
+                  >
+                    BIỆT THỰ ĐƠN LẬP
+                  </NuxtLink>
+                </li>
+                <li class="hover:text-pyramid-gold text-sm py-2 px-4">
+                  <NuxtLink
+                    to="/san-pham/biet-thu-song-lap"
+                    external
+                    :class="
+                      isActiveRoute('/san-pham/biet-thu-song-lap')
+                        ? 'font-montserrat-medium text-pyramid-gold'
+                        : 'font-montserrat-medium hover:text-pyramid-gold'
+                    "
+                    @click="closeDropdown"
+                  >
+                    BIỆT THỰ SONG LẬP
+                  </NuxtLink>
+                </li>
+                <li class="hover:text-pyramid-gold text-sm px-4 pb-2">
+                  <NuxtLink
+                    to="/san-pham/nha-pho-thuong-mai"
+                    external
+                    :class="
+                      isActiveRoute('/san-pham/nha-pho-thuong-mai')
+                        ? 'font-montserrat-medium text-pyramid-gold'
+                        : 'font-montserrat-medium hover:text-pyramid-gold'
+                    "
+                    @click="closeDropdown"
+                  >
+                    NHÀ PHỐ THƯƠNG MẠI
+                  </NuxtLink>
+                </li>
+              </ul>
+            </div>
+            <div @click="openSearchModal"
               class="py-2 flex-grow flex items-center justify-center rounded-full bg-transparent border border-pyramid-gold p-2"
             >
               <svg
@@ -480,7 +560,7 @@
                     <p class="text-3xl">Tin Tức & Sự kiện</p>
                   </NuxtLink>
                 </li>
-                <li class="text-nowrap grid grid-cols-4 w-full pb-4">
+                <!-- <li class="text-nowrap grid grid-cols-4 w-full pb-4">
                   <p class="text-3xl font-montserrat-medium col-start-2 text-pyramid-gold">Sản Phẩm</p>
                 </li>
                 <li class="text-nowrap grid grid-cols-4 w-full pb-4">
@@ -512,7 +592,7 @@
                   >
                     <p class="text-3xl">Nhà Phố Thương Mại</p>
                   </NuxtLink>
-                </li>
+                </li> -->
             </ul>
           </div>
         </div>

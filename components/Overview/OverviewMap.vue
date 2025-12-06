@@ -1,11 +1,11 @@
 <template>
     <div class="flex flex-col">
         <div class="relative">
-            <div class="w-full h-64 md:h-35r bg-custom-green">
+            <div class="w-full h-96 md:h-40r bg-custom-green">
                 <NuxtImg src="/image/gatewaycity/bg-map.png" alt="text" class="w-full h-full object-cover" />
             </div>
             <div class="absolute inset-0 z-20 w-full flex flex-col justify-center items-center">
-                <NuxtImg data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" src="/image/gatewaycity/Textmap.png" alt="text" class="w-1/2 h-fit object-contain" />
+                <NuxtImg data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" src="/image/gatewaycity/Textmap.png" alt="text" class="w-3/4 lg:w-1/2 h-fit object-contain" />
                 <span data-aos="fade-up" data-aos-offset="20" data-aos-delay="50">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 md:size-8 lg:size-10 text-white">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
@@ -15,7 +15,7 @@
         </div>
         <div class="relative w-full h-full">
             <!-- video -->
-            <div v-if="isVideo" class="w-full h-64 md:h-35r lg:h-full lg:min-h-screen relative">
+            <div v-if="isVideo" class="w-full h-96 md:h-40r lg:h-full lg:min-h-screen relative">
                 <video ref="video" preload="auto" webkit-playsinline="true" playsinline="true" autoplay muted loop
                     class="object-cover w-full h-full absolute inset-0 aspect-square lg:aspect-auto" :src="videoSrc" title="Video TranDuc Corporation"
                     alt="Video" style="object-position: top;">

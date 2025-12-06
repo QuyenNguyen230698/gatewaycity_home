@@ -16,7 +16,7 @@
                 </div>
                 <div class="col-span-8 md:col-start-7 col-end-13 lg:col-end-12 w-full h-full relative">
                     <NuxtImg src="/image/gatewaycity/background.jpg" alt="text" class="w-full h-full object-contain" />
-                    <div class="absolute inset-0 mt-10 md:mt-20 lg:mt-40 flex flex-col px-2 md:px-4">
+                    <div class="absolute inset-0 mt-10 md:mt-20 lg:mt-40 flex flex-col px-6 md:px-4">
                         <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-pyramid-gold text-xs md:text-xl lg:text-2xl">GATEWAY CITY VĨNH LONG LÀ KHU ĐÔ THỊ THƯƠNG MẠI – DỊCH VỤ – NGHỈ DƯỠNG KHÉP KÍN ĐẦU TIÊN TẠI ĐỒNG BẰNG SÔNG CỬU LONG,</p>
                         <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-white text-xs md:text-xl lg:text-2xl">PHÁT TRIỂN THEO MÔ HÌNH <br> ALL-IN-COMPOUND</p>
                         <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-white text-xs md:text-xl lg:text-xl py-3 md:py-8 lg:py-16">Tích hợp đầy đủ tiện ích, đảm bảo an ninh 24/7, kết hợp không gian sống, kinh doanh và nghỉ dưỡng trong cùng một quần thể.</p>

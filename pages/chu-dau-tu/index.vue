@@ -82,21 +82,21 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:hidden">
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-2 lg:gap-6 w-full h-full col-span-1">
-                    <h2 class="text-lg md:text-xl lg:text-3xl">1. Phát triển BĐS đô thị</h2>
+                    <h2 class="text-2xl lg:text-3xl">1. Phát triển BĐS đô thị</h2>
                     <h4 class="text-base md:text-lg text-justify">Thành Đô Group phát triển nhiều dự án đô thị quy mô lớn tại các khu vực giàu tiềm năng, định hình phong cách sống mới, gắn với xu hướng phát triển của kinh tế ven biển, công nghiệp – dịch vụ và thương mại.</h4>
                 </div>
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-1 lg:px-14">
                     <NuxtImg src="/image/gatewaycity/banner1.jpg" alt="" class="w-full h-26r md:h-96 lg:h-25r object-cover" format="webp" quality="85" loading="lazy" />
                 </div>
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-2 lg:gap-6 w-full h-full col-span-1">
-                    <h2 class="text-lg md:text-xl lg:text-3xl">2. Đầu tư hạ tầng & khu công nghiệp</h2>
+                    <h2 class="text-2xl lg:text-3xl">2. Đầu tư hạ tầng & khu công nghiệp</h2>
                     <h4 class="text-base md:text-lg text-justify">Tập đoàn tham gia đầu tư hệ thống hạ tầng, logistics và các khu công nghiệp thế hệ mới, tạo động lực thu hút dòng vốn FDI, thúc đẩy tăng trưởng kinh tế địa phương.</h4>
                 </div>
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-1 lg:px-14">
                     <NuxtImg src="/image/chudautu/chudautu1.jpg" alt="" class="w-full h-26r md:h-96 lg:h-25r object-cover" format="webp" quality="85" loading="lazy" />
                 </div>
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-2 lg:gap-6 w-full h-full col-span-1">
-                    <h2 class="text-lg md:text-xl lg:text-3xl">3. Dịch vụ – thương mại – du lịch</h2>
+                    <h2 class="text-2xl lg:text-3xl">3. Dịch vụ – thương mại – du lịch</h2>
                     <h4 class="text-base md:text-lg text-justify">Phát triển chuỗi tiện ích đi kèm, từ thương mại – dịch vụ – lưu trú đến vận hành khu đô thị, góp phần hoàn thiện hệ sinh thái bền vững.</h4>
                 </div>
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-1 lg:px-14">
@@ -107,7 +107,7 @@
         <div class="bg-custom-green w-full py-8 lg:py-16 overflow-hidden">
             <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-6 md:gap-8 lg:gap-10 text-white col-span-1">
-                    <h2 class="text-xl md:text-3xl lg:text-5xl">Dấu ấn phát triển</h2>
+                    <h2 class="text-3xl lg:text-5xl">Dấu ấn phát triển</h2>
                     <p class="text-base">
                         Trong hành trình phát triển, Thành Đô Group đã góp phần tạo nên những chuyển biến tích cực cho các địa phương bằng:
                         <br>
@@ -121,7 +121,7 @@
                     </p>
                 </div>
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-6 md:gap-8 lg:gap-10 text-white col-span-1">
-                    <h2 class="text-xl md:text-3xl lg:text-5xl">Chiến lược phát triển</h2>
+                    <h2 class="text-3xl lg:text-5xl">Chiến lược phát triển</h2>
                     <p class="text-base">
                         • Mở rộng quỹ đất tại những khu vực giàu tiềm năng tăng trưởng.
                         <br>
@@ -135,7 +135,7 @@
                     </p>
                 </div>
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="gap-6 md:gap-8 lg:gap-10 text-white col-span-1 md:col-span-3 grid grid-cols-1 md:grid-cols-2">
-                    <h2 class="text-xl md:text-3xl lg:text-5xl col-span-1 md:col-span-2">Cam kết với khách hàng & nhà đầu tư</h2>
+                    <h2 class="text-3xl lg:text-5xl col-span-1 md:col-span-2">Cam kết với khách hàng & nhà đầu tư</h2>
                     <p class="text-base text-justify col-span-1">
                         Thành Đô Group cam kết phát triển những sản phẩm có giá trị thật, pháp lý minh bạch, tiến độ đảm bảo, chất lượng bền vững – mang đến sự an tâm cho khách hàng và gia tăng giá trị lâu dài cho nhà đầu tư.
                     </p>

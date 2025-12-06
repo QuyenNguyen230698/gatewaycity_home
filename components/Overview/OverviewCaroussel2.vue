@@ -10,7 +10,7 @@
                 <!-- Title -->
                 <div class="container mx-auto w-full grid grid-cols-1 md:grid-cols-2 py-10 overflow-hidden">
                     <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-1 md:px-24 pb-4 md:pb-0 order-1 md:order-2">
-                        <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-white font-montserrat-bold px-6 lg:px-12 text-xl md:text-2xl lg:text-4xl md:text-end">Quy Mô <br> & Phân Khu</p>
+                        <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-white font-montserrat-bold px-10 lg:px-12 text-xl md:text-2xl lg:text-4xl md:text-end">Quy Mô <br class="hidden lg:block"> & Phân Khu</p>
                     </div>
                     <div class="col-span-1 px-10 md:px-0 order-2 md:order-1">
                         <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-white text-sm lg:text-base"><span class="text-white font-montserrat-bold text-lg md:text-xl lg:text-3xl">• Khu A:</span> <br>

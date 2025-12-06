@@ -2,7 +2,7 @@
     <div class="flex flex-col">
         <div class="relative w-full h-full">
             <!-- video -->
-            <div v-if="isVideo" class="w-full h-64 md:h-35r lg:h-full lg:min-h-screen relative">
+            <div v-if="isVideo" class="w-full h-96 md:h-40r lg:h-full lg:min-h-screen relative">
                 <video ref="video" preload="auto" webkit-playsinline="true" playsinline="true" autoplay muted loop
                     class="object-cover w-full h-full absolute inset-0 aspect-square lg:aspect-auto" :src="videoSrc" title="Video TranDuc Corporation"
                     alt="Video" style="object-position: top;">
