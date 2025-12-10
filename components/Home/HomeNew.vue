@@ -34,18 +34,18 @@
             <div v-if="doitac" class="col-span-1 flex flex-col gap-2">
                 <h2 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-2xl lg:text-4xl">Chủ đầu tư</h2>
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex justify-center items-center py-10">
-                    <NuxtImg src="/image/gatewaycity/thanhdogroup.png" class="w-full h-full object-cover"/>
+                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765283240/Media%20Gateway%20City/ht9oeyhfxo8sqyv63ky2.png" class="w-full h-full object-cover"/>
                 </div>
             </div>
             <div v-if="doitac" class="col-span-1 flex flex-col gap-2">
                 <h2 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-2xl lg:text-4xl">Đối tác</h2>
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="grid grid-cols-3">
-                    <NuxtImg src="/image/gatewaycity/brandliftasia.png" class="w-full h-full object-contain"/>
-                    <NuxtImg src="/image/gatewaycity/hdbank.png" class="w-full h-full object-contain"/>
-                    <NuxtImg src="/image/gatewaycity/scid.png" class="w-full h-full object-contain"/>
-                    <NuxtImg src="/image/gatewaycity/vas.png" class="w-full h-full object-contain"/>
-                    <NuxtImg src="/image/gatewaycity/hoaphat.png" class="w-full h-full object-contain"/>
-                    <NuxtImg src="/image/gatewaycity/dic.png" class="w-full h-full object-contain"/>
+                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765352467/Media%20Gateway%20City/lgbcexzmlpngczwr6jms.png" class="w-full h-full object-contain"/>
+                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765352483/Media%20Gateway%20City/kmfylibskisqzu4mwoan.png" class="w-full h-full object-contain"/>
+                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765352497/Media%20Gateway%20City/uw30auydf71efrgh4zey.png" class="w-full h-full object-contain"/>
+                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765352509/Media%20Gateway%20City/ahunvxxfrg5he45nhj6s.png" class="w-full h-full object-contain"/>
+                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765352483/Media%20Gateway%20City/msbtlfay2dzqe6rpowxo.png" class="w-full h-full object-contain"/>
+                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765352482/Media%20Gateway%20City/izonfxcii5laojufr1ah.png" class="w-full h-full object-contain"/>
                 </div>
             </div>
         </div>

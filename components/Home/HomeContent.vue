@@ -5,10 +5,10 @@
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-12 md:col-span-6 lg:col-span-7 py-8 lg:py-6 flex justify-center items-center w-full h-fit md:hidden">
                     <button @click="actionShowPopUp()" class="text-sm md:text-base text-white text-center px-8 py-2 rounded-full bg-pyramid-gold hover:bg-pyramid-gold/80 transition-colors duration-300">ĐĂNG KÝ THĂM QUAN</button>
                 </div>
-                <NuxtImg src="/image/gatewaycity/content.png" alt="text" class="w-full h-full object-cover" />
+                <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765350212/Media%20Gateway%20City/i4y1njpgstabykkapije.png" alt="text" class="w-full h-full object-cover" />
             </div>
             <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-12 md:col-span-6 lg:col-span-5 relative w-full h-full">
-                <NuxtImg src="/image/gatewaycity/background.jpg" alt="text" class="w-full h-full object-cover" />
+                <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765350331/Media%20Gateway%20City/pyevep6ewxkmkntseslx.png" alt="text" class="w-full h-full object-cover" />
                 <div class="absolute inset-0 flex flex-col items-center text-start px-10 md:px-4 pt-4 lg:pt-0">
                     <h2 class="text-white text-2xl md:text-3xl lg:text-4xl py-4 lg:py-6">Lợi Thế Cạnh Tranh</h2>
                     <p class="text-base text-white">Mô hình <span class="font-montserrat-bold">all-in-compound</span> đầu tiên tại ĐBSCL. Liền kề <span class="font-montserrat-bold">TTTM Sense Festi</span> – lớn nhất miền Tây. Bến du thuyền, quảng trường, clubhouse, chợ nổi – tạo điểm khác biệt về trải nghiệm sống và du lịch.</p>
@@ -22,7 +22,7 @@
         <div class="relative w-full h-25r md:h-33r lg:h-full">
             <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="w-full h-4/5 md:h-full container mx-auto grid grid-cols-12">
                 <div class="col-span-12 md:col-start-4 md:col-end-10 lg:col-start-5 lg:col-end-9 w-full h-4/5 md:h-full">
-                    <NuxtImg src="/image/gatewaycity/background.jpg" alt="text" class="w-full h-full object-cover" />
+                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765350331/Media%20Gateway%20City/pyevep6ewxkmkntseslx.png" alt="text" class="w-full h-full object-cover" />
                 </div>
             </div>
             <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="absolute inset-0 md:pt-24 lg:pt-10 h-full flex flex-col justify-center items-center">

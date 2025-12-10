@@ -78,7 +78,7 @@
             aria-label="Social Media Links"
           >
             <a
-              href="https://www.youtube.com/@tranduccorp"
+              href="https://www.youtube.com/@gatewaycityvinhlong"
               target="_blank"
               aria-label="YouTube"
               title="YouTube"
@@ -90,7 +90,7 @@
               />
             </a>
             <a
-              href="https://www.facebook.com/moduluxhomes"
+              href="https://www.facebook.com/GatewayCityVinhLong"
               target="_blank"
               aria-label="Facebook"
               title="Facebook"
@@ -101,8 +101,8 @@
                 class="w-6 h-6 object-contain"
               />
             </a>
-            <a
-              href="https://www.instagram.com/moduluxhomes_/"
+            <!-- <a
+              href="https://www.instagram.com/gatewaycityvinhlong"
               target="_blank"
               aria-label="Instagram"
               title="Instagram"
@@ -112,7 +112,7 @@
                 alt="Quality"
                 class="w-6 h-6 object-contain"
               />
-            </a>
+            </a> -->
           </nav>
         </div>
       </div>
@@ -267,7 +267,7 @@ onMounted(() => {
   letter-spacing: 0.2em;
 }
 .bg-img {
-  background-image: url('/image/gatewaycity/background.jpg');
+  background-image: url('https://res.cloudinary.com/dpcigceaq/image/upload/v1765350331/Media%20Gateway%20City/pyevep6ewxkmkntseslx.png');
   background-size: cover;
   background-position: center;
 }

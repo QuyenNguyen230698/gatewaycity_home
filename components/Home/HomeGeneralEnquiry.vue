@@ -246,7 +246,7 @@ const submitNow = async () => {
 
 <style lang="scss" scoped>
 .bg-image-enquiry {
-    background-image: url('/image/gatewaycity/banner-equip-price.jpg');
+    background-image: url('https://res.cloudinary.com/dpcigceaq/image/upload/v1765352299/Media%20Gateway%20City/qujezuf2bwlld9zlmoaz.jpg');
     background-size: cover;
     background-position: center;
 }

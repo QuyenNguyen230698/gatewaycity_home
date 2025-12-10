@@ -5,7 +5,7 @@
             <div class="relative w-full h-30r md:h-33r lg:h-full bg-custom-green">
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="w-full h-4/5 md:h-full container mx-auto grid grid-cols-12">
                     <div class="col-span-12 md:col-start-4 md:col-end-10 lg:col-start-5 lg:col-end-9 w-full h-4/5 md:h-full">
-                        <NuxtImg src="/image/gatewaycity/background.jpg" alt="text" class="w-full h-full object-cover" />
+                        <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765350331/Media%20Gateway%20City/pyevep6ewxkmkntseslx.png" alt="text" class="w-full h-full object-cover" />
                     </div>
                 </div>
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="absolute left-0 right-0 top-0 h-full flex flex-col items-center">

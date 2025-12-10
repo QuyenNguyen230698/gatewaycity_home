@@ -2,12 +2,12 @@
     <LoadingScreen v-if="isLoading" />
     <section v-else class="flex flex-col">
         <div class="w-full h-96 md:h-35r lg:h-full lg:min-h-screen relative bg-custom-green">
-            <NuxtImg src="/image/chudautu/chudautu2.jpg" alt="banner" class="w-full h-96 md:h-35r lg:h-full lg:min-h-screen object-cover absolute inset-0" />
+            <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765282952/Media%20Gateway%20City/qh5d6mmkpfolsy3zbtpj.jpg" alt="banner" class="w-full h-96 md:h-35r lg:h-full lg:min-h-screen object-cover absolute inset-0" />
             <div class="absolute top-0 left-0 w-full h-full bg-black opacity-20"></div>
         </div>
         <div class="container mx-auto flex flex-col overflow-hidden">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center py-4 md:py-8 lg:py-16">
-                <NuxtImg data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" src="/image/gatewaycity/thanhdo-group-nobg.png" alt="" class="w-full h-full object-contain md:pr-14 col-span-1" format="png" quality="85" loading="lazy" />
+                <NuxtImg data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765283240/Media%20Gateway%20City/ht9oeyhfxo8sqyv63ky2.png" alt="" class="w-full h-full object-contain md:pr-14 col-span-1" format="png" quality="85" loading="lazy" />
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-2 md:gap-4 col-span-1">
                     <div class="flex flex-col">
                         <h2 class="text-xl md:text-2xl lg:text-4xl">Tập đoàn Thành Đô</h2>
@@ -63,10 +63,10 @@
                     <h4 class="text-base md:text-lg text-justify">Thành Đô Group phát triển nhiều dự án đô thị quy mô lớn tại các khu vực giàu tiềm năng, định hình phong cách sống mới, gắn với xu hướng phát triển của kinh tế ven biển, công nghiệp – dịch vụ và thương mại.</h4>
                 </div>
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-1 lg:px-14">
-                    <NuxtImg src="/image/gatewaycity/banner1.jpg" alt="" class="w-full h-26r md:h-96 lg:h-25r object-cover" format="webp" quality="85" loading="lazy" />
+                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765282952/Media%20Gateway%20City/vsmugwgweicb8kc1dybr.jpg" alt="" class="w-full h-26r md:h-96 lg:h-25r object-cover" format="webp" quality="85" loading="lazy" />
                 </div>
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-1 lg:px-14">
-                    <NuxtImg src="/image/chudautu/chudautu1.jpg" alt="" class="w-full h-26r md:h-96 lg:h-25r object-cover" format="webp" quality="85" loading="lazy" />
+                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765282947/Media%20Gateway%20City/uhszciztpbmveabu1g5u.jpg" alt="" class="w-full h-26r md:h-96 lg:h-25r object-cover" format="webp" quality="85" loading="lazy" />
                 </div>
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-2 lg:gap-6 w-full h-full col-span-1">
                     <h2 class="text-lg md:text-xl lg:text-3xl">2. Đầu tư hạ tầng & khu công nghiệp</h2>
@@ -77,7 +77,7 @@
                     <h4 class="text-base md:text-lg text-justify">Phát triển chuỗi tiện ích đi kèm, từ thương mại – dịch vụ – lưu trú đến vận hành khu đô thị, góp phần hoàn thiện hệ sinh thái bền vững.</h4>
                 </div>
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-1 lg:px-14">
-                    <NuxtImg src="/image/chudautu/banner-chudautu.jpg" alt="" class="w-full h-26r md:h-96 lg:h-25r object-cover" format="webp" quality="85" loading="lazy" />
+                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765282947/Media%20Gateway%20City/vtk6wk6eusw2anfudt22.jpg" alt="" class="w-full h-26r md:h-96 lg:h-25r object-cover" format="webp" quality="85" loading="lazy" />
                 </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:hidden">

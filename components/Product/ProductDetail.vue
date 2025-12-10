@@ -330,7 +330,7 @@ const prevImage = () => {
   opacity: 0;
 }
 .bg-img {
-    background-image: url('/image/gatewaycity/background.jpg');
+    background-image: url('https://res.cloudinary.com/dpcigceaq/image/upload/v1765350331/Media%20Gateway%20City/pyevep6ewxkmkntseslx.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

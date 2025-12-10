@@ -7,7 +7,7 @@
         <div class="flex flex-col relative">
             <div class="bg-custom-green grid grid-cols-12">
                 <div class="px-4 col-span-12 md:col-start-4 md:col-end-10 lg:col-start-5 lg:col-end-9">
-                    <NuxtImg src="/image/gatewaycity/background.jpg" alt="text" class="w-full h-full object-cover" />
+                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765350331/Media%20Gateway%20City/pyevep6ewxkmkntseslx.png" alt="text" class="w-full h-full object-cover" />
                 </div>
             </div>
             <div class="bg-white h-12r md:h-25r lg:h-40r"></div>

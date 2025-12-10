@@ -3,7 +3,7 @@
         <div class="relative w-full pb-24 md:pb-32 lg:pb-20">
             <div class="container mx-auto w-full grid grid-cols-1 md:grid-cols-2">
                 <div class="col-start-2 md:px-6">
-                    <NuxtImg src="/image/gatewaycity/background.jpg" alt="text" class="w-full md:h-full object-contain md:px-4" />
+                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765350331/Media%20Gateway%20City/pyevep6ewxkmkntseslx.png" alt="text" class="w-full md:h-full object-contain md:px-4" />
                 </div>
             </div>
             <div class="flex flex-col absolute top-0 left-0 right-0 z-10">
@@ -160,7 +160,7 @@ img {
   image-rendering: -webkit-optimize-contrast;
 }
 .bg-img {
-    background-image: url('/image/gatewaycity/background.jpg');
+    background-image: url('https://res.cloudinary.com/dpcigceaq/image/upload/v1765350331/Media%20Gateway%20City/pyevep6ewxkmkntseslx.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

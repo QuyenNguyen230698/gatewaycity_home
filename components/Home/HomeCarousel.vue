@@ -8,8 +8,8 @@
             >
             <!-- Hình 1, 2, 3 với width khác nhau -->
             <div
-                v-for="(n, index) in 3"
-                :key="n"
+                v-for="(image, index) in images"
+                :key="image"
                 :class="[
                 'flex-shrink-0',
                 index === 1 
@@ -18,8 +18,8 @@
                 ]"
             >
                 <NuxtImg
-                :src="`/image/gatewaycity/carousel${n}.jpg`"
-                :alt="`Carousel image ${n}`"
+                :src="image"
+                :alt="`Carousel image ${index}`"
                 class="w-full h-full shadow-lg object-cover"
                 loading="lazy"
                 width="1200"
@@ -35,7 +35,7 @@
             </div>
         </div>
             <div class="w-full h-96 md:h-40r bg-custom-green flex flex-col gap-4 justify-center items-center bg-map">
-                <NuxtImg data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" src="/image/gatewaycity/Textmap.png" alt="text" class="w-3/4 lg:w-1/2 h-fit object-contain" />
+                <NuxtImg data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765350150/Media%20Gateway%20City/ratczht9snmj5ddfcw2s.png" alt="text" class="w-3/4 lg:w-1/2 h-fit object-contain" />
                 <span data-aos="fade-up" data-aos-offset="20" data-aos-delay="50">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 md:size-8 lg:size-10 text-white">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
@@ -53,6 +53,12 @@ const isInView = ref(false)
 const hasEntered = ref(false)
 const entryDirection = ref(null)
 let startProgress = 0
+
+const images = [
+    'https://res.cloudinary.com/dpcigceaq/image/upload/v1765285099/Media%20Gateway%20City/j5gigj6ijejrjfh0j09j.jpg',
+    'https://res.cloudinary.com/dpcigceaq/image/upload/v1765285099/Media%20Gateway%20City/p5xsxsnm4sxpmicascmf.jpg',
+    'https://res.cloudinary.com/dpcigceaq/image/upload/v1765351940/Media%20Gateway%20City/geb0h5nwfhcehshwftrg.jpg'
+]
 
 // Tính chiều dài cần dịch
 const getMaxTranslate = () => {
@@ -141,7 +147,7 @@ img {
   image-rendering: -webkit-optimize-contrast;
 }
 .bg-map {
-    background-image: url('/image/gatewaycity/bg-map.png');
+    background-image: url('https://res.cloudinary.com/dpcigceaq/image/upload/v1765350129/Media%20Gateway%20City/ahcgawjch8r6gm74c2t0.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
