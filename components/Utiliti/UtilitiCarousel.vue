@@ -10,7 +10,7 @@
                 <!-- Title -->
                 <div class="container mx-auto w-full grid grid-cols-1 md:grid-cols-2 py-4 md:py-10 overflow-hidden">
                     <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-1 md:px-12 pb-4 md:pb-0">
-                        <NuxtImg src="/image/tienich/text-1.png" alt="text" class="w-full h-auto object-contain px-12 md:px-4" />
+                        <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765355067/Media%20Gateway%20City/w92gznlgd22sxfozbnwq.png" alt="text" class="w-full h-auto object-contain px-12 md:px-4" />
                     </div>
                     <div class="col-span-1 px-10 md:px-0">
                         <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-white text-xs md:text-sm lg:text-base"><span class="font-montserrat-bold uppercase">SENSE FESTI VĨNH LONG</span> – Trung tâm thương mại – giải trí lớn nhất miền Tây</p>
@@ -41,8 +41,8 @@
                         :style="{ transform: `translateX(${translateX}px)` }"
                         >
                         <div
-                            v-for="(n, index) in 3"
-                            :key="n"
+                            v-for="(image, index) in images.slice(0,3)"
+                            :key="image"
                             :class="[
                             'flex-shrink-0',
                             index === 1 
@@ -51,8 +51,8 @@
                             ]"
                         >
                             <NuxtImg
-                            :src="`/image/tienich/1carousel${n}.png`"
-                            :alt="`Carousel image ${n}`"
+                            :src="image"
+                            :alt="`Carousel image ${index}`"
                             class="w-full h-full shadow-lg object-cover"
                             loading="lazy"
                             width="1200"
@@ -81,6 +81,14 @@ const isInView = ref(false)
 const hasEntered = ref(false)
 const entryDirection = ref(null)
 let startProgress = 0
+
+const images = [
+    'https://res.cloudinary.com/dpcigceaq/image/upload/v1765355439/Media%20Gateway%20City/d0lraq5ky0lb3hh6doos.png',
+    'https://res.cloudinary.com/dpcigceaq/image/upload/v1765355438/Media%20Gateway%20City/n3rjg1oardfdtmemw0uk.jpg',
+    'https://res.cloudinary.com/dpcigceaq/image/upload/v1765355440/Media%20Gateway%20City/xfuolgrd1kbxx01tltbp.png',
+    'https://res.cloudinary.com/dpcigceaq/image/upload/v1765355446/Media%20Gateway%20City/jr9twaowo9cdsplg98s7.png',
+    'https://res.cloudinary.com/dpcigceaq/image/upload/v1765355438/Media%20Gateway%20City/bq0aiplh6wfr8v30vy4p.png'
+]
 
 // Tính chiều dài cần dịch
 const getMaxTranslate = () => {

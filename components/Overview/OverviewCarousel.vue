@@ -11,7 +11,7 @@
                 <div class="container mx-auto w-full grid grid-cols-1 md:grid-cols-2 py-10 overflow-hidden">
                     <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-1 md:px-12 pb-4 md:pb-0 order-1 md:order-1 flex flex-col gap-4 justify-center">
                         <h3 class="text-white text-xl md:text-2xl lg:text-4xl px-10 lg:px-6">Chủ Đầu Tư</h3>
-                        <NuxtImg src="/image/gatewaycity/thanhdo-group-nobg.png" alt="text" class="w-full h-auto object-contain px-12 md:px-6" />
+                        <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765283240/Media%20Gateway%20City/ht9oeyhfxo8sqyv63ky2.png" alt="text" class="w-full h-auto object-contain px-12 md:px-6" />
                     </div>
                     <div class="col-span-1 px-10 md:px-0 order-2 md:order-2">
                         <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-white text-sm lg:text-base">•<span class="text-white font-montserrat-bold text-sm lg:text-base"> Công ty Cổ phần Tập đoàn Xây dựng Thành Đô</span> – đơn vị có hơn <span class="text-white font-montserrat-bold text-sm lg:text-base">30 công trình dân dụng, công nghiệp, hạ tầng và thương mại</span> đã hoàn thành, bao gồm trường học, bệnh viện, trụ sở cơ quan và dự án bất động sản.</p>
@@ -28,8 +28,8 @@
                         :style="{ transform: `translateX(${translateX}px)` }"
                         >
                         <div
-                            v-for="(n, index) in 3"
-                            :key="n"
+                            v-for="(image, index) in images"
+                            :key="image"
                             :class="[
                             'flex-shrink-0',
                             index === 1 
@@ -38,8 +38,8 @@
                             ]"
                         >
                             <NuxtImg
-                            :src="`/image/tienich/2carousel${n}.jpg`"
-                            :alt="`Carousel image ${n}`"
+                            :src="image"
+                            :alt="`Carousel image ${index}`"
                             class="w-full h-full shadow-lg object-cover"
                             loading="lazy"
                             width="1200"
@@ -68,6 +68,12 @@ const isInView = ref(false)
 const hasEntered = ref(false)
 const entryDirection = ref(null)
 let startProgress = 0
+
+const images = [
+    'https://res.cloudinary.com/dpcigceaq/image/upload/v1765285099/Media%20Gateway%20City/j5gigj6ijejrjfh0j09j.jpg',
+    'https://res.cloudinary.com/dpcigceaq/image/upload/v1765285097/Media%20Gateway%20City/gqkdcy0xk2ggoooxoidb.jpg',
+    'https://res.cloudinary.com/dpcigceaq/image/upload/v1765354428/Media%20Gateway%20City/qcjzjausvklf5ofhfbhr.png'
+]
 
 // Tính chiều dài cần dịch
 const getMaxTranslate = () => {

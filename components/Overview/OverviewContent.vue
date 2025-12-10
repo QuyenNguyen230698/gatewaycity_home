@@ -16,7 +16,7 @@
                     </p>
                     <div class="flex flex-col gap-3 pb-6 md:pb-12">
                         <p class="text-xs md:text-sm text-white text-center">Cảm hứng đằng sau <span class="font-montserrat-bold text-sm md:text-base">GATEWAY CITY</span></p>
-                        <a href="" target="_blank" class="text-sm md:text-base text-white text-center px-8 py-2 rounded-full bg-pyramid-gold hover:bg-pyramid-gold/80 transition-colors duration-300">TẢI E-BROCHURE</a>
+                        <button @click="openPdf" class="text-sm md:text-base text-white text-center px-8 py-2 rounded-full bg-pyramid-gold hover:bg-pyramid-gold/80 transition-colors duration-300">TẢI E-BROCHURE</button>
                     </div>
                     <div class="flex flex-col gap-4 lg:gap-8 justify-center items-center w-4/5 lg:w-2/3">
                         <iframe class="w-full h-48 md:h-25r lg:h-35r object-contain" src="https://www.youtube.com/embed/dLtMInQ7aRE?si=23UijeeR5OfYQPnK" title="Giới thiệu dự án Gateway City - Vĩnh Long" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -30,7 +30,9 @@
 </template>
 
 <script setup>
-
+const openPdf = () => {
+  window.open('/files/Brochure_GatewayCity_VinhLong_1011.pdf', '_blank')
+}
 </script>
 
 <style lang="scss" scoped>

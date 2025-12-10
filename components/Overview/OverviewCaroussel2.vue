@@ -32,8 +32,8 @@
                         :style="{ transform: `translateX(${translateX}px)` }"
                         >
                         <div
-                            v-for="(n, index) in 3"
-                            :key="n"
+                            v-for="(image, index) in images"
+                            :key="image"
                             :class="[
                             'flex-shrink-0',
                             index === 1 
@@ -42,8 +42,8 @@
                             ]"
                         >
                             <NuxtImg
-                            :src="`/image/gatewaycity/carousel${n}.jpg`"
-                            :alt="`Carousel image ${n}`"
+                            :src="image"
+                            :alt="`Carousel image ${index}`"
                             class="w-full h-full shadow-lg object-cover"
                             loading="lazy"
                             width="1200"
@@ -72,6 +72,12 @@ const isInView = ref(false)
 const hasEntered = ref(false)
 const entryDirection = ref(null)
 let startProgress = 0
+
+const images = [
+    'https://res.cloudinary.com/dpcigceaq/image/upload/v1765285099/Media%20Gateway%20City/j5gigj6ijejrjfh0j09j.jpg',
+    'https://res.cloudinary.com/dpcigceaq/image/upload/v1765285099/Media%20Gateway%20City/p5xsxsnm4sxpmicascmf.jpg',
+    'https://res.cloudinary.com/dpcigceaq/image/upload/v1765351940/Media%20Gateway%20City/geb0h5nwfhcehshwftrg.jpg'
+]
 
 // Tính chiều dài cần dịch
 const getMaxTranslate = () => {
