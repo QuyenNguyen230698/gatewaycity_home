@@ -109,7 +109,6 @@ const product = ref([
 // const findProduct = product.value.find(item => item.slug === slug)
 
 const fetchProducts = async () => {
-    console.log(slug)
     const config = useRuntimeConfig().public;
     try {
         const response = await $fetch(`${config.apiBase}/products/detail`, {

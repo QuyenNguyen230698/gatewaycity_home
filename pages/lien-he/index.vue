@@ -106,7 +106,7 @@ const isSubmit = ref(false);
 const isSubmitting = ref(false)
 
 // Form data
-const formEnquiry = reactive({
+const formEnquiry = ref({
   firstName: '',
   lastName: '',
   phoneNumber: '',
@@ -159,7 +159,16 @@ const submitNow = async () => {
   }
   isSubmitting.value = true;
 
+  const config = useRuntimeConfig().public;
+  const urlRegist = window.location.href;
   try {
+    const response = await $fetch(`${config.apiBase}/quoteprices/create`, {
+          method: 'POST',
+          body: {
+              urlRegist: urlRegist,
+              ...formEnquiry.value
+          }
+    })
     showMessageToast('success', 'Thank you for your message!');
     resetFormEnquiry();
     isSubmit.value = true;

@@ -148,7 +148,7 @@ const resetForm = () => {
     isSubmitting.value = false;
 };
 
-const validateFormSubmit = () => {
+const validateformEnquiry = () => {
   const form = formSubmit.value;
 
   if (!form.firstName || !form.lastName || !form.email || !form.phoneNumber) {
@@ -184,16 +184,30 @@ const actionShowPopUp = () => {
   popUp.value.showModal();
 };
 
-const submitForm = () => {
-    isSubmitting.value = true;
-    if (!validateFormSubmit()) {
-        return;
-    }
+const submitForm = async() => {
+  if (!validateformEnquiry()) {
+    return;
+  }
+  isSubmitting.value = true;
 
-    console.log(formSubmit.value);
-
+  const config = useRuntimeConfig().public;
+  const urlRegist = window.location.href;
+  try {
+    const response = await $fetch(`${config.apiBase}/quoteprices/create`, {
+          method: 'POST',
+          body: {
+              urlRegist: urlRegist,
+              ...formEnquiry.value
+          }
+    })
+    showMessageToast('success', 'Thank you for your message!');
+    resetFormEnquiry();
+    isSubmit.value = true;
+  } catch (error) {
+    showMessageToast('error', 'Server busy, please try again later!');
+  } finally {
     isSubmitting.value = false;
-    resetForm();
+  }
 };
 
 defineExpose({

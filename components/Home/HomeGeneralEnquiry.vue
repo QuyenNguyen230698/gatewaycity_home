@@ -52,14 +52,15 @@
               {{ isSubmitting ? 'Đang gửi...' : 'Nhận Báo Giá Ngay' }}
             </button>
           </div>
-          <div v-else class="flex flex-col gap-4 col-span-2">
+          <div v-else class="flex flex-col gap-4 col-span-2 h-96">
               <h2 class="title2xl font-montserrat-bold">Cảm ơn bạn đã gửi thông tin.</h2>
               <p class="titlebase font-montserrat-regular">
                 Chúng tôi sẽ liên hệ với bạn sớm nhất có thể! <br>
                 Trong khi đó, hãy khám phá một số dự án gần nhất của chúng tôi
               </p>
               <NuxtLink
-                to="/projects"
+              external
+                to="/san-pham/biet-thu-don-lap"
                 class="font-montserrat-medium w-fit bg-black text-white rounded-full py-2 my-4 px-6 titlebase text-center hover:bg-stone-800 duration-300 ease-in-out"
               >
                 XEM DỰ ÁN
@@ -123,44 +124,6 @@ const formEnquiry = ref({
   phoneNumber: '',
   note: ''
 });
-
-// Hàm validate form
-const validateForm = () => {
-  const errors = [];
-
-  // Kiểm tra trường bắt buộc
-  if (!formEnquiry.value.firstName.trim()) {
-    errors.push('First name is required.');
-  }
-  if (!formEnquiry.value.lastName.trim()) {
-    errors.push('Last name is required.');
-  }
-  if (!formEnquiry.value.email.trim()) {
-    errors.push('Email is required.');
-  }
-  if (!formEnquiry.value.phone.trim()) {
-    errors.push('Phone number is required.');
-  }
-
-  // Kiểm tra định dạng email
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (formEnquiry.value.email.trim() && !emailRegex.test(formEnquiry.value.email)) {
-    errors.push('Please enter a valid email address.');
-  }
-
-  // Kiểm tra định dạng phone (bắt buộc, chỉ số và dấu +, 10-16 ký tự)
-  const phoneRegex = /^\+?\d{9,15}$/;
-  if (formEnquiry.value.phone.trim() && !phoneRegex.test(formEnquiry.value.phone)) {
-    errors.push('Please enter a valid phone number (10-16 digits, optional country code).');
-  }
-
-  // Kiểm tra message (tùy chọn, giới hạn độ dài tối đa 500 ký tự)
-  if (formEnquiry.value.message.trim().length > 500) {
-    errors.push('Message cannot exceed 500 characters.');
-  }
-
-  return errors;
-};
 
   onMounted(async () => {
     nextTick().then(() => {
@@ -231,7 +194,16 @@ const submitNow = async () => {
   }
   isSubmitting.value = true;
 
+  const config = useRuntimeConfig().public;
+  const urlRegist = window.location.href;
   try {
+    const response = await $fetch(`${config.apiBase}/quoteprices/create`, {
+          method: 'POST',
+          body: {
+              urlRegist: urlRegist,
+              ...formEnquiry.value
+          }
+    })
     showMessageToast('success', 'Thank you for your message!');
     resetFormEnquiry();
     isSubmit.value = true;
