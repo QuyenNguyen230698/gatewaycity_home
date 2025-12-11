@@ -84,7 +84,7 @@
               title="YouTube"
             >
               <NuxtImg
-                src="/image/logo/Youtube_white.svg"
+                src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765485963/Media%20Gateway%20City/wlpahbv0tawafiwqnj5f.svg"
                 alt="Quality"
                 class="w-6 h-6 object-contain"
               />
@@ -96,7 +96,7 @@
               title="Facebook"
             >
               <NuxtImg
-                src="/image/logo/FB_white.svg"
+                src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765485977/Media%20Gateway%20City/gmph3bqnybsb7t7zxeye.svg"
                 alt="Quality"
                 class="w-6 h-6 object-contain"
               />
