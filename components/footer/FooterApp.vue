@@ -29,7 +29,7 @@
               <p class="text-xs lg:text-sm flex md:justify-end items-center gap-2">
                 <span class="hover:underline cursor-pointer">0919 542 618</span>
                 <NuxtImg
-                src="/image/logo/Phone_white.svg"
+                src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765476133/Media%20Gateway%20City/jitgfyeq8vhwcrjlgg7t.svg"
                 alt="Quality"
                 class="w-6 h-6 object-contain"
               />
@@ -37,7 +37,7 @@
               <p class="text-xs lg:text-sm flex md:justify-end items-center gap-2">
                 <span class="hover:underline cursor-pointer">Tân Vĩnh Thuận, Tân Ngãi, Tỉnh Vĩnh Long</span>
                 <NuxtImg
-                src="/image/logo/Location_white.svg"
+                src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765476116/Media%20Gateway%20City/irtjyiac569pvys4ltqv.svg"
                 alt="Quality"
                 class="w-6 h-6 object-contain"
               />

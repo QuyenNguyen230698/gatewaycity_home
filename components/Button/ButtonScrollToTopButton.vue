@@ -4,14 +4,14 @@
       class="bg-black-hole text-white rounded-full shadow-lg z-30"
       :class="{ 'opacity-0 pointer-events-none animate-jump-out': !isVisible, 'opacity-100 animate-jump-in': isVisible }"
     >
-      <NuxtImg src="/Icon_Zalo.svg" alt="Quality" class="w-10 h-10 object-contain" />
+      <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765476015/Media%20Gateway%20City/wmpxyr4coujo9ant3lku.svg" alt="Quality" class="w-10 h-10 object-contain" />
     </a>
     <button
       @click="actionShowPopUp()"
       class="bg-yellow-600 text-white p-2 rounded-full shadow-lg hover:bg-yellow-700 transition-colors translate-all duration-500 ease-in-out z-30"
       :class="{ 'opacity-0 pointer-events-none animate-jump-out': !isVisible, 'opacity-100 animate-jump-in': isVisible }"
     >
-      <NuxtImg src="/Icon_BaoGia.svg" alt="Quality" class="w-6 h-6 object-contain" />
+      <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765476014/Media%20Gateway%20City/l6n3rfiwxhes8ny2wk5z.svg" alt="Quality" class="w-6 h-6 object-contain" />
     </button>
     <button
       @click="scrollToTop"
