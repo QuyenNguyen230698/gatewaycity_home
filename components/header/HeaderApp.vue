@@ -50,7 +50,7 @@
                     <NuxtImg
                       quality="75"
                       loading="eager"
-                      src="/Logo.svg"
+                      src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765281506/Media%20Gateway%20City/iiingth1w5eatij5cju0.svg"
                       aria-label="logo"
                       alt="logo"
                       class="min-w-full h-18 object-contain"
@@ -173,7 +173,7 @@
             <NuxtImg
               quality="75"
               loading="eager"
-              src="/Logo.svg"
+              src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765281506/Media%20Gateway%20City/iiingth1w5eatij5cju0.svg"
               aria-label="logo"
               alt="logo"
               class="h-20 max-w-full max-h-full object-contain"
@@ -259,7 +259,7 @@
               <NuxtImg
                 quality="75"
                 loading="eager"
-                src="/Logo.svg"
+                src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765281506/Media%20Gateway%20City/iiingth1w5eatij5cju0.svg"
                 aria-label="logo"
                 alt="logo"
                 class="h-20 max-w-full object-contain"
@@ -547,7 +547,7 @@
                     <NuxtImg
                       quality="75"
                       loading="eager"
-                      src="/Logo.svg"
+                      src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765281506/Media%20Gateway%20City/iiingth1w5eatij5cju0.svg"
                       aria-label="logo"
                       alt="logo"
                       class="min-w-full h-18 object-contain"
