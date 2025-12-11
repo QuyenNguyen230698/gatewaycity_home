@@ -42,9 +42,9 @@
         </svg>
       </div>
       <!-- Search Results -->
-      <div class="flex flex-col gap-2 w-full h-full items-start justify-start px-4 py-2">
-        <div :class="searchInputValue.length > 0 ? 'h-72' : 'h-28'" class="text-nowrap overflow-hidden flex flex-col w-full pb-4 overflow-y-auto scroll-smooth scrollable">
-          <div class="flex flex-col">
+      <div class="flex flex-col gap-2 w-full h-full items-start justify-start">
+        <div :class="searchInputValue.length > 0 ? 'h-72 px-4 py-2' : ''" class="text-nowrap overflow-hidden flex flex-col w-full overflow-y-auto scroll-smooth scrollable">
+          <!-- <div class="flex flex-col">
             <div class="text-lg">
               <span class="font-montserrat-medium">Recommended</span>
             </div>
@@ -84,7 +84,7 @@
                 </div>
               </div>
             </NuxtLink>
-          </div>
+          </div> -->
           <div class="text-sm font-normal">
             <span v-if="searchInputValue.length > 0">Results <span>({{ filteredResults.length }} items)</span></span>
           </div>
@@ -95,7 +95,8 @@
             v-for="result in filteredResults"
             v-if="searchInputValue.length > 0"
             :key="'result-' + result.id"
-            :to="result.slug"
+            :to="result.slug.startsWith('/') ? result.slug : `/${result.slug}`"
+            external
             class="flex flex-row gap-2 h-fit items-start hover:text-custom-green"
             @click="closeModal"
           >
@@ -142,16 +143,33 @@
 import { ref, computed } from 'vue';
 
 // Dữ liệu gán cứng cho tìm kiếm
-const searchData = ref([
-
-]);
-const recommendedData = ref([
-
-]);
+const recommendedData = ref([]);
 
 // References for search input and value
 const searchInput = ref(null);
 const searchInputValue = ref('');
+const searchData = ref([]);
+const dataSearch = ref(null);
+
+const fetchSearchResults = async (query) => {
+    try {
+        const config = useRuntimeConfig().public;
+        const result = await $fetch(`${config.apiBase}/search/list`, {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ q: query }),
+        });
+        if (!result) {
+            throw new Error('Network response was not ok');
+        }
+        return await result.data;
+    } catch (error) {
+        console.error('Error fetching search results:', error);
+        return [];
+    }
+};
 
 // Computed property to filter search results
 const filteredResults = computed(() => {
@@ -181,8 +199,10 @@ const filteredResults = computed(() => {
 
 // Handle input changes with debounce
 const { $_ } = useNuxtApp();
-const handleInput = $_.debounce((event) => {
-  searchInputValue.value = event.target.value; // Cập nhật searchInputValue từ sự kiện input
+const handleInput = $_.debounce(async (event) => {
+    searchInputValue.value = event.target.value;
+    const query = searchInputValue.value.toLowerCase();
+    dataSearch.value = await fetchSearchResults(query);
 }, 500);
 
 // Clear search input
@@ -203,8 +223,9 @@ const closeModal = () => {
 };
 
 // Open modal
-const showModal = () => {
+const showModal = async() => {
   clearInput();
+  searchData.value = await fetchSearchResults('');
   const modal = document.getElementById('search-modal');
   if (modal) {
     modal.showModal();

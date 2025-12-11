@@ -5,19 +5,19 @@
             <!-- Text Section (3/10) -->
             <div class="col-span-10 md:col-span-3 grid grid-cols-4 justify-center items-center bg-img py-4 h-15r md:h-full">
                 <h3 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-2xl md:text-2xl lg:text-4xl text-center md:text-start text-white col-span-4 md:col-start-2 md:col-end-5 lg:col-end-4">
-                {{ product.title }}
+                {{ product?.title }}
                 </h3>
                 <ul class="hidden md:block space-y-2 lg:space-y-4 text-white md:col-start-2 md:col-end-4">
-                <li v-for="(feature, i) in product.features" :key="i" class="flex flex-col items-start">
-                    <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-sm lg:text-base">{{ feature.title }}</p>
-                    <h3 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-sm lg:text-base">{{ feature.des }}</h3>
+                <li v-for="(feature, i) in product?.features" :key="i" class="flex flex-col items-start">
+                    <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-sm lg:text-base">{{ feature?.title }}</p>
+                    <h3 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-sm lg:text-base">{{ feature?.des }}</h3>
                 </li>
                 </ul>
                 <ul class="md:hidden gap-2 text-white col-span-4 grid grid-cols-2">
-                <li v-for="(feature, i) in product.features" :key="i" class="flex flex-col items-start"
+                <li v-for="(feature, i) in product?.features" :key="i" class="flex flex-col items-start"
                 :class="{'pl-8': (i + 1) % 2 === 1,'pr-8': (i + 1) % 2 === 0 }">
-                    <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-xs md:text-sm lg:text-base">{{ feature.title }}</p>
-                    <h3 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-xs md:text-sm lg:text-base">{{ feature.des }}</h3>
+                    <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-xs md:text-sm lg:text-base">{{ feature?.title }}</p>
+                    <h3 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-xs md:text-sm lg:text-base">{{ feature?.des }}</h3>
                 </li>
                 </ul>
             </div>
@@ -28,7 +28,7 @@
                 <!-- Images -->
                 <transition-group name="fade" tag="div" class="absolute inset-0">
                     <img
-                    v-for="(img, i) in product.images"
+                    v-for="(img, i) in product?.images"
                     :key="i"
                     v-show="currentImage === i"
                     :src="img"
@@ -60,7 +60,7 @@
                 <!-- Dots Indicator -->
                 <div class="absolute bottom-4 left-1/2 -translate-x-1/2 gap-2 hidden">
                     <button
-                    v-for="(img, i) in product.images"
+                    v-for="(img, i) in product?.images"
                     :key="i"
                     @click="currentImage = i"
                     :class="[
@@ -73,18 +73,18 @@
             </div>
         </div>
         <!-- Blueprint Section -->
-        <div v-if="product.blueprint.length > 0" class="w-full bg-custom-green py-12 lg:py-20">
+        <div v-if="product?.blueprint?.length > 0" class="w-full bg-custom-green py-12 lg:py-20">
         <!-- Container giới hạn width tối đa -->
         <div class="container mx-auto px-4 lg:px-8">
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-6">
             <!-- Mỗi item là 1 cột -->
             <div
-                v-for="item in product.blueprint"
-                :key="item.id"
+                v-for="(item, index) in product?.blueprint"
+                :key="index"
                 class="flex flex-col items-center col-span-1"
             >
                 <!-- Hình ảnh -->
-                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="w-full aspect-[4/3] overflow-hidden shadow-lg">
+                <div @click="actionShowBlueprint(index)" data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="w-full aspect-[4/3] overflow-hidden shadow-lg">
                 <NuxtImg
                     :src="item.image"
                     alt="Blueprint"
@@ -103,7 +103,7 @@
         <div v-else>
             <p class="text-white text-base text-center py-12 lg:py-20 bg-custom-green">Sản phẩm hiện đang cập nhật, vui lòng đợi</p>
         </div>
-        <div v-if="product.blueprint.length > 0" class="flex flex-col bg-custom-green">
+        <div v-if="product?.blueprint?.length > 0" class="flex flex-col bg-custom-green">
 
             <!-- Tabs -->
             <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50"
@@ -220,10 +220,20 @@ const currentImages = computed(() => {
     return props.product[tabs[activeTab.value].key].image
 })
 
+const blueprintImages = computed(() => {
+  return props.product.blueprint.map(item => item.image)
+})
+
+const actionShowBlueprint = (index) => {
+    let updatedImages = [...blueprintImages.value];
+    imageStore.setListImage(updatedImages, index);
+    imageStore.setIsOpen(true);
+}
+
 const actionShowImage = (index) => {
   let updatedImages = [...props.product[tabs[activeTab.value].key].image];
-  imageStore.setListImage(updatedImages, index);
-  imageStore.setIsOpen(true);
+    imageStore.setListImage(updatedImages, index);
+    imageStore.setIsOpen(true);
 };
 
 /* ---- Hàm tạo GSAP Animation chạy vô hạn ---- */
@@ -259,6 +269,7 @@ const switchTab = (index) => {
 onMounted(() => {
     nextTick(() => initSlide())
       ctx = gsap.context(() => {
+        if (!buttonRef.value || !circleRef.value) return
     // Đặt trạng thái ban đầu: dashoffset = chu vi (ẩn hoàn toàn)
     gsap.set(circleRef.value, {
       strokeDasharray: circumference,

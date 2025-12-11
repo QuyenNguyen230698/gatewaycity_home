@@ -20,7 +20,7 @@
                         <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-pyramid-gold text-xs md:text-xl lg:text-2xl">GATEWAY CITY VĨNH LONG LÀ KHU ĐÔ THỊ THƯƠNG MẠI – DỊCH VỤ – NGHỈ DƯỠNG KHÉP KÍN ĐẦU TIÊN TẠI ĐỒNG BẰNG SÔNG CỬU LONG,</p>
                         <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-white text-xs md:text-xl lg:text-2xl">PHÁT TRIỂN THEO MÔ HÌNH <br> ALL-IN-COMPOUND</p>
                         <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-white text-xs md:text-xl lg:text-xl py-3 md:py-8 lg:py-16">Tích hợp đầy đủ tiện ích, đảm bảo an ninh 24/7, kết hợp không gian sống, kinh doanh và nghỉ dưỡng trong cùng một quần thể.</p>
-                        <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-white flex items-center gap-2 text-xss md:text-lg">Tìm hiểu thêm <a href="">GATEWAY CITY</a>
+                        <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-white flex items-center gap-2 text-xss md:text-lg">Tìm hiểu thêm <NuxtLink external to="/tong-quan">GATEWAY CITY</NuxtLink>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                             </svg>

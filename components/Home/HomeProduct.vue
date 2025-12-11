@@ -14,7 +14,7 @@
             : 'bg-white hover:bg-custom-green hover:text-white border border-pyramid-gold'
         ]"
       >
-        {{ tab.title }}
+        {{ tab?.title }}
       </button>
     </div>
 
@@ -23,19 +23,19 @@
       <!-- Text Section (3/10) -->
       <div class="col-span-10 md:col-span-3 grid grid-cols-4 justify-center items-center bg-img py-4 h-15r md:h-full">
         <h3 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-2xl md:text-2xl lg:text-4xl text-center md:text-start text-white col-span-4 md:col-start-2 md:col-end-5 lg:col-end-4">
-          {{ tabs[activeTab].title }}
+          {{ tabs[activeTab]?.title }}
         </h3>
         <ul class="hidden md:block space-y-2 lg:space-y-4 text-white md:col-start-2 md:col-end-4">
-          <li v-for="(feature, i) in tabs[activeTab].features" :key="i" class="flex flex-col items-start">
-            <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-sm lg:text-base">{{ feature.title }}</p>
-            <h3 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-sm lg:text-base">{{ feature.des }}</h3>
+          <li v-for="(feature, i) in tabs[activeTab]?.features" :key="i" class="flex flex-col items-start">
+            <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-sm lg:text-base">{{ feature?.title }}</p>
+            <h3 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-sm lg:text-base">{{ feature?.des }}</h3>
           </li>
         </ul>
         <ul class="md:hidden gap-2 text-white col-span-4 grid grid-cols-2">
-          <li v-for="(feature, i) in tabs[activeTab].features" :key="i" class="flex flex-col items-start"
+          <li v-for="(feature, i) in tabs[activeTab]?.features" :key="i" class="flex flex-col items-start"
           :class="{'pl-8': (i + 1) % 2 === 1,'pr-8': (i + 1) % 2 === 0 }">
-            <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-xs md:text-sm lg:text-base">{{ feature.title }}</p>
-            <h3 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-xs md:text-sm lg:text-base">{{ feature.des }}</h3>
+            <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-xs md:text-sm lg:text-base">{{ feature?.title }}</p>
+            <h3 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-xs md:text-sm lg:text-base">{{ feature?.des }}</h3>
           </li>
         </ul>
       </div>
@@ -46,7 +46,7 @@
           <!-- Images -->
           <transition-group name="fade" tag="div" class="absolute inset-0 w-full h-full">
             <img
-              v-for="(img, i) in tabs[activeTab].images"
+              v-for="(img, i) in tabs[activeTab]?.images"
               :key="i"
               v-show="currentImage === i"
               :src="img"
@@ -78,7 +78,7 @@
           <!-- Dots Indicator -->
           <div class="absolute bottom-4 left-1/2 -translate-x-1/2 gap-2 hidden">
             <button
-              v-for="(img, i) in tabs[activeTab].images"
+              v-for="(img, i) in tabs[activeTab]?.images"
               :key="i"
               @click="currentImage = i"
               :class="[
@@ -97,99 +97,100 @@
 import { ref, watch } from 'vue'
 
 // === TAB DATA ===
-const tabs = [
-  {
-    title: 'BIỆT THỰ ĐƠN LẬP',
-    features: [
-        {
-            title: 'TỔNG DIỆN TÍCH ĐẤT',
-            des: '188m2 - 238m2',
-        },
-        {
-            title: 'TỔNG DIỆN TÍCH SÀN SỬ DỤNG (*)',
-            des: '340m2 - 360m2',
-        },
-        {
-            title: 'SỐ TẦNG',
-            des: '1 Trệt, 2 Lầu',
-        },
-        {
-            title: 'SỐ PHÒNG',
-            des: '4 Phòng Ngủ - 5 WC',
-        },
-    ],
-    images: [
-      '/image/gatewaycity/biet-thu-don-lap.jpg',
-      '/image/gatewaycity/biet-thu-don-lap.jpg',
-      '/image/gatewaycity/biet-thu-don-lap.jpg'
-    ]
-  },
-  {
-    title: 'BIỆT THỰ SONG LẬP',
-    features: [
-        {
-            title: 'TỔNG DIỆN TÍCH ĐẤT',
-            des: '200m2 - 300m2',
-        },
-        {
-            title: 'TỔNG DIỆN TÍCH SÀN SỬ DỤNG (*)',
-            des: '400m2 - 450m2',
-        },
-        {
-            title: 'SỐ TẦNG',
-            des: '1 Trệt, 2 Lầu',
-        },
-        {
-            title: 'SỐ PHÒNG',
-            des: '4 Phòng Ngủ - 5 WC',
-        },
-    ],
-    images: [
-      '/image/gatewaycity/biet-thu-song-lap.jpg',
-      '/image/gatewaycity/biet-thu-song-lap.jpg',
-      '/image/gatewaycity/biet-thu-song-lap.jpg'
-    ]
-  },
-  {
-    title: 'NHÀ PHỐ THƯƠNG MẠI',
-    features: [
-        {
-            title: 'TỔNG DIỆN TÍCH ĐẤT',
-            des: '188m2 - 238m2',
-        },
-        {
-            title: 'TỔNG DIỆN TÍCH SÀN SỬ DỤNG (*)',
-            des: '340m2 - 360m2',
-        },
-        {
-            title: 'SỐ TẦNG',
-            des: '1 Trệt, 2 Lầu',
-        },
-        {
-            title: 'SỐ PHÒNG',
-            des: '4 Phòng Ngủ - 5 WC',
-        },
-    ],
-    images: [
-      '/image/gatewaycity/thanh-pho-thuong-mai.jpg',
-      '/image/gatewaycity/thanh-pho-thuong-mai.jpg',
-      '/image/gatewaycity/thanh-pho-thuong-mai.jpg'
-    ]
-  }
-]
+// const tabs = [
+//   {
+//     title: 'BIỆT THỰ ĐƠN LẬP',
+//     features: [
+//         {
+//             title: 'TỔNG DIỆN TÍCH ĐẤT',
+//             des: '188m2 - 238m2',
+//         },
+//         {
+//             title: 'TỔNG DIỆN TÍCH SÀN SỬ DỤNG (*)',
+//             des: '340m2 - 360m2',
+//         },
+//         {
+//             title: 'SỐ TẦNG',
+//             des: '1 Trệt, 2 Lầu',
+//         },
+//         {
+//             title: 'SỐ PHÒNG',
+//             des: '4 Phòng Ngủ - 5 WC',
+//         },
+//     ],
+//     images: [
+//       '/image/gatewaycity/biet-thu-don-lap.jpg',
+//       '/image/gatewaycity/biet-thu-don-lap.jpg',
+//       '/image/gatewaycity/biet-thu-don-lap.jpg'
+//     ]
+//   },
+//   {
+//     title: 'BIỆT THỰ SONG LẬP',
+//     features: [
+//         {
+//             title: 'TỔNG DIỆN TÍCH ĐẤT',
+//             des: '200m2 - 300m2',
+//         },
+//         {
+//             title: 'TỔNG DIỆN TÍCH SÀN SỬ DỤNG (*)',
+//             des: '400m2 - 450m2',
+//         },
+//         {
+//             title: 'SỐ TẦNG',
+//             des: '1 Trệt, 2 Lầu',
+//         },
+//         {
+//             title: 'SỐ PHÒNG',
+//             des: '4 Phòng Ngủ - 5 WC',
+//         },
+//     ],
+//     images: [
+//       '/image/gatewaycity/biet-thu-song-lap.jpg',
+//       '/image/gatewaycity/biet-thu-song-lap.jpg',
+//       '/image/gatewaycity/biet-thu-song-lap.jpg'
+//     ]
+//   },
+//   {
+//     title: 'NHÀ PHỐ THƯƠNG MẠI',
+//     features: [
+//         {
+//             title: 'TỔNG DIỆN TÍCH ĐẤT',
+//             des: '188m2 - 238m2',
+//         },
+//         {
+//             title: 'TỔNG DIỆN TÍCH SÀN SỬ DỤNG (*)',
+//             des: '340m2 - 360m2',
+//         },
+//         {
+//             title: 'SỐ TẦNG',
+//             des: '1 Trệt, 2 Lầu',
+//         },
+//         {
+//             title: 'SỐ PHÒNG',
+//             des: '4 Phòng Ngủ - 5 WC',
+//         },
+//     ],
+//     images: [
+//       '/image/gatewaycity/thanh-pho-thuong-mai.jpg',
+//       '/image/gatewaycity/thanh-pho-thuong-mai.jpg',
+//       '/image/gatewaycity/thanh-pho-thuong-mai.jpg'
+//     ]
+//   }
+// ]
 
 // === STATE ===
 const activeTab = ref(0)
 const currentImage = ref(0)
+const tabs = ref([])
 
 // === CAROUSEL LOGIC ===
 const nextImage = () => {
-  const len = tabs[activeTab.value].images.length
+  const len = tabs.value[activeTab.value].images.length
   currentImage.value = (currentImage.value + 1) % len
 }
 
 const prevImage = () => {
-  const len = tabs[activeTab.value].images.length
+  const len = tabs.value[activeTab.value].images.length
   currentImage.value = (currentImage.value - 1 + len) % len
 }
 
@@ -206,6 +207,23 @@ let interval = null
 // onUnmounted(() => {
 //   clearInterval(interval)
 // })
+
+const fetchProducts = async () => {
+    const config = useRuntimeConfig().public;
+    try {
+        const response = await $fetch(`${config.apiBase}/products/`, {
+            method: 'GET',
+        })
+        tabs.value = response.result
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+onMounted(() => {
+    fetchProducts()
+})
+
 </script>
 
 <style scoped>
