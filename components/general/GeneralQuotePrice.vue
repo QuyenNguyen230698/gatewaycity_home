@@ -18,7 +18,7 @@
               </span>
             </button>
           </form>
-          <div v-if="!isSubmitted">
+          <div>
             <form @submit.prevent="submitForm" class="grid grid-cols-2 gap-2 lg:gap-4 p-2 lg:p-6 h-96 md:h-25r lg:h-30r overflow-y-auto scrollable">
               <div class="col-span-2 grid grid-cols-2 gap-4">
                   <input
@@ -144,7 +144,6 @@ const resetForm = () => {
         email: '',
         note: '',
     };
-    isSubmitted.value = false;
     isSubmitting.value = false;
 };
 
@@ -197,12 +196,11 @@ const submitForm = async() => {
           method: 'POST',
           body: {
               urlRegist: urlRegist,
-              ...formEnquiry.value
+              ...formSubmit.value
           }
     })
     showMessageToast('success', 'Thank you for your message!');
-    resetFormEnquiry();
-    isSubmit.value = true;
+    resetForm();
   } catch (error) {
     showMessageToast('error', 'Server busy, please try again later!');
   } finally {
