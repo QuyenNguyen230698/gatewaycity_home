@@ -1,8 +1,8 @@
 <template>
     <div class="w-full h-full container mx-auto overflow-hidden">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-16 py-8 md:py-16 justify-stretch">
-            <div v-if="renderNews.length > 0" class="col-span-1 flex flex-col gap-6 h-full">
-                <h2 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-2xl lg:text-4xl">Tin Tức</h2>
+        <div class="grid grid-cols-6 gap-4 lg:gap-16 py-8 md:py-16 justify-stretch">
+            <div v-if="renderNews.length > 0" class="col-span-6 md:col-span-3 flex flex-col gap-6 h-full">
+                <h2 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-3xl lg:text-4xl">Tin Tức</h2>
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-3 w-full h-full">
                     <NuxtImg :src="renderNews[0]?.src" class="w-full h-64 md:h-96 object-cover"/>
                     <h3 class="text-base md:text-lg lg:text-xl">{{ renderNews[0]?.title }}</h3>
@@ -16,8 +16,8 @@
                     </NuxtLink>
                 </div>
             </div>
-            <div v-if="renderEvents.length > 0" class="col-span-1 flex flex-col gap-6 h-full">
-                <h2 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-2xl lg:text-4xl">Sự Kiện</h2>
+            <div v-if="renderEvents.length > 0" class="col-span-6 md:col-span-3 flex flex-col gap-6 h-full">
+                <h2 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-3xl lg:text-4xl">Sự Kiện</h2>
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-3 w-full h-full">
                     <NuxtImg :src="renderEvents[0]?.src" class="w-full h-64 md:h-96 object-cover"/>
                     <h3 class="text-base md:text-lg lg:text-xl">{{ renderEvents[0]?.title }}</h3>
@@ -31,23 +31,25 @@
                     </NuxtLink>
                 </div>
             </div>
-            <div v-if="doitac" class="col-span-1 flex flex-col gap-2">
-                <h2 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-2xl lg:text-4xl">Chủ đầu tư</h2>
-                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex justify-center items-center py-10">
+            <NuxtLink external v-if="doitac" to="/chu-dau-tu" class="col-span-6 md:col-span-2 flex flex-col gap-2 mt-4 md:mt-0">
+                <h2 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-3xl lg:text-4xl text-center">Chủ đầu tư</h2>
+                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex justify-center items-center py-2 md:py-10">
                     <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765283240/Media%20Gateway%20City/ht9oeyhfxo8sqyv63ky2.png" class="w-full h-full object-cover"/>
                 </div>
-            </div>
-            <div v-if="doitac" class="col-span-1 flex flex-col gap-2">
-                <h2 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-2xl lg:text-4xl">Đối tác</h2>
-                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="grid grid-cols-3">
-                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765352467/Media%20Gateway%20City/lgbcexzmlpngczwr6jms.png" class="w-full h-full object-contain"/>
-                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765352483/Media%20Gateway%20City/kmfylibskisqzu4mwoan.png" class="w-full h-full object-contain"/>
-                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765352497/Media%20Gateway%20City/uw30auydf71efrgh4zey.png" class="w-full h-full object-contain"/>
-                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765352509/Media%20Gateway%20City/ahunvxxfrg5he45nhj6s.png" class="w-full h-full object-contain"/>
-                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765352483/Media%20Gateway%20City/msbtlfay2dzqe6rpowxo.png" class="w-full h-full object-contain"/>
-                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765352482/Media%20Gateway%20City/izonfxcii5laojufr1ah.png" class="w-full h-full object-contain"/>
+            </NuxtLink>
+            <NuxtLink external v-if="doitac" to="/chu-dau-tu" class="col-span-6 md:col-span-2 flex flex-col gap-2">
+                <h2 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-3xl lg:text-4xl text-center">Phát Triển Dự Án</h2>
+                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex justify-center items-center py-4 md:py-10">
+                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765534465/Media%20Gateway%20City/qhehbtown2kiwf3vxpku.png" class="w-40 md:w-24 lg:w-32 h-full object-cover"/>
                 </div>
-            </div>
+            </NuxtLink>
+            <NuxtLink external v-if="doitac" to="/chu-dau-tu" class="col-span-6 md:col-span-2 flex flex-col gap-2">
+                <h2 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-3xl lg:text-4xl text-center">Đối tác</h2>
+                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col w-full py-6 md:py-10">
+                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765534464/Media%20Gateway%20City/n76fz4ov7ijbhoybtwvy.png" class="w-full h-full object-contain"/>
+                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765534465/Media%20Gateway%20City/lk1htfoknjwmz7j66etp.png" class="w-full h-full object-contain"/>
+                </div>
+            </NuxtLink>
         </div>
     </div>
 </template>
