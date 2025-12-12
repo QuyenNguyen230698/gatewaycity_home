@@ -101,6 +101,16 @@
                 </li>
                 <li class="text-nowrap w-full pb-4">
                   <NuxtLink
+                    to="/doi-tac-chien-luoc"
+                    external
+                    @click="closeDrawer"
+                    class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
+                  >
+                    <p class="text-2xl">Đối Tác Chiến Lược</p>
+                  </NuxtLink>
+                </li>
+                <li class="text-nowrap w-full pb-4">
+                  <NuxtLink
                     to="/vi-tri"
                     external
                     @click="closeDrawer"
@@ -452,6 +462,16 @@
                   class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
                 >
                   <p class="text-3xl">Chủ Đầu Tư</p>
+                </NuxtLink>
+              </li>
+              <li class="text-nowrap grid grid-cols-4 w-full pb-4">
+                <NuxtLink
+                  to="/doi-tac-chien-luoc"
+                  external
+                  @click="closeDrawer2"
+                  class="font-montserrat-medium col-start-2 text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
+                >
+                  <p class="text-3xl">Đối Tác Chiến Lược</p>
                 </NuxtLink>
               </li>
               <li class="text-nowrap grid grid-cols-4 w-full pb-4">
