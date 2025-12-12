@@ -109,18 +109,19 @@
             <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50"
                 class="flex flex-wrap justify-center gap-2 md:gap-8 lg:gap-16 mb-12 md:mb-20">
                 <button
-                    v-for="(tab, index) in tabs"
-                    :key="index"
-                    @click="switchTab(index)"
-                    :class="[
+                v-for="(tab, index) in availableTabs"
+                :key="index"
+                @click="switchTab(index)"
+                :class="[
                     'px-4 py-1 md:px-10 md:py-1 text-xs md:text-sm transition-all duration-500 rounded-full font-montserrat-medium',
                     activeTab === index
-                        ? 'text-white border border-pyramid-gold bg-pyramid-gold'
-                        : 'bg-custom-green hover:bg-pyramid-gold text-white border border-pyramid-gold'
-                    ]"
+                    ? 'text-white border border-pyramid-gold bg-pyramid-gold'
+                    : 'bg-custom-green hover:bg-pyramid-gold text-white border border-pyramid-gold'
+                ]"
                 >
-                    {{ tab.title }}
+                {{ tab.title }}
                 </button>
+
             </div>
 
             <!-- Carousel -->
@@ -202,8 +203,16 @@ const currentImage = ref(0)
 const tabs = [
     { title: "TẦNG 01", key: "floor1" },
     { title: "TẦNG 02", key: "floor2" },
-    { title: "TẦNG 03", key: "floor3" }
+    { title: "TẦNG 03", key: "floor3" },
+    { title: "TẦNG 04", key: "floor4" }
 ]
+
+const availableTabs = computed(() => {
+  return tabs.filter(tab => {
+    const floor = props.product[tab.key]
+    return floor && Array.isArray(floor.image) && floor.image.length > 0
+  })
+})
 
 const activeTab = ref(0)
 const track = ref(null)
@@ -217,7 +226,8 @@ const radius = 50
 const circumference = 2 * Math.PI * radius
 
 const currentImages = computed(() => {
-    return props.product[tabs[activeTab.value].key].image
+  const key = availableTabs.value[activeTab.value]?.key
+  return key ? props.product[key].image : []
 })
 
 const blueprintImages = computed(() => {
@@ -262,8 +272,8 @@ const initSlide = () => {
 
 /* ---- Khi đổi tab → re-init GSAP ---- */
 const switchTab = (index) => {
-    activeTab.value = index
-    nextTick(() => initSlide())
+  activeTab.value = index
+  nextTick(() => initSlide())
 }
 
 onMounted(() => {
