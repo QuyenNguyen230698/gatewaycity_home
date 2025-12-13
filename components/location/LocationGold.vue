@@ -4,7 +4,7 @@
             <div class="w-full h-96 md:h-40r bg-custom-green flex flex-col gap-4 justify-center items-center">
                 <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765350129/Media%20Gateway%20City/ahcgawjch8r6gm74c2t0.png" alt="text" class="w-full h-full object-cover" />
             </div>
-            <div class="w-full h-30r bg-custom-green hidden md:block"></div>
+            <div class="w-full h-30r xl:h-40r bg-custom-green hidden md:block"></div>
             <div class="bg-custom-green md:bg-transparent md:absolute  md:bottom-0 md:left-0 md:right-0 w-full z-10 grid grid-cols-12 justify-center items-center px-4 md:px-0">
                 <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765350331/Media%20Gateway%20City/pyevep6ewxkmkntseslx.png" alt="text" class="col-span-12 md:col-start-4 md:col-end-10 lg:col-start-5 lg:col-end-9 w-full h-auto object-contain" />
             </div>

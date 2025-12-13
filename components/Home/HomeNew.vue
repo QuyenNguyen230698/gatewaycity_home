@@ -97,7 +97,7 @@ const renderEvents = computed(() => {
 const fetchNews = async () => {
     const config = useRuntimeConfig().public;
     try {
-        const response = await $fetch(`${config.apiBase}/newandevents/list`, {
+        const response = await $fetch(`${config.apiBase}/newandevents/`, {
             method: 'POST',
             body: {
                 sorted: [

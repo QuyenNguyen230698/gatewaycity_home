@@ -66,112 +66,151 @@ const htmlOutput = computed(() => {
   return convertUnlayerToHtml(design);
 });
 function convertUnlayerToHtml(json) {
-  // Đảm bảo json hợp lệ (phòng trường hợp vẫn bị undefined do lỗi khác)
-  if (!json || !json.body || !Array.isArray(json.body.rows)) {
-    console.warn('Invalid Unlayer JSON structure:', json);
-    return '<!DOCTYPE html><html><body><p>Nội dung không hợp lệ</p></body></html>';
+  if (!json?.body?.rows) {
+    return '<html><body>Nội dung không hợp lệ</body></html>';
   }
 
-  const generateStyles = (values, numColumns) => {
-    const styles = [];
-    if (numColumns === 1) styles.push('width: 100%;');
-    else if (numColumns === 2) styles.push('width: 50%; float: left; box-sizing: border-box;');
-    else if (numColumns === 3) styles.push('width: 33.33%; float: left; box-sizing: border-box;');
-    else if (numColumns === 4) styles.push('width: 25%; float: left; box-sizing: border-box;');
-
-    if (values.backgroundColor) styles.push(`background-color: ${values.backgroundColor};`);
-    if (values.padding) styles.push(`padding: ${values.padding};`);
-    if (values.borderRadius) styles.push(`border-radius: ${values.borderRadius};`);
-    
-    // Xử lý border an toàn hơn
-    if (values.border) {
-      const b = values.border;
-      if (b.borderTopWidth) styles.push(`border-top: ${b.borderTopWidth} ${b.borderTopStyle || 'solid'} ${b.borderTopColor || '#000'};`);
-      if (b.borderLeftWidth) styles.push(`border-left: ${b.borderLeftWidth} ${b.borderLeftStyle || 'solid'} ${b.borderLeftColor || '#000'};`);
-      if (b.borderRightWidth) styles.push(`border-right: ${b.borderRightWidth} ${b.borderRightStyle || 'solid'} ${b.borderRightColor || '#000'};`);
-      if (b.borderBottomWidth) styles.push(`border-bottom: ${b.borderBottomWidth} ${b.borderBottomStyle || 'solid'} ${b.borderBottomColor || '#000'};`);
-    }
-
-    return styles.join(' ');
+  /* ================= ROW ================= */
+  const generateRowStyles = (values = {}) => {
+    const styles = ['width:100%;clear:both;overflow:hidden;'];
+    if (values.backgroundColor) styles.push(`background:${values.backgroundColor};`);
+    if (values.padding) styles.push(`padding:${values.padding};`);
+    return styles.join('');
   };
 
-  const generateContentStyles = (values) => {
-    const styles = [];
-    const fontFamily = values.fontFamily?.value || values.fontFamily || '';
-    if (fontFamily) styles.push(`font-family: ${fontFamily};`);
-    if (values.fontSize) styles.push(`font-size: ${values.fontSize};`);
-    if (values.fontWeight) styles.push(`font-weight: ${values.fontWeight};`);
-    if (values.textAlign) styles.push(`text-align: ${values.textAlign};`);
-    if (values.lineHeight) styles.push(`line-height: ${values.lineHeight};`);
-    if (values.containerPadding) styles.push(`padding: ${values.containerPadding};`);
-    if (values.color) styles.push(`color: ${values.color};`);
-    return styles.join(' ');
+  /* ================= COLUMN ================= */
+  const generateColumnStyles = (values = {}, cols = 1) => {
+    const widthMap = {
+      1: '100%',
+      2: '50%',
+      3: '33.33%',
+      4: '25%',
+      5: '20%',
+      6: '16.66%',
+    };
+
+    const styles = [
+      'float:left;',
+      'box-sizing:border-box;',
+      `width:${widthMap[cols] || '100%'};`
+    ];
+
+    if (values.padding) styles.push(`padding:${values.padding};`);
+    if (values.backgroundColor) styles.push(`background:${values.backgroundColor};`);
+    return styles.join('');
   };
 
-  const removeSpanTags = (text = '') => {
-    return text.replace(/<span[^>]*>(.*?)<\/span>/g, '$1');
+  /* ================= CONTENT ================= */
+  const generateContentStyles = (v = {}) => {
+    const s = [];
+    if (v.fontFamily?.value) s.push(`font-family:${v.fontFamily.value};`);
+    if (v.fontSize) s.push(`font-size:${v.fontSize};`);
+    if (v.fontWeight) s.push(`font-weight:${v.fontWeight};`);
+    if (v.textAlign) s.push(`text-align:${v.textAlign};`);
+    if (v.lineHeight) s.push(`line-height:${v.lineHeight};`);
+    if (v.containerPadding) s.push(`padding:${v.containerPadding};`);
+    if (v.color) s.push(`color:${v.color};`);
+    return s.join('');
   };
 
+  const cleanSpan = (html = '') =>
+    html.replace(/<span[^>]*>/g, '').replace(/<\/span>/g, '');
+
+  /* ================= HTML ================= */
   let html = `
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <style>
-        @import url('https://fonts.googleapis.com/css2?family=Georama:wght@100;400;700&family=Quicksand:wght@300;400;700&display=swap');
-        body { margin: 0; padding: 0; background-color: #FFFFFF; }
-        .u_row { width: 100%; margin: 0 auto; overflow: hidden; clear: both; }
-        .u_column { box-sizing: border-box; float: left; }
-        img { max-width: 100%; height: auto; display: block; }
-        table { border-collapse: collapse; width: 100%; }
-      </style>
-    </head>
-    <body>
-  `;
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  body{margin:0;padding:0;background:#fff}
+  img{max-width:100%;display:block}
+</style>
+</head>
+<body>
+`;
 
-  try {
-    json.body.rows.forEach(row => {
-      const numColumns = Array.isArray(row.cells) ? row.cells.length : 1;
-      html += `<div class="u_row" style="${generateStyles(row.values || {}, numColumns)}">`;
+  json.body.rows.forEach(row => {
+    const cols = row.cells?.length || 1;
+    html += `<div style="${generateRowStyles(row.values)}">`;
 
-      (row.columns || []).forEach(column => {
-        html += `<div class="u_column" style="${generateStyles(column.values || {}, numColumns)}">`;
+    row.columns?.forEach(col => {
+      html += `<div style="${generateColumnStyles(col.values, cols)}">`;
 
-        (column.contents || []).forEach(content => {
-          if (content.type === 'text') {
-            const text = (content.values?.text || '').replace(/<span[^>]*>/g, '').replace(/<\/span>/g, '');
-            html += `<div style="${generateContentStyles(content.values || {})}">${text}</div>`;
-          }
-          else if (content.type === 'heading') {
-            const tag = content.values?.headingType || 'h2';
-            const cleanedText = removeSpanTags(content.values?.text || '');
-            html += `<${tag} style="${generateContentStyles(content.values || {})}">${cleanedText}</${tag}>`;
-          }
-          else if (content.type === 'image') {
-            const src = content.values?.src?.url || '';
-            const alt = content.values?.altText || 'Image';
-            html += `<div style="${generateContentStyles(content.values || {})}">
-              <img src="${src}" alt="${alt}" style="width: 100%; height: auto; display: block;">
-            </div>`;
-          }
-        });
+      col.contents?.forEach(c => {
 
-        html += `</div>`;
+        /* ===== TEXT ===== */
+        if (c.type === 'text') {
+          html += `<div style="${generateContentStyles(c.values)}">
+            ${cleanSpan(c.values.text)}
+          </div>`;
+        }
+
+        /* ===== HEADING ===== */
+        if (c.type === 'heading') {
+          const tag = c.values.headingType || 'h2';
+          html += `<${tag} style="${generateContentStyles(c.values)}">
+            ${cleanSpan(c.values.text)}
+          </${tag}>`;
+        }
+
+        /* ===== IMAGE ===== */
+        if (c.type === 'image') {
+          const src = c.values?.src?.url || '';
+          html += `<img src="${src}" style="${generateContentStyles(c.values)}">`;
+        }
+
+        /* ===== BUTTON ===== */
+        if (c.type === 'button') {
+          const href = c.values?.href?.values?.href || '#';
+          const target = c.values?.href?.values?.target || '_self';
+          const colors = c.values.buttonColors || {};
+
+          html += `
+          <div style="text-align:${c.values.textAlign || 'left'};${c.values.containerPadding || ''}">
+            <a href="${href}" target="${target}"
+              style="
+                display:inline-block;
+                background:${colors.backgroundColor || '#000'};
+                color:${colors.color || '#fff'};
+                padding:${c.values.padding || '10px 20px'};
+                border-radius:${c.values.borderRadius || '4px'};
+                text-decoration:none;
+                font-size:${c.values.fontSize || '14px'};
+              ">
+              ${cleanSpan(c.values.text)}
+            </a>
+          </div>`;
+        }
+
+        /* ===== SOCIAL ===== */
+        if (c.type === 'social') {
+          html += `<div style="text-align:${c.values.align};padding:${c.values.containerPadding};">`;
+          c.values.icons.icons.forEach(icon => {
+            const name = icon.name.toLowerCase();
+            html += `
+              <a href="${icon.url}" target="_blank" style="margin:${c.values.spacing}px;">
+                <img src="https://cdn.simpleicons.org/${name}/000" width="${c.values.iconSize}">
+              </a>`;
+          });
+          html += `</div>`;
+        }
+
+        /* ===== DIVIDER ===== */
+        if (c.type === 'divider') {
+          html += `<hr style="margin:${c.values.containerPadding || '10px 0'};">`;
+        }
+
       });
 
-      html += `</div><div style="clear: both;"></div>`;
+      html += `</div>`;
     });
-  } catch (err) {
-    console.error('Error rendering Unlayer HTML:', err);
-    html += `<p style="color: red; padding: 20px;">Lỗi hiển thị nội dung</p>`;
-  }
 
-  html += `
-    </body>
-    </html>
-  `;
+    html += `</div><div style="clear:both"></div>`;
+  });
 
+  html += '</body></html>';
   return html;
 }
 

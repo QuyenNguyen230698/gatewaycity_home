@@ -16,33 +16,56 @@
                 </div>
             </div>
         </div>
-            <div v-else class="w-full h-25r mt-16 lg:mt-20 flex flex-col items-center justify-center py-20 container mx-auto">
-                <h2 
-                data-aos="fade-up"
-                data-aos-offset="20"
-                data-aos-delay="50"
-                class="title2xl text-black font-geoform-bold text-center"
-                >
-                Không tìm thấy tin tức
-                </h2>
-                <p 
-                data-aos="fade-up"
-                data-aos-offset="20"
-                data-aos-delay="100"
-                class="titlebase text-stone-500 font-quicksand-regular text-center mt-4"
-                >
-                Tin tức bạn tìm kiếm không tồn tại hoặc đã bị xóa.
-                </p>
-                <NuxtLink external
-                to="/"
-                data-aos="fade-up"
-                data-aos-offset="20"
-                data-aos-delay="150"
-                class="font-geoform-medium uppercase w-fit mt-6 bg-black text-white px-4 py-2 titlebase hover:bg-stone-800 duration-300 ease-in-out"
-                >
-                Back to Homes
-                </NuxtLink>
+        <div v-else class="w-full h-25r mt-16 lg:mt-20 flex flex-col items-center justify-center py-20 container mx-auto">
+            <h2 
+            data-aos="fade-up"
+            data-aos-offset="20"
+            data-aos-delay="50"
+            class="title2xl text-black font-geoform-bold text-center"
+            >
+            Không tìm thấy tin tức
+            </h2>
+            <p 
+            data-aos="fade-up"
+            data-aos-offset="20"
+            data-aos-delay="100"
+            class="titlebase text-stone-500 font-quicksand-regular text-center mt-4"
+            >
+            Tin tức bạn tìm kiếm không tồn tại hoặc đã bị xóa.
+            </p>
+            <NuxtLink external
+            to="/"
+            data-aos="fade-up"
+            data-aos-offset="20"
+            data-aos-delay="150"
+            class="font-geoform-medium uppercase w-fit mt-6 bg-black text-white px-4 py-2 titlebase hover:bg-stone-800 duration-300 ease-in-out"
+            >
+            Back to Homes
+            </NuxtLink>
+        </div>
+     <!-- Pagination -->
+     <div v-if="totalPages > 1" class="pb-6 container mx-auto flex items-center justify-end"
+        >
+          <div class="flex border border-black">
+            <button
+              class="border-r border-black text-xl px-2 hover:bg-base-300 duration-300 ease-in-out"
+              :disabled="currentPage === 1"
+              @click="prevPage"
+            >
+              «
+            </button>
+            <div class="flex items-center px-2 text-sm">
+              {{ currentPage }} / {{ totalPages }}
             </div>
+            <button
+              class="border-l border-black text-xl px-2 hover:bg-base-300 duration-300 ease-in-out"
+              :disabled="currentPage === totalPages"
+              @click="nextPage"
+            >
+              »
+            </button>
+          </div>
+     </div>
     </section>
 </template>
 
@@ -74,18 +97,49 @@ const dataNews = ref([
 //   }
 ])
 
+const currentPage = ref(1)
+const pageSize = ref(5) // số item / trang
+const totalRecords = ref(0)
+const totalPages = computed(() =>
+  Math.ceil(totalRecords.value / pageSize.value)
+)
+
+const goToPage = (page) => {
+  if (page < 1 || page > totalPages.value) return
+  currentPage.value = page
+  fetchNews()
+}
+
+const nextPage = () => {
+  if (currentPage.value < totalPages.value) {
+    currentPage.value++
+    fetchNews()
+  }
+}
+
+const prevPage = () => {
+  if (currentPage.value > 1) {
+    currentPage.value--
+    fetchNews()
+  }
+}
+
 const fetchNews = async () => {
     const config = useRuntimeConfig().public;
     try {
-        const response = await $fetch(`${config.apiBase}/newandevents/list`, {
+        const response = await $fetch(`${config.apiBase}/newandevents/`, {
             method: 'POST',
             body: {
+                skip: (currentPage.value - 1) * pageSize.value,
+                take: pageSize.value,
+                requiresCounts: true,
                 sorted: [
                     { name: 'createdAt', direction: 'descending' }
                 ],
             }
         })
-        dataNews.value = response.result
+        dataNews.value = response.result || []
+        totalRecords.value = response.count || 0
     } catch (error) {
         console.log(error)
     }
