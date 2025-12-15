@@ -17,10 +17,10 @@ export default defineNuxtConfig({
       },
       title: "Gatewaycity Homes",
       link: [
-        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-        { rel: "apple-touch-icon", sizes: "180x180", href: "/favicon.ico" },
-        { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon.ico" },
-        { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon.ico" },
+        { rel: "icon", type: "image/x-icon", href: "/Logo.svg" },
+        { rel: "apple-touch-icon", sizes: "180x180", href: "/Logo.svg" },
+        { rel: "icon", type: "image/png", sizes: "32x32", href: "/Logo.svg" },
+        { rel: "icon", type: "image/png", sizes: "16x16", href: "/Logo.svg" },
         { rel: "manifest", href: "/site.webmanifest" },
       ],
       meta: [
