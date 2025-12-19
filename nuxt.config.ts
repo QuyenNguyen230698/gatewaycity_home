@@ -31,7 +31,7 @@ export default defineNuxtConfig({
         { name: "keywords", content: "Gatewaycity, Homes" },
         { name: "author", content: "Gatewaycity Homes" },
         { name: "robots", content: "index, follow" },
-        { name: "theme-color", content: "#FFFFFF" },
+        { name: "theme-color", content: "#1C351C" },
         { name: "mobile-web-app-capable", content: "yes" },
         { name: "apple-mobile-web-app-status-bar-style", content: "default" },
         { name: "apple-mobile-web-app-title", content: "Gatewaycity Homes" },
