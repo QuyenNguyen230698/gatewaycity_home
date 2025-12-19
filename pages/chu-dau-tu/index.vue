@@ -5,7 +5,7 @@
             <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765282952/Media%20Gateway%20City/qh5d6mmkpfolsy3zbtpj.jpg" alt="banner" class="w-full h-96 md:h-35r lg:h-full lg:min-h-screen object-cover absolute inset-0" />
             <div class="absolute top-0 left-0 w-full h-full bg-black opacity-20"></div>
         </div>
-        <div class="container mx-auto flex flex-col overflow-hidden">
+        <div class="container mx-auto flex flex-col overflow-hidden py-8 md:py-14 lg:py-28">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center py-4 md:py-8 lg:py-16">
                 <NuxtImg data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765283240/Media%20Gateway%20City/ht9oeyhfxo8sqyv63ky2.png" alt="" class="w-full h-full object-contain md:pr-14 col-span-1" format="png" quality="85" loading="lazy" />
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-2 md:gap-4 col-span-1">
@@ -17,7 +17,7 @@
                 </div>
             </div>
         </div>
-        <div class="bg-custom-green w-full py-8 lg:py-16 overflow-hidden">
+        <div class="bg-custom-green w-full py-14 lg:py-28 overflow-hidden">
             <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-6 md:gap-8 lg:gap-10 text-white col-span-1">
                     <h2 class="text-3xl md:text-4xl lg:text-5xl text-center">•Tầm Nhìn</h2>
@@ -55,9 +55,9 @@
                 </div>
             </div>
         </div>
-        <div class="w-full container mx-auto bg-transparent overflow-hidden flex flex-col gap-6 md:py-10 lg:py-6">
+        <div class="w-full container mx-auto bg-transparent overflow-hidden flex flex-col gap-8 md:gap-14 py-14 lg:py-28">
             <h2 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-3xl md:text-4xl lg:text-5xl py-4">Lĩnh Vực Hoạt Động</h2>
-            <div class="hidden md:grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="hidden md:grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-y-14">
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-2 lg:gap-6 w-full h-full col-span-1">
                     <h2 class="text-lg md:text-xl lg:text-3xl">1. Phát triển BĐS đô thị</h2>
                     <h4 class="text-base md:text-lg text-justify">Thành Đô Group phát triển nhiều dự án đô thị quy mô lớn tại các khu vực giàu tiềm năng, định hình phong cách sống mới, gắn với xu hướng phát triển của kinh tế ven biển, công nghiệp – dịch vụ và thương mại.</h4>
@@ -80,7 +80,7 @@
                     <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765282947/Media%20Gateway%20City/vtk6wk6eusw2anfudt22.jpg" alt="" class="w-full h-26r md:h-96 lg:h-25r object-cover" format="webp" quality="85" loading="lazy" />
                 </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:hidden">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:hidden">
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-2 lg:gap-6 w-full h-full col-span-1">
                     <h2 class="text-2xl lg:text-3xl">1. Phát triển BĐS đô thị</h2>
                     <h4 class="text-base md:text-lg text-justify">Thành Đô Group phát triển nhiều dự án đô thị quy mô lớn tại các khu vực giàu tiềm năng, định hình phong cách sống mới, gắn với xu hướng phát triển của kinh tế ven biển, công nghiệp – dịch vụ và thương mại.</h4>
@@ -104,7 +104,7 @@
                 </div>
             </div>
         </div>
-        <div class="bg-custom-green w-full py-8 lg:py-16 overflow-hidden">
+        <div class="bg-custom-green w-full py-14 lg:py-28 overflow-hidden">
             <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-6 md:gap-8 lg:gap-10 text-white col-span-1">
                     <h2 class="text-3xl lg:text-5xl">Dấu ấn phát triển</h2>

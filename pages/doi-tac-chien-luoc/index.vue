@@ -1,153 +1,153 @@
 <template>
     <LoadingScreen v-if="isLoading" />
     <section v-else class="flex flex-col">
-        <div class="h-40r w-full flex flex-col gap-4 justify-center items-center text-white bg-green-950">
-            <h2>Waiting For Our Content!</h2>
-            <p>Coming soon...</p>
-            <NuxtLink external to="/" class="text-sm md:text-base text-white text-center px-8 py-2 rounded-full bg-pyramid-gold hover:bg-pyramid-gold/80 transition-colors duration-300">Back to Home</NuxtLink>
-        </div>
-        <!-- <div class="w-full h-96 md:h-35r lg:h-full lg:min-h-screen relative bg-custom-green">
-            <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765282952/Media%20Gateway%20City/qh5d6mmkpfolsy3zbtpj.jpg" alt="banner" class="w-full h-96 md:h-35r lg:h-full lg:min-h-screen object-cover absolute inset-0" />
+        <div class="w-full h-96 md:h-35r lg:h-full lg:min-h-screen relative bg-custom-green">
+            <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1766149388/Media%20Gateway%20City/jo9ebnslvmtb8mzkjebn.jpg" alt="banner" class="w-full h-96 md:h-35r lg:h-full lg:min-h-screen object-cover absolute inset-0" />
             <div class="absolute top-0 left-0 w-full h-full bg-black opacity-20"></div>
         </div>
-        <div class="container mx-auto flex flex-col overflow-hidden">
+        <div class="container mx-auto flex flex-col overflow-hidden py-8 md:py-14 lg:py-28">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center py-4 md:py-8 lg:py-16">
-                <NuxtImg data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765283240/Media%20Gateway%20City/ht9oeyhfxo8sqyv63ky2.png" alt="" class="w-full h-full object-contain md:pr-14 col-span-1" format="png" quality="85" loading="lazy" />
-                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-2 md:gap-4 col-span-1">
+                <NuxtImg data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" src="https://res.cloudinary.com/dpcigceaq/image/upload/v1766150993/Media%20Gateway%20City/mzuqcatkgwynno7zbpap.png" alt="" class="w-full h-full object-contain pb-8 md:pb-0 md:pr-14 col-span-1" format="png" quality="85" loading="lazy" />
+                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-6 md:gap-8 col-span-1">
                     <div class="flex flex-col">
-                        <h2 class="text-xl md:text-2xl lg:text-4xl">Tập đoàn Thành Đô</h2>
-                        <h3 class="text-base md:text-lg">Kiến tạo giá trị bền vững cho tương lai đô thị Việt Nam</h3>
+                        <h2 class="text-3xl lg:text-4xl">Giới thiệu BrandLift Asia</h2>
                     </div>
-                    <h4 class="text-justify text-base md:text-lg">Thành Đô Group là tập đoàn phát triển bất động sản và đầu tư đa ngành, định hình bởi tầm nhìn dài hạn, chiến lược khác biệt và khát vọng tiên phong trong kiến tạo các đô thị hiện đại. Với tinh thần “lấy con người làm trung tâm, lấy giá trị thật làm nền tảng”, Thành Đô Group đã từng bước khẳng định vị thế của mình trên thị trường bằng những dự án quy mô, chất lượng và giàu giá trị bền vững.</h4>
+                    <h4 class="text-justify text-base md:text-lg">
+                        <span class="font-montserrat-bold text-base md:text-lg">BrandLift Asia</span> là đơn vị tư vấn chiến lược và triển khai các giải
+                        pháp <span class="font-montserrat-bold text-base md:text-lg">kinh doanh – tiếp thị – truyền thông thương hiệu tích hợp,</span>
+                        hoạt động với vai trò như một tổng đại lý marketing đồng hành
+                        cùng doanh nghiệp trên toàn bộ hành trình tăng trưởng.
+                        BrandLift Asia không chỉ cung cấp dịch vụ truyền thông đơn lẻ,
+                        mà xây dựng hệ sinh thái giải pháp gắn chặt giữa chiến lược
+                        thương hiệu, hoạt động tiếp thị và mục tiêu kinh doanh, hướng
+                        đến hiệu quả thực tế và giá trị bền vững trong dài hạn.
+                    </h4>
                 </div>
             </div>
         </div>
-        <div class="bg-custom-green w-full py-8 lg:py-16 overflow-hidden">
-            <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-6 md:gap-8 lg:gap-10 text-white col-span-1">
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl text-center">•Tầm Nhìn</h2>
-                    <p class="text-base text-justify">Trở thành tập đoàn đầu tư – phát triển đô thị hàng đầu Việt Nam, tiên phong trong việc dẫn dắt xu hướng đô thị mới, đóng góp vào sự phát triển thịnh vượng và bền vững của các địa phương.</p>
+        <div class="bg-custom-green w-full py-14 lg:py-28 overflow-hidden">
+            <div class="container mx-auto flex flex-col gap-16">
+                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-white gap-16 md:gap-0 grid grid-cols-1 md:grid-cols-2 w-full items-center">
+                    <p class="text-base md:text-lg text-justify order-1">
+                        Với triết lý lấy chiến lược làm nền tảng, lấy dữ liệu thị trường và
+                        hành vi khách hàng làm trung tâm, BrandLift Asia hỗ trợ doanh
+                        nghiệp xác lập định vị thương hiệu rõ ràng, nhất quán và phù hợp
+                        với từng giai đoạn phát triển. Mỗi chiến lược được xây dựng đều
+                        dựa trên nghiên cứu chuyên sâu, phân tích xu hướng ngành, năng
+                        lực nội tại của doanh nghiệp và bối cảnh cạnh tranh, nhằm tạo ra
+                        lợi thế khác biệt và khả năng mở rộng trong tương lai.
+                    </p>
+                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1766149388/Media%20Gateway%20City/uom9tahcobtok5aynwoc.jpg" alt="Chiến lược phát triển" class="w-full h-auto object-contain order-2 md:order-1 md:px-8" />
                 </div>
-                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-6 md:gap-8 lg:gap-10 text-white col-span-1">
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl text-center">•Sứ Mệnh</h2>
-                    <p class="text-base text-center">
-                        Kiến tạo những khu đô thị văn minh, hiện đại và giàu bản sắc.
-                        <br>
-                        <br>
-                        Mang đến giá trị sống nâng cao cho cộng đồng cư dân.
-                        <br>
-                        <br>
-                        Tạo ra các cơ hội đầu tư tăng trưởng dài hạn và an toàn.
-                        <br>
-                        <br>
-                        Đồng hành cùng địa phương trong phát triển hạ tầng – kinh tế – xã hội.
+                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-white gap-16 md:gap-0 grid grid-cols-1 md:grid-cols-2 w-full items-center">
+                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1766149391/Media%20Gateway%20City/hhf3ot81hggyp93citvg.jpg" alt="Chiến lược phát triển" class="w-full h-auto object-contain order-2 md:order-1 md:px-8" />
+                    <p class="text-base md:text-lg text-justify order-1 md:order-2">
+                        Sở hữu đội ngũ chuyên gia giàu kinh nghiệm trong các lĩnh vực
+                        chiến lược thương hiệu, marketing tích hợp, nội dung sáng tạo,
+                        truyền thông đa kênh và triển khai chiến dịch kinh doanh,
+                        BrandLift Asia đóng vai trò là đối tác chiến lược lâu dài của doanh
+                        nghiệp. Từ nghiên cứu thị trường, xác định chân dung khách hàng
+                        mục tiêu, xây dựng hệ thống nhận diện thương hiệu, phát triển
+                        thông điệp và nội dung, đến tổ chức và vận hành các chiến dịch
+                        tiếp thị – truyền thông trên nhiều nền tảng, BrandLift Asia đảm
+                        bảo mọi hoạt động đều được triển khai đồng bộ, nhất quán và tối
+                        ưu hiệu quả.
                     </p>
                 </div>
-                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-6 md:gap-8 lg:gap-10 text-white col-span-1">
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl text-center">•Giá Trị Cốt Lõi</h2>
-                    <p class="text-base text-center">
-                        <span class="font-montserrat-bold text-base">Uy tín:</span> Cam kết rõ ràng, thực thi chuẩn mực, lấy chữ tín làm trọng tâm.
-                        <br>
-                        <br>
-                        <span class="font-montserrat-bold text-base">Chất lượng:</span> Mỗi dự án đều hướng tới tiêu chuẩn cao về quy hoạch, tiện ích, pháp lý và vận hành.
-                        <br>
-                        <br>
-                        <span class="font-montserrat-bold text-base">Bền vững:</span> Kiến tạo giá trị lâu dài cho nhà đầu tư, cư dân và cộng đồng địa phương.
-                        <br>
-                        <br>
-                        <span class="font-montserrat-bold text-base">Đổi mới:</span> Ứng dụng tư duy hiện đại, công nghệ và mô hình quản trị tiên tiến.
+                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-white gap-16 md:gap-0 grid grid-cols-1 md:grid-cols-2 w-full items-center">
+                    <p class="text-base md:text-lg text-justify order-1">
+                        Không dừng lại ở việc xây dựng hình ảnh, BrandLift Asia đặc biệt
+                        chú trọng đến hiệu quả kinh doanh và khả năng chuyển đổi thực
+                        tế. Các giải pháp tiếp thị được thiết kế gắn liền với mục tiêu doanh
+                        thu, độ phủ thị trường và năng lực bán hàng, thông qua việc đo
+                        lường minh bạch, theo dõi sát sao và liên tục tối ưu trong quá trình
+                        triển khai. Nhờ đó, BrandLift Asia giúp doanh nghiệp gia tăng độ
+                        nhận diện thương hiệu, củng cố niềm tin với khách hàng, thúc đẩy
+                        hành vi mua hàng và từng bước xây dựng vị thế vững chắc trên thị
+                        trường.
                     </p>
+                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1766149391/Media%20Gateway%20City/khdgt2nw06tnr9dvn6z6.jpg" alt="Chiến lược phát triển" class="w-full h-auto object-contain order-2 md:px-8" />
+                </div>
+                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-white w-full">
+                    <h4 class="text-base md:text-lg text-justify">
+                        Với định hướng trở thành đối tác tổng thể về kinh doanh và tiếp thị tích hợp, BrandLift Asia cam kết đồng hành cùng doanh
+                        nghiệp không chỉ trong các chiến dịch ngắn hạn, mà trong chiến lược phát triển dài hạn, góp phần nâng tầm thương hiệu và tạo
+                        dựng giá trị tăng trưởng bền vững theo thời gian.
+                    </h4>
                 </div>
             </div>
         </div>
-        <div class="w-full container mx-auto bg-transparent overflow-hidden flex flex-col gap-6 md:py-10 lg:py-6">
-            <h2 data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-3xl md:text-4xl lg:text-5xl py-4">Lĩnh Vực Hoạt Động</h2>
-            <div class="hidden md:grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="w-full container mx-auto bg-transparent overflow-hidden flex flex-col gap-10 md:py-14 lg:py-28">
+            <div class="hidden md:grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-y-16 items-center">
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-2 lg:gap-6 w-full h-full col-span-1">
-                    <h2 class="text-lg md:text-xl lg:text-3xl">1. Phát triển BĐS đô thị</h2>
-                    <h4 class="text-base md:text-lg text-justify">Thành Đô Group phát triển nhiều dự án đô thị quy mô lớn tại các khu vực giàu tiềm năng, định hình phong cách sống mới, gắn với xu hướng phát triển của kinh tế ven biển, công nghiệp – dịch vụ và thương mại.</h4>
+                    <h2 class="text-lg md:text-xl lg:text-4xl">Giới thiệu SCID</h2>
+                    <h4 class="text-base md:text-lg text-justify">
+                        <span class="font-montserrat-bold text-base md:text-lg">SCID</span> là đơn vị hoạt động trong lĩnh vực nghiên cứu, phát triển và
+                        tư vấn giải pháp chiến lược, hướng đến việc nâng cao năng lực
+                        cạnh tranh và giá trị dài hạn cho doanh nghiệp. <br>
+                        Với nền tảng chuyên môn vững chắc cùng phương pháp tiếp cận
+                        bài bản, SCID cung cấp các giải pháp dựa trên dữ liệu, phân tích
+                        thị trường và xu hướng phát triển, hỗ trợ doanh nghiệp đưa ra
+                        quyết định hiệu quả, tối ưu nguồn lực và phát triển bền vững trong
+                        môi trường kinh doanh nhiều biến động.
+                    </h4>
                 </div>
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-1 lg:px-14">
-                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765282952/Media%20Gateway%20City/vsmugwgweicb8kc1dybr.jpg" alt="" class="w-full h-26r md:h-96 lg:h-25r object-cover" format="webp" quality="85" loading="lazy" />
+                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1766151016/Media%20Gateway%20City/nvg7ptfibc7hp6bavv7j.png" alt="" class="w-full h-auto object-cover" format="webp" quality="85" loading="lazy" />
                 </div>
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-1 lg:px-14">
-                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765282947/Media%20Gateway%20City/uhszciztpbmveabu1g5u.jpg" alt="" class="w-full h-26r md:h-96 lg:h-25r object-cover" format="webp" quality="85" loading="lazy" />
+                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1766151016/Media%20Gateway%20City/nqm9rdwbvkqs9n2elddo.png" alt="" class="w-full h-auto object-cover" format="webp" quality="85" loading="lazy" />
                 </div>
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-2 lg:gap-6 w-full h-full col-span-1">
-                    <h2 class="text-lg md:text-xl lg:text-3xl">2. Đầu tư hạ tầng & khu công nghiệp</h2>
-                    <h4 class="text-base md:text-lg text-justify">Tập đoàn tham gia đầu tư hệ thống hạ tầng, logistics và các khu công nghiệp thế hệ mới, tạo động lực thu hút dòng vốn FDI, thúc đẩy tăng trưởng kinh tế địa phương.</h4>
-                </div>
-                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-2 lg:gap-6 w-full h-full col-span-1">
-                    <h2 class="text-lg md:text-xl lg:text-3xl">3. Dịch vụ – thương mại – du lịch</h2>
-                    <h4 class="text-base md:text-lg text-justify">Phát triển chuỗi tiện ích đi kèm, từ thương mại – dịch vụ – lưu trú đến vận hành khu đô thị, góp phần hoàn thiện hệ sinh thái bền vững.</h4>
-                </div>
-                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-1 lg:px-14">
-                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765282947/Media%20Gateway%20City/vtk6wk6eusw2anfudt22.jpg" alt="" class="w-full h-26r md:h-96 lg:h-25r object-cover" format="webp" quality="85" loading="lazy" />
+                    <h2 class="text-lg md:text-xl lg:text-4xl">Giới thiệu HDBank</h2>
+                    <h4 class="text-base md:text-lg text-justify">
+                        <span class="font-montserrat-bold text-base md:text-lg">HDBank</span> là một trong những ngân hàng thương mại cổ phần
+                        hàng đầu Việt Nam, hoạt động với định hướng phát triển hiện đại,
+                        an toàn và bền vững. <br>
+                        HDBank cung cấp đa dạng các sản phẩm và dịch vụ tài chính –
+                        ngân hàng dành cho khách hàng cá nhân, doanh nghiệp và nhà
+                        đầu tư, đồng thời không ngừng đổi mới công nghệ, nâng cao chất
+                        lượng dịch vụ nhằm mang đến trải nghiệm thuận tiện, minh bạch
+                        và hiệu quả cho khách hàng trên toàn quốc.
+                    </h4>                
                 </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:hidden">
-                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-2 lg:gap-6 w-full h-full col-span-1">
-                    <h2 class="text-2xl lg:text-3xl">1. Phát triển BĐS đô thị</h2>
-                    <h4 class="text-base md:text-lg text-justify">Thành Đô Group phát triển nhiều dự án đô thị quy mô lớn tại các khu vực giàu tiềm năng, định hình phong cách sống mới, gắn với xu hướng phát triển của kinh tế ven biển, công nghiệp – dịch vụ và thương mại.</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-16 md:hidden items-center py-14">
+                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-6 w-full h-full col-span-1">
+                    <h2 class="text-3xl">Giới thiệu SCID</h2>
+                    <h4 class="text-base md:text-lg text-justify">
+                        <span class="font-montserrat-bold text-base md:text-lg">SCID</span> là đơn vị hoạt động trong lĩnh vực nghiên cứu, phát triển và
+                        tư vấn giải pháp chiến lược, hướng đến việc nâng cao năng lực
+                        cạnh tranh và giá trị dài hạn cho doanh nghiệp. <br>
+                        Với nền tảng chuyên môn vững chắc cùng phương pháp tiếp cận
+                        bài bản, SCID cung cấp các giải pháp dựa trên dữ liệu, phân tích
+                        thị trường và xu hướng phát triển, hỗ trợ doanh nghiệp đưa ra
+                        quyết định hiệu quả, tối ưu nguồn lực và phát triển bền vững trong
+                        môi trường kinh doanh nhiều biến động.
+                    </h4>
+                </div>
+                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-1 lg:px-14 pt-4">
+                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1766151016/Media%20Gateway%20City/nvg7ptfibc7hp6bavv7j.png" alt="" class="w-full h-auto object-cover" format="webp" quality="85" loading="lazy" />
+                </div>
+                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-6 w-full h-full col-span-1 pt-14">
+                    <h2 class="text-3xl">Giới thiệu HBBank</h2>
+                    <h4 class="text-base md:text-lg text-justify">
+                        <span class="font-montserrat-bold text-base md:text-lg">HDBank</span> là một trong những ngân hàng thương mại cổ phần
+                        hàng đầu Việt Nam, hoạt động với định hướng phát triển hiện đại,
+                        an toàn và bền vững. <br>
+                        HDBank cung cấp đa dạng các sản phẩm và dịch vụ tài chính –
+                        ngân hàng dành cho khách hàng cá nhân, doanh nghiệp và nhà
+                        đầu tư, đồng thời không ngừng đổi mới công nghệ, nâng cao chất
+                        lượng dịch vụ nhằm mang đến trải nghiệm thuận tiện, minh bạch
+                        và hiệu quả cho khách hàng trên toàn quốc.
+                    </h4>  
                 </div>
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-1 lg:px-14">
-                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765282952/Media%20Gateway%20City/vsmugwgweicb8kc1dybr.jpg" alt="" class="w-full h-26r md:h-96 lg:h-25r object-cover" format="webp" quality="85" loading="lazy" />
-                </div>
-                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-2 lg:gap-6 w-full h-full col-span-1">
-                    <h2 class="text-2xl lg:text-3xl">2. Đầu tư hạ tầng & khu công nghiệp</h2>
-                    <h4 class="text-base md:text-lg text-justify">Tập đoàn tham gia đầu tư hệ thống hạ tầng, logistics và các khu công nghiệp thế hệ mới, tạo động lực thu hút dòng vốn FDI, thúc đẩy tăng trưởng kinh tế địa phương.</h4>
-                </div>
-                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-1 lg:px-14">
-                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765282947/Media%20Gateway%20City/uhszciztpbmveabu1g5u.jpg" alt="" class="w-full h-26r md:h-96 lg:h-25r object-cover" format="webp" quality="85" loading="lazy" />
-                </div>
-                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-2 lg:gap-6 w-full h-full col-span-1">
-                    <h2 class="text-2xl lg:text-3xl">3. Dịch vụ – thương mại – du lịch</h2>
-                    <h4 class="text-base md:text-lg text-justify">Phát triển chuỗi tiện ích đi kèm, từ thương mại – dịch vụ – lưu trú đến vận hành khu đô thị, góp phần hoàn thiện hệ sinh thái bền vững.</h4>
-                </div>
-                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="col-span-1 lg:px-14">
-                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765282947/Media%20Gateway%20City/vtk6wk6eusw2anfudt22.jpg" alt="" class="w-full h-26r md:h-96 lg:h-25r object-cover" format="webp" quality="85" loading="lazy" />
+                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1766151016/Media%20Gateway%20City/nqm9rdwbvkqs9n2elddo.png" alt="" class="w-full h-auto object-cover" format="webp" quality="85" loading="lazy" />
                 </div>
             </div>
         </div>
-        <div class="bg-custom-green w-full py-8 lg:py-16 overflow-hidden">
-            <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-6 md:gap-8 lg:gap-10 text-white col-span-1">
-                    <h2 class="text-3xl lg:text-5xl">Dấu ấn phát triển</h2>
-                    <p class="text-base">
-                        Trong hành trình phát triển, Thành Đô Group đã góp phần tạo nên những chuyển biến tích cực cho các địa phương bằng:
-                        <br>
-                        • Các khu đô thị được quy hoạch đồng bộ.
-                        <br>
-                        • Hạ tầng giao thông – kỹ thuật hoàn thiện.
-                        <br>
-                        • Dòng vốn đầu tư mới chảy về các vùng đang trỗi dậy.
-                        <br>
-                        • Cộng đồng cư dân an cư ổn định, nâng cao chất lượng sống.
-                    </p>
-                </div>
-                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="flex flex-col gap-6 md:gap-8 lg:gap-10 text-white col-span-1">
-                    <h2 class="text-3xl lg:text-5xl">Chiến lược phát triển</h2>
-                    <p class="text-base">
-                        • Mở rộng quỹ đất tại những khu vực giàu tiềm năng tăng trưởng.
-                        <br>
-                        • Tập trung phát triển các dự án đô thị quy mô lớn theo mô hình đô thị – cảng biển – công nghiệp.
-                        <br>
-                        • Hạ tầng giao thông – kỹ thuật hoàn thiện.
-                        <br>
-                        • Hợp tác chiến lược với các đơn vị tư vấn, thiết kế, tài chính và quản lý vận hành hàng đầu.
-                        <br>
-                        • Tiếp tục mở rộng sang lĩnh vực hạ tầng và dịch vụ đô thị.
-                    </p>
-                </div>
-                <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="gap-6 md:gap-8 lg:gap-10 text-white col-span-1 md:col-span-3 grid grid-cols-1 md:grid-cols-2">
-                    <h2 class="text-3xl lg:text-5xl col-span-1 md:col-span-2">Cam kết với khách hàng & nhà đầu tư</h2>
-                    <p class="text-base text-justify col-span-1">
-                        Thành Đô Group cam kết phát triển những sản phẩm có giá trị thật, pháp lý minh bạch, tiến độ đảm bảo, chất lượng bền vững – mang đến sự an tâm cho khách hàng và gia tăng giá trị lâu dài cho nhà đầu tư.
-                    </p>
-                </div>
-            </div>
-        </div> -->
-        <!-- <HomeNew :doitac="false"></HomeNew> -->
+        <HomeNew :doitac="false"></HomeNew>
     </section>
 </template>
 
