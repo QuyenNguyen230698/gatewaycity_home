@@ -2,7 +2,7 @@
     <LoadingScreen v-if="isLoading" />
     <section v-else class="flex flex-col">
         <div class="w-full h-96 md:h-35r lg:h-full lg:min-h-screen relative bg-custom-green">
-            <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1766149388/Media%20Gateway%20City/jo9ebnslvmtb8mzkjebn.jpg" alt="banner" class="w-full h-96 md:h-35r lg:h-full lg:min-h-screen object-cover absolute inset-0" />
+            <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1766808901/Media%20Gateway%20City/teozush8hdgxklvihudy.jpg" alt="banner" class="w-full h-96 md:h-35r lg:h-full lg:min-h-screen object-cover absolute inset-0" />
             <div class="absolute top-0 left-0 w-full h-full bg-black opacity-20"></div>
         </div>
         <div class="container mx-auto flex flex-col overflow-hidden py-8 md:py-14 lg:py-28">
@@ -37,10 +37,10 @@
                         lực nội tại của doanh nghiệp và bối cảnh cạnh tranh, nhằm tạo ra
                         lợi thế khác biệt và khả năng mở rộng trong tương lai.
                     </p>
-                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1766149388/Media%20Gateway%20City/uom9tahcobtok5aynwoc.jpg" alt="Chiến lược phát triển" class="w-full h-auto object-contain order-2 md:order-1 md:px-8" />
+                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1766808901/Media%20Gateway%20City/qez7rl98ttvz5xhy5n0i.jpg" alt="Chiến lược phát triển" class="w-full h-auto object-contain order-2 md:order-1 md:px-8" />
                 </div>
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-white gap-16 md:gap-0 grid grid-cols-1 md:grid-cols-2 w-full items-center">
-                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1766149391/Media%20Gateway%20City/hhf3ot81hggyp93citvg.jpg" alt="Chiến lược phát triển" class="w-full h-auto object-contain order-2 md:order-1 md:px-8" />
+                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1766808901/Media%20Gateway%20City/diechyihbxxihojxoykk.jpg" alt="Chiến lược phát triển" class="w-full h-auto object-contain order-2 md:order-1 md:px-8" />
                     <p class="text-base md:text-lg text-justify order-1 md:order-2">
                         Sở hữu đội ngũ chuyên gia giàu kinh nghiệm trong các lĩnh vực
                         chiến lược thương hiệu, marketing tích hợp, nội dung sáng tạo,
@@ -66,7 +66,7 @@
                         hành vi mua hàng và từng bước xây dựng vị thế vững chắc trên thị
                         trường.
                     </p>
-                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1766149391/Media%20Gateway%20City/khdgt2nw06tnr9dvn6z6.jpg" alt="Chiến lược phát triển" class="w-full h-auto object-contain order-2 md:px-8" />
+                    <NuxtImg src="https://res.cloudinary.com/dpcigceaq/image/upload/v1766808902/Media%20Gateway%20City/wegohuim8jfxgrqglftq.jpg" alt="Chiến lược phát triển" class="w-full h-auto object-contain order-2 md:px-8" />
                 </div>
                 <div data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-white w-full">
                     <h4 class="text-base md:text-lg text-justify">
