@@ -26,14 +26,14 @@
             <p class="text-sm lg:text-base tracking-widest text-gray-300 py-2 lg:py-0">GATEWAY CITY | <span class="text-white text-sm lg:text-base font-montserrat-bold">ALL-IN-COMPOUND</span> ĐẦU TIÊN TẠI MIỀN TÂY</p>
             <div class="flex flex-col lg:gap-1">
               <h4 class="text-lg lg:text-2xl tracking-wide pb-1">Liên Hệ</h4>
-              <p class="text-xs lg:text-sm flex md:justify-end items-center gap-2">
-                <span class="hover:underline cursor-pointer">0919 542 618</span>
+              <a href="tel:0325898989" class="text-xs lg:text-sm flex md:justify-end items-center gap-2">
+                <span class="hover:underline cursor-pointer">0325898989</span>
                 <NuxtImg
                 src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765476133/Media%20Gateway%20City/jitgfyeq8vhwcrjlgg7t.svg"
                 alt="Quality"
                 class="w-6 h-6 object-contain"
               />
-              </p>
+              </a>
               <p class="text-xs lg:text-sm flex md:justify-end items-center gap-2">
                 <span class="hover:underline cursor-pointer">Tân Vĩnh Thuận, Tân Ngãi, Tỉnh Vĩnh Long</span>
                 <NuxtImg

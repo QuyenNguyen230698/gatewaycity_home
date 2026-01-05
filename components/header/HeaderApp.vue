@@ -284,7 +284,7 @@
               @click="closeDropdown"
               class="whitespace-nowrap text-white hover:text-pyramid-gold cursor-pointer transition-all duration-300"
             >
-              <a href="tel:0919542618" class="text-base">0919.542.618</a>
+              <a href="tel:0325898989" class="text-base">0325.89.89.89</a>
             </NuxtLink>
             <!-- WhatWeDo dropdown -->
             <div class="relative">
