@@ -15,7 +15,7 @@
                     <div class="col-span-1 px-10 md:px-0 order-2 md:order-1">
                         <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-white font-montserrat-bold text-sm lg:text-base">Biểu tượng thượng lưu – Điểm hẹn tinh hoa</p>
                         <br>
-                        <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-white text-sm lg:text-base">Trải nghiệm du ngoạn sang trọng, kết nối giao thương đường thủy, khẳng định phong cách sống thượng lưu. Bến du thuyền chính là dấu ấn độc bản chỉ có tại Gateway City.</p>
+                        <p data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" class="text-white text-sm lg:text-base">Trải nghiệm du ngoạn sang trọng, kết nối giao thương đường thủy, khẳng định phong cách sống thượng lưu. Bến du thuyền chính là dấu ấn độc bản chỉ có tại Gateway Co Chien.</p>
                     </div>
                 </div>
                 <!-- Carousel -->

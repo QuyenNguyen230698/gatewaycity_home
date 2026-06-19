@@ -1,7 +1,7 @@
 {
-    "name": "Gateway City Homes",
-    "short_name": "Gateway City",
-    "description": "Official website for Gateway City Homes",
+    "name": "Gateway Co Chien",
+    "short_name": "Gateway Co Chien",
+    "description": "Official website for Gateway Co Chien",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",

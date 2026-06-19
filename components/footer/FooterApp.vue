@@ -12,7 +12,7 @@
         <div class="col-span-12 md:col-span-6">
           <NuxtLink external to="/" class="w-fit">
             <NuxtImg
-              src="https://res.cloudinary.com/dpcigceaq/image/upload/v1765281506/Media%20Gateway%20City/iiingth1w5eatij5cju0.svg"
+              src="/Logo.svg"
               quality="75"
               loading="eager"
               alt="logo"
@@ -23,7 +23,7 @@
           <div
             class="col-span-12 md:col-span-6 w-full md:text-end flex flex-col h-full md:justify-between md:pb-8"
           >
-            <p class="text-sm lg:text-base tracking-widest text-gray-300 py-2 lg:py-0">GATEWAY CITY | <span class="text-white text-sm lg:text-base font-montserrat-bold">ALL-IN-COMPOUND</span> ĐẦU TIÊN TẠI MIỀN TÂY</p>
+            <p class="text-sm lg:text-base tracking-widest text-gray-300 py-2 lg:py-0">GATEWAY CO CHIEN | <span class="text-white text-sm lg:text-base font-montserrat-bold">ALL-IN-COMPOUND</span> ĐẦU TIÊN TẠI MIỀN TÂY</p>
             <div class="flex flex-col lg:gap-1">
               <h4 class="text-lg lg:text-2xl tracking-wide pb-1">Liên Hệ</h4>
               <a href="tel:0325898989" class="text-xs lg:text-sm flex md:justify-end items-center gap-2">
@@ -122,7 +122,7 @@
         <div
           class="flex flex-col md:flex-row gap-1 md:items-center md:justify-between text-sm text-gray-300"
         >
-          <p class="text-xs">© 2025 Gateway City - Vĩnh Long. **All rights reserved.**</p>
+          <p class="text-xs">© 2025 Gateway Co Chien. **All rights reserved.**</p>
           <div class="flex space-x-4">
             <a
               href="/terms"

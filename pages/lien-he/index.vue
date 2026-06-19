@@ -8,10 +8,10 @@
         <div class="container mx-auto w-full grid grid-cols-12 gap-6 md:gap-0 py-12">
             <div class="col-span-12 md:col-span-6 flex flex-col gap-4 md:gap-6">
                 <p class="uppercase font-montserrat-bold text-xl md:text-2xl">THÔNG TIN LIÊN HỆ</p>
-                <p>Quý khách hàng cần hỗ trợ tư vấn, cung cấp thông tin, quy trình thủ tục... Dự án Gateway City của chúng tôi vui lòng liên hệ với bộ phận phụ trách theo thông tin hoặc biểu mẫu bên dưới.</p>
+                <p>Quý khách hàng cần hỗ trợ tư vấn, cung cấp thông tin, quy trình thủ tục... Dự án Gateway Co Chien của chúng tôi vui lòng liên hệ với bộ phận phụ trách theo thông tin hoặc biểu mẫu bên dưới.</p>
                 <p>Email: gatewaycityvinhlong@gmail.com</p>
                 <p>Địa chỉ : Tân Vĩnh Thuận, Tân Ngãi, Tỉnh Vĩnh Long</p>
-                <p>Showroom: Gateway City - All-in-compound đầu tiên ở Đồng bằng Sông Cửu Long</p>
+                <p>Showroom: Gateway Co Chien - All-in-compound đầu tiên ở Đồng bằng Sông Cửu Long</p>
             </div>
             <div class="col-span-12 md:col-span-6">
                 <div class="md:px-6">

@@ -28,7 +28,7 @@
                             <br>
                             Không gian giải trí trong nhà và ngoài trời
                             <br>
-                            Sense Festi Vĩnh Long sẽ trở thành biểu tượng mua sắm – giải trí – văn hóa của miền Tây, gia tăng mạnh mẽ giá trị cho Gateway City.
+                            Sense Festi Vĩnh Long sẽ trở thành biểu tượng mua sắm – giải trí – văn hóa của miền Tây, gia tăng mạnh mẽ giá trị cho Gateway Co Chien.
                         </p>
                     </div>
                 </div>
