@@ -12,7 +12,7 @@
         <div class="col-span-12 md:col-span-6">
           <NuxtLink external to="/" class="w-fit">
             <NuxtImg
-              src="/Logo.svg"
+              src="https://res.cloudinary.com/dpcigceaq/image/upload/v1781874951/AdminAssets/htbspgp5pevgh953qwuk.png"
               quality="75"
               loading="eager"
               alt="logo"

@@ -17,10 +17,10 @@ export default defineNuxtConfig({
       },
       title: "Gateway Co Chien",
       link: [
-        { rel: "icon", type: "image/x-icon", href: "/Logo.svg" },
-        { rel: "apple-touch-icon", sizes: "180x180", href: "/Logo.svg" },
-        { rel: "icon", type: "image/png", sizes: "32x32", href: "/Logo.svg" },
-        { rel: "icon", type: "image/png", sizes: "16x16", href: "/Logo.svg" },
+        { rel: "icon", type: "image/x-icon", href: "https://res.cloudinary.com/dpcigceaq/image/upload/v1781874951/AdminAssets/htbspgp5pevgh953qwuk.png" },
+        { rel: "apple-touch-icon", sizes: "180x180", href: "https://res.cloudinary.com/dpcigceaq/image/upload/v1781874951/AdminAssets/htbspgp5pevgh953qwuk.png" },
+        { rel: "icon", type: "image/png", sizes: "32x32", href: "https://res.cloudinary.com/dpcigceaq/image/upload/v1781874951/AdminAssets/htbspgp5pevgh953qwuk.png" },
+        { rel: "icon", type: "image/png", sizes: "16x16", href: "https://res.cloudinary.com/dpcigceaq/image/upload/v1781874951/AdminAssets/htbspgp5pevgh953qwuk.png" },
         { rel: "manifest", href: "/site.webmanifest" },
       ],
       meta: [
@@ -42,7 +42,7 @@ export default defineNuxtConfig({
         { property: "og:site_name", content: "Gateway Co Chien" },
         {
           property: "og:image",
-          content: `/Logo.png`,
+          content: `https://res.cloudinary.com/dpcigceaq/image/upload/v1781874951/AdminAssets/htbspgp5pevgh953qwuk.png`,
         },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:site", content: "@gatewaycityhomes" },
@@ -50,7 +50,7 @@ export default defineNuxtConfig({
         { name: "twitter:description", content: "Gateway Co Chien" },
         {
           name: "twitter:image",
-          content: `/Logo.png`,
+          content: `https://res.cloudinary.com/dpcigceaq/image/upload/v1781874951/AdminAssets/htbspgp5pevgh953qwuk.png`,
         },
       ],
     },
